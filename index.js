@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const Client = new Discord.Client();
-const config = require('./config.json')
+//const config = require('./config.json')
 const prefix = '>';
 
 const fs = require('fs');
@@ -56,4 +56,4 @@ Client.on('message', message => {
 
 
 
-Client.login(config.token);
+Client.login(process.env.DJS_TOKEN);
