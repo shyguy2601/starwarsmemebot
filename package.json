@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shyguy2601/starwarsmemebot.git",
   "author": "Shyguy",
   "license": "ISC",
   "dependencies": {
@@ -13,5 +16,6 @@
     "memejs": "^1.2.3",
     "node.js": "0.0.1-security",
     "snekfetch": "^4.0.4"
+    }
   }
 }
