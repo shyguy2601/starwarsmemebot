@@ -9,13 +9,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shyguy2601/starwarsmemebot.git",
-  "author": "Shyguy",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^12.5.1",
-    "memejs": "^1.2.3",
-    "node.js": "0.0.1-security",
-    "snekfetch": "^4.0.4"
+    "author": "Shyguy",
+    "license": "ISC",
+    "dependencies": {
+      "discord.js": "^12.5.1",
+      "memejs": "^1.2.3",
+      "node.js": "0.0.1-security",
+      "snekfetch": "^4.0.4"
     }
+  },
+  "dependencies": {
+    "discord.js": "^12.5.1"
   }
 }
