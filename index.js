@@ -63,7 +63,7 @@ Client.on('message', message => {
           } else {
             const userMemeEmbed = new Discord.MessageEmbed()
             .setTitle(`Meme Entry by ${message.author.username}`)
-            .setImage(Attachment[0].url)
+            .setImage(memeAttachment[0].url)
             .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
             message.guild.channels.cache.find(i => i.name === `meme-entrys`).send(userMemeEmbed)
             .then(embed => {
