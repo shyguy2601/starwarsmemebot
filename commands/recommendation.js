@@ -19,7 +19,8 @@ module.exports = {
     message.channel.awaitMessages(m => m.author.id == message.author.id,
         {max: 1, time: 30000}).then(collected => {    
          
-          let UserRecommendation = (collected.first().attachments).array();
+          //let UserRecommendation = (collected.first().attachments).array();
+          let UserRecommendation = collected.first().content
   
           console.log(collected.first());
           const sendRecommendationEmbed = new Discord.MessageEmbed()
