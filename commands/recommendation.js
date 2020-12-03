@@ -8,7 +8,7 @@ module.exports = {
     
 
     const AskForRecommendationEmbed = new Discord.MessageEmbed()
-    .setColor(0x00F5FF)
+    .setColor(message.guild.me.displayColor)
     .setTitle('Recommendation')
     .setDescription('What is your recommendation')
     .addField('\u200b', 'Send the recommendation in the chat')
@@ -28,7 +28,7 @@ module.exports = {
           const sendRecommendationEmbed = new Discord.MessageEmbed()
             .setTitle(`Recommendation by ${message.author.username}`)
             .setDescription(UserRecommendation)
-            .setFooter(`*There are two different commands for recommendations ;), >recommend and >addrec*`)
+            .setThumbnail(`There are two different commands for recommendations ;), >recommend and >addrec`)
             
             message.guild.channels.cache.find(i => i.name === `recommendations`).send(sendRecommendationEmbed)
             
