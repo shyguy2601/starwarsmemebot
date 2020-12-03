@@ -41,7 +41,7 @@ Client.once('ready', () => {
     });
 
 Client.on('message', message => {
-    
+    if(message.author.bot) return;
 
 const args = message.content.trim().split(/ +/g);
       
