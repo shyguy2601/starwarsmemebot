@@ -50,7 +50,7 @@ Client.on('message', message => {
  if(Client.commands.get(command))
  Client.commands.get(command).execute(message, args);
 else if (message.channel.id === '784015463747026959') {
-   message.attachments.forEach(attachment => {
+    message.attachments.forEach(attachment => {
        const userMemeEmbed = new Discord.MessageEmbed()
            .setTitle(`Meme Entry by ${message.author.username}`)
            .setImage(attachment.url)
