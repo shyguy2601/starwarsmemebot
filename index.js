@@ -8,14 +8,6 @@ const fs = require('fs');
 
 const fetch = require('node-fetch')
 
-const meme_list = [
-    `./memes/meme1.jpg`,
-    `./memes/meme2.jpg`,
-    `./memes/meme3.jpg`,
-]
-
-
-
 Client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));

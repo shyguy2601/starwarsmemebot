@@ -20,5 +20,8 @@ module.exports = {
                     message.channel.send(embed);
                 });
             });
+        aliases:[
+            "swmeme"
+        ]
     },
 };

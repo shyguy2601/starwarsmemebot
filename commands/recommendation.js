@@ -34,6 +34,8 @@ module.exports = {
             
           })
             
-        
+        aliases: [
+          `addrec`
+        ]
     } 
   }
