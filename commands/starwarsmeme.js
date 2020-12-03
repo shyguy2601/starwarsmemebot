@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 const https = require('https');
  
 module.exports = {
-    name: 'meme',
-    description: 'Sends a meme.',
+    name: 'starwarsmeme',
+    description: 'Sends a star wars meme.',
     execute(message, args) {
             https.get('https://api.macedon.ga/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
                 let data = '';
