@@ -32,21 +32,29 @@ Client.once('ready', () => {
     }, 10000);
     });
 
-Client.on('message', message => {
+ 
+
+ Client.on('message', message => {
     if(message.author.bot) return;
 
 const args = message.content.trim().split(/ +/g);
       
- const command = args[0].slice(prefix.length).toLowerCase(); 
-
- 
+ const commandName = args[0].slice(prefix.length).toLowerCase(); 
  if (message.content == `<@!783629275546648577> prefix`) {
      Client.commands.get(`prefix`).execute(message, args);
- }
+     
+ if (message.content == `<@!783629275546648577> prefix`)
+     Client.commands.get(`prefix`).execute(message, args);
 
- if(Client.commands.get(command)){
- Client.commands.get(command).execute(message, args);
- } 
+const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+if (!command) return;
+
+
+ 
+ command.execute(message, args);
+
+
  if (message.channel.id === '784015463747026959') {
     message.attachments.forEach(attachment => {
        const userMemeEmbed = new Discord.MessageEmbed()
@@ -57,9 +65,12 @@ const args = message.content.trim().split(/ +/g);
            .then(embed => {
                embed.react('👍')
                    .then(() => embed.react('👎'));
-           })
-   })
-} 
+                
+                })
+            })    
+        }
+ 
+    }
 
 
 });
