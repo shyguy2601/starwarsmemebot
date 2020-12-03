@@ -47,8 +47,8 @@ const args = message.content.trim().split(/ +/g);
       
  const command = args[0].slice(prefix.length).toLowerCase(); 
 
- 
- if (message.isMemberMentioned(client.user)) {
+ let botMention = message.isMemberMentioned(client.user)
+ if (message.content == `${botMention}`+`prefix`) {
      Client.commands.get(`prefix`).execute(message, args);
  }
 
