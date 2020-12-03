@@ -8,7 +8,7 @@ module.exports = {
     
 
     const AskForRecommendationEmbed = new Discord.MessageEmbed()
-    .setColor(message.guild.me.displayColor)
+    .setColor(message.guild.member.displayColor)
     .setTitle('Recommendation')
     .setDescription('What is your recommendation')
     .addField('\u200b', 'Send the recommendation in the chat')
