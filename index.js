@@ -55,27 +55,28 @@ Client.on('message', message => {
     Client.commands.get(`recommendation`).execute(message, args) 
  }
  if (message.channel.id === '784015463747026959'){
-    let memeAttachment = (collected.first().attachments).array();
-  
-          console.log(collected.first());
-          if (memeAttachment.length == 0) {
-            console.log("Message was not an attachment")
-          } else {
-            const userMemeEmbed = new Discord.MessageEmbed()
-            .setTitle(`Meme Entry by ${message.author.username}`)
-            .setImage(memeAttachment[0].url)
-            .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-            message.guild.channels.cache.find(i => i.name === `meme-entrys`).send(userMemeEmbed)
-            .then(embed => {
-                embed.react('👍')
-                .then(() => embed.react('👎'));
+    message.channel.awaitMessages(m => m.author.id == message.author.id,
+    {max: 1, time: 30000}).then(collected => {    
+     
+      let memeAttachment = (collected.first().attachments).array();
+
+      console.log(collected.first());
+      if (memeAttachment.length == 0) {
+        message.channel.send("The message needs to have an attachment");
+      } else {
+        const userMemeEmbed = new Discord.MessageEmbed()
+        .setTitle(`Meme Entry by ${message.author.username}`)
+        .setImage(memeAttachment[0].url)
+        .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
+        message.guild.channels.cache.find(i => i.name === `meme-entrys`).send(userMemeEmbed)
+        .then(embed => {
+            embed.react('👍')
+            .then(() => embed.react('👎'));
         })
+      }
+        
+    }) 
+ }
 
-     }
- 
-    }
 });
-
-
-
 Client.login(process.env.DJS_TOKEN);
