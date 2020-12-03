@@ -60,7 +60,7 @@ Client.once('ready', () => {
                   .then(() => embed.react('👎'));
               })
           })
-          Client.on(error())
+          
         } else if (!command) return;
       
         command.execute(message, args);
