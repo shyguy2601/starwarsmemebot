@@ -12,8 +12,8 @@ module.exports = {
     .setTitle('Recommendation')
     .setDescription('What is your recommendation')
     .addField('\u200b', 'Send the recommendation in the chat')
-    .setFooter(`Requested by: ${message.author.username}`, iconURL=message.author.avatarURL)
-    .setThumbnail(`${message.author.avatarURL}`)
+    .setFooter(`Requested by: ${message.author.username}`)
+    
     
   
     message.channel.send(AskForRecommendationEmbed);
@@ -28,7 +28,6 @@ module.exports = {
           const sendRecommendationEmbed = new Discord.MessageEmbed()
             .setTitle(`Recommendation by ${message.author.username}`)
             .setDescription(UserRecommendation)
-            
             .setFooter(`*There are two different commands for recommendations ;), >recommend and >addrec*`)
             
             message.guild.channels.cache.find(i => i.name === `recommendations`).send(sendRecommendationEmbed)
