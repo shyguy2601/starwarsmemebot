@@ -47,10 +47,10 @@ const args = message.content.trim().split(/ +/g);
       
  const command = args[0].slice(prefix.length).toLowerCase(); 
 
- if(Client.commands.get(command))
+ if(Client.commands.get(command)){
  Client.commands.get(command).execute(message, args);
-else if (message.channel.id === '784015463747026959') {
-    message.attachments.forEach(attachment => {
+ } else if (message.channel.id === '784015463747026959') {
+    essage.attachments.forEach(attachment => {
        const userMemeEmbed = new Discord.MessageEmbed()
            .setTitle(`Meme Entry by ${message.author.username}`)
            .setImage(attachment.url)
