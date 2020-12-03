@@ -59,7 +59,7 @@ Client.once('ready', () => {
               })
           })
           
-        
+    const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));  
       command.execute(message, args).catch(command);
 
         }
