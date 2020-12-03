@@ -44,11 +44,8 @@ Client.once('ready', () => {
         if(message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
-        if(message.content == "pls meme"){
-            message.reply('pls meme is disabled, pls use >meme instead ')
-        }
-      
-        const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+        
+      const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
         if (message.channel.id === '784015463747026959') {
           message.attachments.forEach(attachment => {
@@ -62,7 +59,9 @@ Client.once('ready', () => {
                   .then(() => embed.react('👎'));
               })
           })
-        }
+        } else if (!command) return;
+      
+        command.execute(message, args);
       });
 
 Client.login(process.env.DJS_TOKEN);
