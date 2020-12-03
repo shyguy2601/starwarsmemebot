@@ -6,7 +6,7 @@ module.exports = {
       const prefix = ">";
     const messageArray = message.content.split(' ');
 	const arguments = messageArray.slice(1);
-
+    if(message.channel.type === "dm") return message.send('This command cannot be used in DMs');
     if (!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send('Lack of Perms!');
     
     let deleteAmount;
