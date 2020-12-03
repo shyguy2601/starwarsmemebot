@@ -6,7 +6,7 @@ module.exports = {
         const prefix = ">";
         const { MessageEmbed } = require('discord.js');
         
-        const helpEmbed = new Discord.MessageEmbed
+        const helpEmbed = new Discord.MessageEmbed()
         .setColor('#0099ff')
 	    .setTitle('Some title')
 	    .setURL('https://discord.js.org/')
@@ -23,7 +23,7 @@ module.exports = {
 	    .setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
         .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-        console.log(helpEmbed);
+       
         message.channel.send(helpEmbed);
 
 
