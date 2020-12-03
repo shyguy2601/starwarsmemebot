@@ -58,7 +58,8 @@ Client.once('ready', () => {
                   .then(() => embed.react('👎'));
               })
           })
-        } else if (!command) return;
+          
+        } if (!command) return;
       
         command.execute(message, args);
       });
