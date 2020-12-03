@@ -36,16 +36,16 @@ Client.once('ready', () => {
 
     Client.on('message', message => {
         if (message.author.bot) return;
-       
+      
         const args = message.content.trim().split(/ +/g);
-       
+      
         const commandName = args[0].slice(prefix.length).toLowerCase();
-       
+      
         if (message.content == `<@!783629275546648577> prefix`)
           Client.commands.get(`prefix`).execute(message, args);
-       
-        const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-       
+      
+        const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+      
         if (message.channel.id === '784015463747026959') {
           message.attachments.forEach(attachment => {
             const userMemeEmbed = new Discord.MessageEmbed()
@@ -59,7 +59,7 @@ Client.once('ready', () => {
               })
           })
         } else if (!command) return;
-       
+      
         command.execute(message, args);
       });
 
