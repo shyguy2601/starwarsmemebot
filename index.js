@@ -19,7 +19,8 @@ for(const file of commandFiles){
 }
 const activities_list = [ 
     "Prefix is > , do >meme",
-    "I'm basically just a meme bot right now"]
+    "I'm basically just a meme bot right now",
+    ">help"]
 
     let i = 0;
 
