@@ -54,7 +54,7 @@ Client.on('message', message => {
  } else if(command == 'recommend' || command == 'addrec'){
     Client.commands.get(`recommendation`).execute(message, args) 
  }
-  if(message.channel.name === '🐸jokes-n-memes'){
+  if(message.channel.id === '784015463747026959'){
     message.channel.awaitMessages().then(collected => {    
      
       let memeAttachment = (collected.first().attachments).array();
