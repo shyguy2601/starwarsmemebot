@@ -5,7 +5,7 @@ module.exports = {
     name: 'meme',
     description: 'Sends a meme.',
     execute(message, args) {
-            https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
+            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
