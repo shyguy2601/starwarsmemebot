@@ -51,6 +51,8 @@ Client.on('message', message => {
      Client.commands.get(`entermeme`).execute(message, args);
  } else if(command == 'dadjoke'){
     Client.commands.get(`dadjoke`).execute(message, args);
+ } else if(command == 'recommendation'){
+    Client.commands.get(`recommendation`).execute(message, args) 
  }
 });
 
