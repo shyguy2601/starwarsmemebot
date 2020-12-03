@@ -47,6 +47,10 @@ const args = message.content.trim().split(/ +/g);
       
  const command = args[0].slice(prefix.length).toLowerCase(); 
 
+ if(message.content == "@VibeMaster prefix"){
+     Client.commands.get(`prefix`).execute(message, args);
+ }
+
  if(Client.commands.get(command)){
  Client.commands.get(command).execute(message, args);
  } 
