@@ -54,7 +54,7 @@ Client.on('message', message => {
  } else if(command == 'recommend' || command == 'addrec'){
     Client.commands.get(`recommendation`).execute(message, args) 
  }
-  if(message.channel.id === '784015463747026959'){
+  if(message.channel.name === '🐸jokes-n-memes'){
     message.channel.awaitMessages(m => m.author.id == message.author.id,
     {max: 1, time: 30000}).then(collected => {    
      
