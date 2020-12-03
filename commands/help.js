@@ -11,6 +11,7 @@ module.exports = {
 	    .setTitle('Available Commands')
 	    .setAuthor('Help')
 	    .addFields(
+            { name: 'Meme Related Commands'},
             { name: '>meme', value: 'Get a random meme from reddit', inline: true },
             { name: '>starwarsmeme / >swmeme', value: 'Get a starwarsmeme from reddit', inline: true },
 		    { name: '\u200B', value: '\u200B' },
