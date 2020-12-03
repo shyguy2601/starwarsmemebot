@@ -55,8 +55,7 @@ Client.on('message', message => {
     Client.commands.get(`recommendation`).execute(message, args) 
  }
   if(message.channel.name === '🐸jokes-n-memes'){
-    message.channel.awaitMessages(m => m.author.id == message.author.id,
-    {max: 1, time: 30000}).then(collected => {    
+    message.channel.awaitMessages().then(collected => {    
      
       let memeAttachment = (collected.first().attachments).array();
 
