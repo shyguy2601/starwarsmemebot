@@ -34,45 +34,33 @@ Client.once('ready', () => {
 
  
 
- Client.on('message', message => {
-    if(message.author.bot) return;
-
-const args = message.content.trim().split(/ +/g);
-      
- const commandName = args[0].slice(prefix.length).toLowerCase(); 
- if (message.content == `<@!783629275546648577> prefix`) {
-     Client.commands.get(`prefix`).execute(message, args);
-     
- if (message.content == `<@!783629275546648577> prefix`)
-     Client.commands.get(`prefix`).execute(message, args);
-
-const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-
-if (!command) return;
-
-
- 
- command.execute(message, args);
-
-
- if (message.channel.id === '784015463747026959') {
-    message.attachments.forEach(attachment => {
-       const userMemeEmbed = new Discord.MessageEmbed()
-           .setTitle(`Meme Entry by ${message.author.username}`)
-           .setImage(attachment.url)
-           .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-       message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
-           .then(embed => {
-               embed.react('👍')
-                   .then(() => embed.react('👎'));
-                
-                })
-            })    
-        }
- 
-    }
-
-
-});
+    Client.on('message', message => {
+        if (message.author.bot) return;
+       
+        const args = message.content.trim().split(/ +/g);
+       
+        const commandName = args[0].slice(prefix.length).toLowerCase();
+       
+        if (message.content == `<@!783629275546648577> prefix`)
+          Client.commands.get(`prefix`).execute(message, args);
+       
+        const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+       
+        if (message.channel.id === '784015463747026959') {
+          message.attachments.forEach(attachment => {
+            const userMemeEmbed = new Discord.MessageEmbed()
+              .setTitle(`Meme Entry by ${message.author.username}`)
+              .setImage(attachment.url)
+              .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
+            message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
+              .then(embed => {
+                embed.react('👍')
+                  .then(() => embed.react('👎'));
+              })
+          })
+        } else if (!command) return;
+       
+        command.execute(message, args);
+      });
 
 Client.login(process.env.DJS_TOKEN);
