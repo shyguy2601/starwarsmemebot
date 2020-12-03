@@ -43,6 +43,9 @@ Client.once('ready', () => {
       
         if (message.content == `<@!783629275546648577> prefix`)
           Client.commands.get(`prefix`).execute(message, args);
+      
+        const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+      
         if (message.channel.id === '784015463747026959') {
           message.attachments.forEach(attachment => {
             const userMemeEmbed = new Discord.MessageEmbed()
@@ -50,21 +53,14 @@ Client.once('ready', () => {
               .setImage(attachment.url)
               .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
             message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
-                .then(embed => {
+              .then(embed => {
                 embed.react('👍')
                   .then(() => embed.react('👎'));
               })
           })
-          
-    const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));  
-    if(command == 'entermeme'){
-        Client.commands.get(`entermeme`).execute(message, args);
-    } else if(command == 'starwarsmeme' || command == 'swmeme'){
-    Client.commands.get('starwarsmeme').execute(message, args)
-    } else if(command == 'meme'){
-        Client.commands.get('meme').execute(message, args)
-    }
-}
+        } else if (!command) return;
+      
+        command.execute(message, args);
       });
 
 Client.login(process.env.DJS_TOKEN);
