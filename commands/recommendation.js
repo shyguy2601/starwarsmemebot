@@ -24,7 +24,7 @@ module.exports = {
           console.log(collected.first());
           const sendRecommendationEmbed = new Discord.MessageEmbed()
             .setTitle(`Recommendation by ${message.author.username}`)
-            .setImage(UserRecommendation)
+            .setDescription(UserRecommendation)
             .setFooter(`*There are two different commands for recommendations ;), >recommend and >addrec*`)
             message.guild.channels.cache.find(i => i.name === `recommendations`).send(sendRecommendationEmbed)
             
