@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'prefix',
-    description: "this is a command to remind users of prefix",
+    name: 'help',
+    description: "this is a help command",
     execute(message, args){
         const Discord = require('discord.js');
         const prefix = ">";
