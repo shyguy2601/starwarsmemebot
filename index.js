@@ -13,7 +13,7 @@ const meme_list = [
     `./memes/meme2.jpg`,
     `./memes/meme3.jpg`,
 ]
-
+const memeChannel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
 
 Client.commands = new Discord.Collection();
@@ -54,6 +54,26 @@ Client.on('message', message => {
  } else if(command == 'recommend' || command == 'addrec'){
     Client.commands.get(`recommendation`).execute(message, args) 
  }
+ if (message.channel.id === '784015463747026959'){
+    let memeAttachment = (collected.first().attachments).array();
+  
+          console.log(collected.first());
+          if (memeAttachment.length == 0) {
+            console.log("Message was not an attachment")
+          } else {
+            const userMemeEmbed = new Discord.MessageEmbed()
+            .setTitle(`Meme Entry by ${message.author.username}`)
+            .setImage(Attachment[0].url)
+            .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
+            message.guild.channels.cache.find(i => i.name === `meme-entrys`).send(userMemeEmbed)
+            .then(embed => {
+                embed.react('👍')
+                .then(() => embed.react('👎'));
+        })
+
+     }
+ 
+    }
 });
 
 
