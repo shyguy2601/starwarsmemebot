@@ -59,10 +59,10 @@ Client.once('ready', () => {
               })
           })
           
-        } else if (!command) return;
+        
       command.execute(message, args);
 
-
+        }
       });
 
 Client.login(process.env.DJS_TOKEN);
