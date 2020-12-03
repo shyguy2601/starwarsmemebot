@@ -12,7 +12,7 @@ module.exports = {
     .setTitle('Recommendation')
     .setDescription('What is your recommendation')
     .addField('\u200b', 'Send the recommendation in the chat')
-    .setFooter(`Requested by ${message.author.username} ${message.author.avatarURL()}`)
+    .setFooter(`Requested by: ${message.author.username}`,iconURL=message.author.avatarURL)
     
   
     message.channel.send(AskForRecommendationEmbed);
