@@ -13,7 +13,7 @@ const meme_list = [
     `./memes/meme2.jpg`,
     `./memes/meme3.jpg`,
 ]
-const memeChannel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
+//const memeChannel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
 
 Client.commands = new Discord.Collection();
