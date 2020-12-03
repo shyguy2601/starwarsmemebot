@@ -54,13 +54,13 @@ Client.on('message', message => {
  } else if(command == 'recommend' || command == 'addrec'){
     Client.commands.get(`recommendation`).execute(message, args) 
  }
- if (message.channel.id === '771625972792557591') {
+ if (message.channel.id === '784015463747026959') {
     message.attachments.forEach(attachment => {
         const userMemeEmbed = new Discord.MessageEmbed()
             .setTitle(`Meme Entry by ${message.author.username}`)
             .setImage(attachment.url)
             .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-        message.guild.channels.cache.find(i => i.id === `771625972792557591`).send(userMemeEmbed)
+        message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
             .then(embed => {
                 embed.react('👍')
                     .then(() => embed.react('👎'));
