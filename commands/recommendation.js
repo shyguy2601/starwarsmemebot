@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     name: 'recommendation',
     description: "this is a recommendation command",
     execute(message, args){
@@ -38,4 +38,5 @@ module.exports = {
           `addrec`
         ]
     } 
-  }
+  } 
+  */
