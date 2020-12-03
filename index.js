@@ -61,8 +61,7 @@ const args = message.content.trim().split(/ +/g);
                    .then(() => embed.react('👎'));
            })
    })
-} else
- message.reply("Command not found");
+} 
 
 
 });
