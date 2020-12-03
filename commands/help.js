@@ -22,7 +22,9 @@ module.exports = {
 	    .addField('Inline field title', 'Some value here', true)
 	    .setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
-	    .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+        .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+        
+        message.channel.send(helpEmbed);
 
 
   }
