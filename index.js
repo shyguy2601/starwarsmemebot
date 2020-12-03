@@ -52,12 +52,15 @@ Client.once('ready', () => {
               .setTitle(`Meme Entry by ${message.author.username}`)
               .setImage(attachment.url)
               .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-            message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
+            message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed).catch((err) =>{
+                console.errror(err)
+            })
               .then(embed => {
                 embed.react('👍')
                   .then(() => embed.react('👎'));
               })
           })
+          Client.on(error())
         } else if (!command) return;
       
         command.execute(message, args);
