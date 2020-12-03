@@ -60,7 +60,7 @@ Client.once('ready', () => {
           })
           
         
-      command.execute(message, args);
+      command.execute(message, args).catch(command);
 
         }
       });
