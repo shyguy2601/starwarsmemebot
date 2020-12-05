@@ -4,7 +4,7 @@ const https = require('https');
 module.exports = {
     name: 'starwarsmeme',
     description: 'Sends a star wars meme.',
-    aliases:['swmeme'],
+    aliases:['swmeme', 'swm'],
     execute(message, args) {
             https.get('https://api.macedon.ga/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
                 let data = '';
