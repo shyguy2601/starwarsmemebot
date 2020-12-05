@@ -36,6 +36,7 @@ Client.once('ready', () => {
  
 
     Client.on('message', message => {
+      if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
       
         const args = message.content.trim().split(/ +/g);
