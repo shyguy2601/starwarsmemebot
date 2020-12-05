@@ -7,7 +7,7 @@ module.exports = {
         const { MessageEmbed } = require('discord.js');
         
         const helpEmbed = new Discord.MessageEmbed()
-        .setColor(message.member.displayColor)
+        //.setColor(message.member.displayColor)
 	    .setTitle('Available Commands')
 	    .setAuthor('Help')
 	    .addFields(
