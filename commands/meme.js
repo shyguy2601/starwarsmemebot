@@ -13,7 +13,7 @@ module.exports = {
                 resp.on('end', () => {
                     var res = JSON.parse(data);
                     const embed = new Discord.MessageEmbed()
-                        .setColor(message.member.displayColor)
+                        //.setColor(message.member.displayColor)
                         .setTitle(res.title)
                         .setURL(res.permalink)
                         .setImage(res.image)
