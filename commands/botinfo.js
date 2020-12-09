@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const { MessageEmbed, version: djsversion } = require('discord.js');
-const version = require('./package.json');
+const version = require('../package.json');
 const { utc } = require('moment');
 const os = require('os');
 const ms = require('ms');
