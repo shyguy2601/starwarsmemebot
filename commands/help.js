@@ -7,6 +7,7 @@ module.exports = {
         const { MessageEmbed } = require('discord.js');
         
         const NextToCommand = "[] next to the command name is a mandatory thing for the command to work"
+        const insultExample = ">insult [ping the user you want to insult]"
         const helpEmbed = new Discord.MessageEmbed()
       .setTitle(`Help - \`\`\`${NextToCommand}\`\`\`` )
       .addFields(
@@ -15,9 +16,9 @@ module.exports = {
             { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true },
             { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true },
             { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true },
-            { name: '\u200B', value: '\u200B' },
+            //{ name: '\u200B', value: '\u200B' },
             { name: '__Fun Related Commands__', value: '\u200B' },
-            { name: `>insult [ping the user you want to insult]`, value: `Insults the mentioned user`, inline: true},
+            { name: `\`\`\`${NextToCommand}\`\`\`` , value: `Insults the mentioned user`, inline: true},
 		    
 	    )
 	    .setTimestamp()
