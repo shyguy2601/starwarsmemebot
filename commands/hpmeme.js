@@ -35,7 +35,7 @@ module.exports = {
                     .setFooter(`Requested by ${message.author.username}`)
                 message.channel.send(embed);
             });
-        }if (message.channel.type == "text") {
+        }if (message.channel.type == "dm") {
             function getMeme() {
                 return new Promise((resolve, reject) => {
                     https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
