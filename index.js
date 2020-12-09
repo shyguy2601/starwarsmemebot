@@ -33,7 +33,22 @@ Client.once('ready', () => {
     }, 10000);
     });
 
- 
+    Client.on(`messageDelete`, function(message, channel){
+      if(message.mentions.users.first() || message.mentions.roles.first()){
+        if(!message.author.bot) {
+          const usersMentioned = message.mentions.users;
+          if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
+          
+                const GhostPingEmbed = new MessageEmbed();
+                embed.setTitle("Ghost Ping");
+                embed.addField("Author:- ", message.author);
+                embed.addField("Message:- ", message.content);
+                message.channel.send(GhostPingEmbed);
+        } else if(!message.mentions.users.first() || message.mentions.roles.first()){
+          console.log(`no ping detected`)
+      }
+    }
+    })
 
     Client.on('message', message => {
 
@@ -69,22 +84,7 @@ Client.once('ready', () => {
       
         command.execute(message, args);
 
-        Client.on(`messageDelete`, function(message, channel){
-          if(message.mentions.users.first() || message.mentions.roles.first()){
-            if(!message.author.bot) {
-              const usersMentioned = message.mentions.users;
-              if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
-              
-                    const GhostPingEmbed = new MessageEmbed();
-                    embed.setTitle("Ghost Ping");
-                    embed.addField("Author:- ", message.author);
-                    embed.addField("Message:- ", message.content);
-                    message.channel.send(GhostPingEmbed);
-            } else if(!message.mentions.users.first() || message.mentions.roles.first()){
-              console.log(`no ping detected`)
-          }
-        }
-        })
+        
       });
 
 Client.login(process.env.DJS_TOKEN);
