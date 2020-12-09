@@ -36,13 +36,30 @@ Client.once('ready', () => {
  
 
     Client.on('message', message => {
-      if(!message.content.startsWith(`${prefix}`)) return;
+
+        if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
       
         const args = message.content.trim().split(/ +/g);
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
       
+        const _a, _b;
+        if (message.mentions.users.first() || message.mentions.roles.first()) {
+            if (!((_a = message.author) === null || _a === void 0 ? void 0 : _a.bot)) {
+                var usersMentioned = message.mentions.users;
+                if (((_b = usersMentioned.first()) === null || _b === void 0 ? void 0 : _b.id) === message.author.id && usersMentioned.size === 1)
+                    return;
+                var embed = new MessageEmbed();
+                embed.setTitle("Ghost Ping Detected!");
+                embed.addField("Author", message.author);
+                embed.addField("Message", message.content);
+                message.channel.send(embed);
+            }
+        }
+
+
+
         if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
