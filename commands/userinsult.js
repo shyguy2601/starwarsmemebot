@@ -1,4 +1,5 @@
 const { createError } = require('./userinsult.js');
+const { MessageEmbed } = require('discord.js');
 const https = require('https');
 
 module.exports = {
