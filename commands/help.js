@@ -9,7 +9,7 @@ module.exports = {
         const NextToCommand = "[] next to the command name is a mandatory thing for the command to work"
         const insultExample = ">insult [ping the user you want to insult]"
         const helpEmbed = new Discord.MessageEmbed()
-      .setTitle(`Help - \`\`\`${NextToCommand}\`\`\`` )
+      .setTitle(`Help - \`\`${NextToCommand}\`\`` )
       .addFields(
             {name:'__Available Commands:-__', value: '\u200B'},
             { name: `__Meme Related Commands__`, value: '\u200B' },
