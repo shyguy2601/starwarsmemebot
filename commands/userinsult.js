@@ -1,10 +1,19 @@
-const { createError } = require('./create.js');
+const { createError } = require('./userinsult.js');
 const https = require('https');
 
 module.exports = {
     name: 'insult',
     description: 'A command for users to insult eachother',
     execute(message, args) {
+
+        function createWarning(warning) {
+            const warningEmbed = new Discord.MessageEmbed()
+                .setColor(message.member.displayColor)
+                .setDescription(warning)
+                .setTimestamp()
+                return warningEmbed;
+        }
+
         if (!message.mentions.users.size) {
             return message.channel.send(createWarning("You didn't tell me who to insult!"));
         } else {
