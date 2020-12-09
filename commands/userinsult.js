@@ -8,7 +8,9 @@ module.exports = {
 
     const warningEmbed = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
-    .setDescription(`You didn't tell me who to insult!`)
+    .setTitle(`You didn't tell me who to insult!`)
+    .setDescription('Correct usage of this command is `>insult [ping the user you want to insult]`, For example:-')
+    .addField('`>insult @discorduser`')
     .setTimestamp();
                 
         

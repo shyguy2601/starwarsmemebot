@@ -9,8 +9,8 @@ module.exports = {
         const helpEmbed = new Discord.MessageEmbed()
        
         //.setColor(message.member.displayColor)
-	    .setTitle('Available Commands')
-	    .setAuthor('Help')
+	    .setTitle('Available Commands:- ')
+	    .setAuthor('Help - `[] next to the command name is a mandatory thing for the command to work`')
 	    .addFields(
             { name: 'Meme Related Commands', value: '\u200B' },
             { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true },
