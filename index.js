@@ -20,7 +20,8 @@ for(const file of commandFiles){
 const activities_list = [ 
     "Prefix is > , do >meme",
     "I'm basically just a meme bot right now",
-    ">help"]
+    ">help",
+    "Developed by ShyGuy#5504"]
 
     let i = 0;
 
@@ -56,7 +57,7 @@ Client.once('ready', () => {
 
         if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
-      
+    
         const args = message.content.trim().split(/ +/g);
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
