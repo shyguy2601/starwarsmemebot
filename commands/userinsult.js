@@ -7,16 +7,16 @@ module.exports = {
     description: 'A command for users to insult eachother',
     execute(message, args) {
 
-        function createWarning(warning) {
-            const warningEmbed = new Discord.MessageEmbed()
-                .setColor(message.member.displayColor)
-                .setDescription(warning)
-                .setTimestamp()
-                return warningEmbed;
-        }
+        
+const warningEmbed = new Discord.MessageEmbed()
+    .setColor(message.member.displayColor)
+    .setDescription(`You didn't tell me who to insult!`)
+    .setTimestamp();
+                
+        
 
         if (!message.mentions.users.size) {
-            return message.channel.send(createWarning("You didn't tell me who to insult!"));
+            return message.channel.send((warningEmbed));
         } else {
             https.get('https://insult.mattbas.org/api/insult', (resp) => {
                 let data = '';
