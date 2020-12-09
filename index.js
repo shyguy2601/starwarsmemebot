@@ -70,14 +70,15 @@ Client.once('ready', () => {
         }
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
-        if (message.channel.id === '784015463747026959') {
+        if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
+        if(message.guild.id != '784015462303399958') return message.channel.send(`Not in correct server for this command`);{
           message.attachments.forEach(attachment => {
             const userMemeEmbed = new Discord.MessageEmbed()
               .setColor(message.member.displayColor)
               .setTitle(`Meme Entry by ${message.author.username}`)
               .setImage(attachment.url)
               .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-            message.guild.channels.cache.find(i => i.id === `784020687013675038`).send(userMemeEmbed)
+            message.guild.channels.cache.find(i => i.name === `meme-entry`).send(userMemeEmbed)
               .then(embed => {
                 embed.react('👍')
                   .then(() => embed.react('👎'));
