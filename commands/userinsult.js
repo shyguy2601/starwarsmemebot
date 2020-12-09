@@ -11,7 +11,7 @@ module.exports = {
     .setColor(message.member.displayColor)
     .setTitle(`You didn't tell me who to insult!`)
     .setDescription(`Correct usage of this command is `, "```" + ` ${insultUsage} `+"```" + ', For example:-')
-    .addField("```" + ` ${UsageExample} `+"```")
+    .addField('\u200B',"```" + ` ${UsageExample} `+"```")
     .setTimestamp();
                 
         
