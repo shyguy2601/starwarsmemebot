@@ -5,9 +5,13 @@ module.exports = {
       const Discord = require('discord.js');
       const prefix = ">";
       
-      let server = message.guild.id.get(s => s.id === '784015462303399958');
-      if(!server) message.channel.send(`Not in correct server for this command`)
-      if(server){
+
+
+
+      if (message.guild.id === '784015462303399958') return message.channel.send(`Not in correct server for this command`);
+else {
+      
+      
         const AskForImageEmbed = new Discord.MessageEmbed()
         .setColor(0x00F5FF)
         .setTitle('Meme Contest Entry')
@@ -41,7 +45,7 @@ module.exports = {
             }) 
 
 
-      }
+          }
 
    
     } 
