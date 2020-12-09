@@ -18,7 +18,7 @@ module.exports = {
             { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true },
             //{ name: '\u200B', value: '\u200B' },
             { name: '__Fun Related Commands__', value: '\u200B' },
-            { name: `\`\`\`${NextToCommand}\`\`\`` , value: `Insults the mentioned user`, inline: true},
+            { name: `\`\`\`${insultExample}\`\`\`` , value: `Insults the mentioned user`, inline: true},
 		    
 	    )
 	    .setTimestamp()
