@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+/*const Discord = require('discord.js');
 const { MessageEmbed, version: djsversion } = require('discord.js');
 const version = require('../package.json');
 const { utc } = require('moment');
@@ -47,4 +47,4 @@ module.exports = {
         
         message.channel.send(embed);
     }
-};
+};*/
