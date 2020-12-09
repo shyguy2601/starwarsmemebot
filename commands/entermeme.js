@@ -8,7 +8,7 @@ module.exports = {
 
 
 
-      if (message.guild.id != '784015462303399958') return message.channel.send(`Not in correct server for this command`);
+      if (message.guild.id != '396021514740301825') return message.channel.send(`Not in correct server for this command`);
 else {
       
       

@@ -5,6 +5,6 @@ module.exports = {
       const Discord = require('discord.js');
       const prefix = ">";
 
-  message.channel.send(`https://discord.com/oauth2/authorize?client_id=783629275546648577&scope=bot&permissions=1883630704`)
+  message.channel.send(`https://discord.com/oauth2/authorize?client_id=783629275546648577&scope=bot&permissions=805694576`)
   }
 }
