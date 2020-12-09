@@ -15,19 +15,17 @@ module.exports = {
                 resp.on('end', () => {
                     var res = JSON.parse(data);
                     const embed = new Discord.MessageEmbed()
-                        .setColor(message.member.displayColor)
+                        //.setColor(message.member.displayColor)
                         .setTitle(res.title)
                         .setURL(res.permalink)
                         .setImage(res.image)
                         .setTimestamp()
                         .setFooter(`Requested by ${message.author.username}`)
                     message.channel.send(embed);
-                
-                    
                 });
             });
         }if(message.channel.type == "dm"){
-              https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
+            https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
@@ -42,9 +40,8 @@ module.exports = {
                         .setTimestamp()
                         .setFooter(`Requested by ${message.author.username}`)
                     message.channel.send(embed);
-            
-                })    
-            })
+                });
+            });
         }
     },
 };

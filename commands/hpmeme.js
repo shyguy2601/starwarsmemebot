@@ -6,66 +6,42 @@ module.exports = {
     description: 'Sends harry potter meme.',
     aliases:['harrypottermeme', 'hpm'],
     execute(message, args) {
-        if (message.channel.type == "text") {
-            function getMeme() {
-                return new Promise((resolve, reject) => {
-                    https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
-                        let data = '';
-                        resp.on('data', (chunk) => {
-                            data += chunk;
-                        });
-                        resp.on('end', () => {
-                            var data = JSON.parse(data);
-                            if (data.image.includes("https://i.redd.it/"))
-                                resolve(data);
-                            else
-                                getMeme().then(data => resolve);
-                        });
-                    });
+        if(message.channel.type == "text"){
+            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
+                let data = '';
+                resp.on('data', (chunk) => {
+                    data += chunk;
                 });
-            }
-        
-            getMeme().then(data => {
-                const embed = new Discord.MessageEmbed()
-                    .setColor(message.member.displayColor)
-                    .setTitle(data.title)
-                    .setURL(data.permalink)
-                    .setImage(data.image)
-                    .setTimestamp()
-                    .setFooter(`Requested by ${message.author.username}`)
-                message.channel.send(embed);
+                resp.on('end', () => {
+                    var res = JSON.parse(data);
+                    const embed = new Discord.MessageEmbed()
+                        //.setColor(message.member.displayColor)
+                        .setTitle(res.title)
+                        .setURL(res.permalink)
+                        .setImage(res.image)
+                        .setTimestamp()
+                        .setFooter(`Requested by ${message.author.username}`)
+                    message.channel.send(embed);
+                });
             });
-        }if (message.channel.type == "dm") {
-            function getMeme() {
-                return new Promise((resolve, reject) => {
-                    https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
-                        let data = '';
-                        resp.on('data', (chunk) => {
-                            data += chunk;
-                        });
-                        resp.on('end', () => {
-                            var data = JSON.parse(data);
-                            if (data.image.includes("https://i.redd.it/"))
-                                resolve(data);
-                            else
-                                getMeme().then(data => resolve);
-                        });
-                    });
+        }if(message.channel.type == "dm"){
+            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
+                let data = '';
+                resp.on('data', (chunk) => {
+                    data += chunk;
                 });
-            }
-        
-            getMeme().then(data => {
-                const embed = new Discord.MessageEmbed()
-                    .setColor(message.member.displayColor)
-                    .setTitle(data.title)
-                    .setURL(data.permalink)
-                    .setImage(data.image)
-                    .setTimestamp()
-                    .setFooter(`Requested by ${message.author.username}`)
-                message.channel.send(embed);
+                resp.on('end', () => {
+                    var res = JSON.parse(data);
+                    const embed = new Discord.MessageEmbed()
+                        //.setColor(message.member.displayColor)
+                        .setTitle(res.title)
+                        .setURL(res.permalink)
+                        .setImage(res.image)
+                        .setTimestamp()
+                        .setFooter(`Requested by ${message.author.username}`)
+                    message.channel.send(embed);
+                });
             });
         }
-          
-       
     },
-};
+}
