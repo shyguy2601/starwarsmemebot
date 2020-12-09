@@ -44,7 +44,7 @@ Client.once('ready', () => {
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
       
-        const _a, _b;
+        let _a, _b;
         if (message.mentions.users.first() || message.mentions.roles.first()) {
             if (!((_a = message.author) === null || _a === void 0 ? void 0 : _a.bot)) {
                 var usersMentioned = message.mentions.users;
