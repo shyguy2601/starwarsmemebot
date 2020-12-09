@@ -19,7 +19,6 @@ module.exports = {
     execute: (message, args) => {
     const core = os.cpus()[0];
     const embed = new Discord.MessageEmbed()
-        .setThumbnail(this.client.displayAvatarURL())
         .setColour(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
             `**> Client:** ${this.client.user.tag} (${this.client.user.id})`,
