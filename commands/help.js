@@ -30,7 +30,7 @@ module.exports = {
             message.channel.send(helpEmbed);
     
     
-      }else if(message.guild.id != '784015462303399958'){
+      }if(message.guild.id != '784015462303399958'){
           const helpEmbed = new Discord.MessageEmbed()
           .setTitle(`Help - \`\`${NextToCommand}\`\`` )
           .addFields(
