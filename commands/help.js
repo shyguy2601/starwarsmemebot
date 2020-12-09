@@ -30,7 +30,7 @@ module.exports = {
             message.channel.send(GoodVibeHelpEmbed);
     
     
-      }if(message.guild.id != '784015462303399958'){
+      }else if(message.guild.id != '784015462303399958'){
           const helpEmbed = new Discord.MessageEmbed()
           .setTitle(`Help - \`\`${NextToCommand}\`\`` )
           .addFields(
