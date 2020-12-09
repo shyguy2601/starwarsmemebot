@@ -43,6 +43,7 @@ Client.once('ready', () => {
                 GhostPingEmbed.setTitle("Ghost Ping");
                 GhostPingEmbed.addField("Author:- ", message.author);
                 GhostPingEmbed.addField("Message:- ", message.content);
+                GhostPingEmbed.setColor(message.member.displayColor);
                 message.channel.send(GhostPingEmbed);
         } else if(!message.mentions.users.first() || message.mentions.roles.first()){
           console.log(`no ping detected`)
@@ -70,6 +71,7 @@ Client.once('ready', () => {
         if (message.channel.id === '784015463747026959') {
           message.attachments.forEach(attachment => {
             const userMemeEmbed = new Discord.MessageEmbed()
+              .setColor(message.member.displayColor)
               .setTitle(`Meme Entry by ${message.author.username}`)
               .setImage(attachment.url)
               .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
