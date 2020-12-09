@@ -27,7 +27,7 @@ module.exports = {
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
         .slice(0, -1);
-    const userflags = member.user.flags.toArray();
+    const userFlags = member.user.flags.toArray();
     const embed = new MessageEmbed()
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
     .addField('User', [
