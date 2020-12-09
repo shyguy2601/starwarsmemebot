@@ -6,7 +6,7 @@ module.exports = {
     description: 'Sends a meme.',
     aliases: [`m`],
     execute(message, args) {
-        if(!message.channel.type == "dm"){
+        if(message.channel.type == "text"){
             https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
@@ -26,7 +26,7 @@ module.exports = {
                     
                 });
             });
-        }if(!message.channel.type == "dm"){
+        }if(message.channel.type == "dm"){
               https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
