@@ -10,7 +10,7 @@ module.exports = {
         
         if(message.guild.id = '784015462303399958'){
         
-          const helpEmbed = new Discord.MessageEmbed()
+          const GoodVibeHelpEmbed = new Discord.MessageEmbed()
           .setTitle(`Help - \`\`${NextToCommand}\`\`` )
           .addFields(
                 {name:'__Available Commands:-__', value: '\u200B'},
@@ -27,7 +27,7 @@ module.exports = {
           .setTimestamp()
             .setFooter(`Requested by ${message.author.username}`);
            
-            message.channel.send(helpEmbed);
+            message.channel.send(GoodVibeHelpEmbed);
     
     
       }if(message.guild.id != '784015462303399958'){
