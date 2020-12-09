@@ -14,7 +14,7 @@ module.exports = {
           .setTimestamp()
           .setFooter(`Requested by ${message.author.username}`);
 
-      if (message.guild.id = '784015462303399958')
+          if (message.guild.id == '784015462303399958')
           helpEmbed.addFields({ name: '>entermeme', value: 'Enter a meme into meme-entrys to try win the meme competition', inline: true })
 
       helpEmbed.addFields({ name: '__Fun Related Commands__', value: '\u200B' }, { name: `${insultExample}`, value: `Insults the mentioned user`, inline: true });
