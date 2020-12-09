@@ -1,14 +1,12 @@
-const { createError } = require('./userinsult.js');
-const { MessageEmbed } = require('discord.js');
 const https = require('https');
-
+const Discord = require('discord.js');
 module.exports = {
     name: 'insult',
     description: 'A command for users to insult eachother',
     execute(message, args) {
 
-        
-const warningEmbed = new Discord.MessageEmbed()
+
+    const warningEmbed = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
     .setDescription(`You didn't tell me who to insult!`)
     .setTimestamp();
