@@ -5,12 +5,13 @@ module.exports = {
     description: 'A command for users to insult eachother',
     execute(message, args) {
 
-
+        const insultUsage = ">insult [ping the user you want to insult]"
+        const UsageExample = ">insult @discorduser"
     const warningEmbed = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
     .setTitle(`You didn't tell me who to insult!`)
-    .setDescription('Correct usage of this command is `>insult [ping the user you want to insult]`, For example:-')
-    .addField('`>insult @discorduser`')
+    .setDescription(`Correct usage of this command is `, "```" + ` ${insultUsage} `+"```" + ', For example:-')
+    .addField("```" + ` ${UsageExample} `+"```")
     .setTimestamp();
                 
         
