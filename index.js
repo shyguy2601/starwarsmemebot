@@ -44,22 +44,6 @@ Client.once('ready', () => {
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
       
-        let _a, _b;
-        if (message.mentions.users.first() || message.mentions.roles.first()) {
-            if (!((_a = message.author) === null || _a === void 0 ? void 0 : _a.bot)) {
-                var usersMentioned = message.mentions.users;
-                if (((_b = usersMentioned.first()) === null || _b === void 0 ? void 0 : _b.id) === message.author.id && usersMentioned.size === 1)
-                    return;
-                var embed = new MessageEmbed();
-                embed.setTitle("Ghost Ping Detected!");
-                embed.addField("Author", message.author);
-                embed.addField("Message", message.content);
-                message.channel.send(embed);
-            }
-        }
-
-
-
         if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
@@ -84,6 +68,23 @@ Client.once('ready', () => {
         } if (!command) return;
       
         command.execute(message, args);
+
+        Client.on(`messageDelete`, function(message, channel){
+          if(message.mentions.users.first() || message.mentions.roles.first()){
+            if(!message.author.bot) {
+              const usersMentioned = message.mentions.users;
+              if (usersMentioned.first()?.id === message.author.id && usersMentioned.size === 1) return;
+              
+                    const GhostPingEmbed = new MessageEmbed();
+                    embed.setTitle("Ghost Ping");
+                    embed.addField("Author:- ", message.author);
+                    embed.addField("Message:- ", message.content);
+                    message.channel.send(GhostPingEmbed);
+            } else if(!message.mentions.users.first() || message.mentions.roles.first()){
+              console.log(`no ping detected`)
+          }
+        }
+        })
       });
 
 Client.login(process.env.DJS_TOKEN);
