@@ -9,8 +9,9 @@ module.exports = {
         const NextToCommand = "[] next to the command name is a mandatory thing for the command to work"
         const helpEmbed = new Discord.MessageEmbed()
       .setTitle(`Help - \`\`\`${NextToCommand}\`\`\`` )
-      .addField({ name:'__Available Commands:-__', value: '\u200B'})
-	    .addFields(
+      .addFields(
+            {name:'__Available Commands:-__', value: '\u200B'},
+            { name: '\u200B', value: '\u200B' },
             { name: `__Meme Related Commands__`, value: '\u200B' },
             { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true },
             { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true },
