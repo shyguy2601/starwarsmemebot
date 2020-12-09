@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const cmd = require('./Command.js')
 const { MessageEmbed } = require('discord.js');
-const moment = require('moment')
+const Client = new Discord.Client();
+
+const moment = require('moment');
+const utils = require('utils');
 const flags = {
 	DISCORD_EMPLOYEE: 'Discord Employee',
 	DISCORD_PARTNER: 'Discord Partner',
@@ -47,7 +50,7 @@ module.exports = {
         `**> Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
         `**> Server Join Date:** ${moment(member.joinedAt).format('LL LTS')}`,
         `**> Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
-        `**> Roles [${roles.length}]:** ${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.client.utils.trimArray(roles) : 'None'}`,
+        `**> Roles [${roles.length}]:** ${roles.length < 10 ? roles.join(', ') : roles.length > 10 ? this.Client.utils.trimArray(roles) : 'None'}`,
         `\u200b`
     ]);
         return message.channel.send(embed);
