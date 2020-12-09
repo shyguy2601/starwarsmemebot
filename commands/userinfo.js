@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const cmd = require('./Command.js')
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
