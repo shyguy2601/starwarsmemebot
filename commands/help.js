@@ -8,8 +8,8 @@ module.exports = {
         
         const NextToCommand = "[] next to the command name is a mandatory thing for the command to work"
         const helpEmbed = new Discord.MessageEmbed()
-      .setTitle('Available Commands:- ')
-      .setAuthor(`Help -`,"```" +`${NextToCommand} `+"```")
+      .setAuthor('Available Commands:- ')
+      .setTitle(`Help -`,"```" +`${NextToCommand} `+"```")
 	    .addFields(
             { name: 'Meme Related Commands', value: '\u200B' },
             { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true },
