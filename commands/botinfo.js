@@ -19,7 +19,7 @@ module.exports = {
     execute: (message, args) => {
     const core = os.cpus()[0];
     const embed = new Discord.MessageEmbed()
-        .setThumbnail(this.client.user.displayAvatarURL())
+        .setThumbnail(this.client.displayAvatarURL())
         .setColour(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
             `**> Client:** ${this.client.user.tag} (${this.client.user.id})`,
@@ -45,7 +45,7 @@ module.exports = {
             `\u3000 Used: ${this.client.utils.formatBytes(process.memoryUsage().heapUsed)}`,
         ])
         .setTimestamp()
-
+        
         message.channel.send(embed);
     }
 };
