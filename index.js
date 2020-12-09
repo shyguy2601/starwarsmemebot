@@ -40,6 +40,7 @@ Client.once('ready', () => {
           if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
           
                 const GhostPingEmbed = new MessageEmbed();
+                GhostPingEmbed.setColor(message.member.displayColor);
                 GhostPingEmbed.setTitle("Ghost Ping");
                 GhostPingEmbed.addField("Author:- ", message.author);
                 GhostPingEmbed.addField("Message:- ", message.content);
