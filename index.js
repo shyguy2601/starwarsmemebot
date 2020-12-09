@@ -40,9 +40,9 @@ Client.once('ready', () => {
           if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
           
                 const GhostPingEmbed = new MessageEmbed();
-                embed.setTitle("Ghost Ping");
-                embed.addField("Author:- ", message.author);
-                embed.addField("Message:- ", message.content);
+                GhostPingEmbed.setTitle("Ghost Ping");
+                GhostPingEmbed.addField("Author:- ", message.author);
+                GhostPingEmbed.addField("Message:- ", message.content);
                 message.channel.send(GhostPingEmbed);
         } else if(!message.mentions.users.first() || message.mentions.roles.first()){
           console.log(`no ping detected`)
