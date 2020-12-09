@@ -13,6 +13,7 @@ module.exports = {
           .addFields(
           { name: '__Available Commands:-__', value: '\u200B' }, 
           { name: '__Information:-__', value: '\u200B'},
+          { name: '>userinfo / >whois / >ui', value: 'Shows the information of a member'},
           { name: `__Meme Related Commands__`, value: '\u200B' }, 
           { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true }, 
           { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true }, 

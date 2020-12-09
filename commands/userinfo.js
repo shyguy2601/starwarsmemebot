@@ -31,13 +31,14 @@ module.exports = {
     const userFlags = member.user.flags.toArray();
     const embed = new MessageEmbed()
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
+    .setColor(message.member.displayColor)
     .addField('User', [
         `**> Username:** ${member.user.username}`,
         `**> Discriminator:** ${member.user.discriminator}`,
-        `**> ID:** ${member.id}`,
+        `**> UserID:** ${member.id}`,
         `**> Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
         `**> Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
-        `**> Time Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} ${moment(member.user.createdTimestamp).fromNow()}`,
+        `**> Time Account Was Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} ${moment(member.user.createdTimestamp).fromNow()}`,
         `**> Status:** ${member.user.presence.status}`,
         `**> Game:** ${member.user.presence.game || 'Not playing a game.'}`,
         `\u200b`
