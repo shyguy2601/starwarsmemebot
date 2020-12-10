@@ -19,6 +19,7 @@
     }
   },
   "dependencies": {
+    "discord-xp": "^1.1.7",
     "discord.js": "^12.5.1",
     "glob": "^7.1.6",
     "moment": "^2.29.1",
