@@ -12,8 +12,8 @@ const verificationLevels = {
 	NONE: 'None',
 	LOW: 'Low',
 	MEDIUM: 'Medium',
-	HIGH: '(╯°□°）╯︵ ┻━┻',
-	VERY_HIGH: '┻━┻ ﾐヽ(ಠ益ಠ)ノ彡┻━┻'
+	HIGH: 'High',
+	VERY_HIGH: 'Very High'
 };
 
 const regions = {
@@ -48,10 +48,10 @@ module.exports = {
 			.addField('General', [
 				`**❯ Name:** ${message.guild.name}`,
 				`**❯ ID:** ${message.guild.id}`,
-				//`**❯ Owner:** ${message.guild.owner.user.tag} (${message.guild.ownerID})`,
 				`**❯ Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`,
-				`**❯ Explicit Filter:** ${filterLevels[message.guild.explicitContentFilter]}`,
-				`**❯ Time Created:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`,
+                `**❯ Explicit Filter:** ${filterLevels[message.guild.explicitContentFilter]}`,
+                `**❯ Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`,
+                `**❯ Time Created:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`,
 				'\u200b'
 			])
 			.addField('Statistics', [
@@ -59,14 +59,14 @@ module.exports = {
 				`**❯ Emoji Count:** ${emojis.size}`,
 				`**❯ Regular Emoji Count:** ${emojis.filter(emoji => !emoji.animated).size}`,
 				`**❯ Animated Emoji Count:** ${emojis.filter(emoji => emoji.animated).size}`,
-				`**❯ Member Count:** ${message.guild.memberCount}`,
+				`**❯ Member Count:** ${message.guild.memberCount}`,])
+			.addField('\u200b',[
 				`**❯ Humans:** ${members.filter(member => !member.user.bot).size}`,
 				`**❯ Bots:** ${members.filter(member => member.user.bot).size}`,
 				`**❯ Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`,
 				`**❯ Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`,
 				`**❯ Boost Count:** ${message.guild.premiumSubscriptionCount || '0'}`,
-				'\u200b'
-			])
+				'\u200b'])
 			.addField(`Roles`, [`**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,])
             
 			.setTimestamp();
