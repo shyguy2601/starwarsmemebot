@@ -47,6 +47,9 @@ Client.once('ready', () => {
                 GhostPingEmbed.addField("Message:- ", message.content);
                 GhostPingEmbed.setColor(message.member.displayColor);
                 message.channel.send(GhostPingEmbed);
+                if (message.guild.id == '396021514740301825'){
+                  message.guild.channels.cache.find(c => c.name === `🤖-bot-commands`).send(GhostPingEmbed)
+                }    
         } else if(!message.mentions.users.first() || message.mentions.roles.first()){
           console.log(`no ping detected`)
       }
@@ -65,9 +68,9 @@ Client.once('ready', () => {
         if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
-        if (message.content == `pls meme` || message.content==`Pls meme`){
+        /*if (message.content == `pls meme` || message.content==`Pls meme`){
             message.reply('***Pls meme is disabled use >meme instead***')
-        }
+        }*/
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
         if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
