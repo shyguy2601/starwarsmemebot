@@ -38,7 +38,7 @@ module.exports = {
                         .setURL(res.permalink)
                         .setImage(res.image)
                         .setTimestamp()
-                        .setFooter(`Requested by ${message.author.username}`)
+                        .setFooter(`Requested by ${message.author.username}. Please note that some of these memes will keep loading, this due to an issue with the api, which i cannot fix, so just do >ramm or >rickandmortymeme again :)`)
                     message.channel.send(embed);
                 });
             });
