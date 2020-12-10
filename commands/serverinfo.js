@@ -48,7 +48,7 @@ module.exports = {
 			.addField('General', [
 				`**❯ Name:** ${message.guild.name}`,
 				`**❯ ID:** ${message.guild.id}`,
-				`**❯ Owner:** ${message.guild.owner.user.tag} (${message.guild.ownerID})`,
+				//`**❯ Owner:** ${message.guild.owner.user.tag} (${message.guild.ownerID})`,
 				`**❯ Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`,
 				`**❯ Explicit Filter:** ${filterLevels[message.guild.explicitContentFilter]}`,
 				
