@@ -70,10 +70,7 @@ Client.once('ready', () => {
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
 
-        if(message.content == '0_o'){
-          message.channel.send('EWWWWWWWWWWWW Gross');
-        }
-        if (message.content == `<@!783629275546648577> prefix`){
+       if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
         /*if (message.content == `pls meme` || message.content==`Pls meme`){
