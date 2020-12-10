@@ -18,6 +18,7 @@ module.exports = {
           //{ name: '>botinfo / >bi / >info', value: 'Shows the information of the bot', inline: true},
           { name: `__Meme Related Commands__`, value: '\u200B' }, 
           { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true }, 
+          { name: '>rickandmortymeme / >ramm', value: 'Get a random rick and morty meme from reddit', inline: true }, 
           { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true }, 
           { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true })
           .setTimestamp()
