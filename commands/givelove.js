@@ -7,7 +7,7 @@ module.exports = {
       const prefix = ">";
       const member = message.member;
     const userToLove = message.mentions.members.first() || message.guild.members.get(args[1]);
-  message.channel.send(`${member.user.username} kissed ${userToLove}`);
+  message.channel.send(`${message.author.username} kissed ${userToLove}`);
 
   }
 }
