@@ -51,7 +51,6 @@ module.exports = {
 				//`**❯ Owner:** ${message.guild.owner.user.tag} (${message.guild.ownerID})`,
 				`**❯ Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`,
 				`**❯ Explicit Filter:** ${filterLevels[message.guild.explicitContentFilter]}`,
-				
 				`**❯ Time Created:** ${moment(message.guild.createdTimestamp).format('LT')} ${moment(message.guild.createdTimestamp).format('LL')} ${moment(message.guild.createdTimestamp).fromNow()}`,
 				'\u200b'
 			])
