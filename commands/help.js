@@ -14,6 +14,7 @@ module.exports = {
           { name: '__Available Commands:-__', value: '\u200B' }, 
           { name: '__Information:-__', value: '\u200B'},
           { name: '>userinfo / >whois / >ui', value: 'Shows the information of a member', inline: true},
+          { name: '>serverinfo / >si', value: 'Shows the information of the server', inline: true},
           //{ name: '>botinfo / >bi / >info', value: 'Shows the information of the bot', inline: true},
           { name: `__Meme Related Commands__`, value: '\u200B' }, 
           { name: '>meme / >m', value: 'Get a random meme from reddit', inline: true }, 
