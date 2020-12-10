@@ -62,11 +62,13 @@ module.exports = {
 				`**❯ Member Count:** ${message.guild.memberCount}`,])
 			.addField('\u200b',[
 				`**❯ Humans:** ${members.filter(member => !member.user.bot).size}`,
-				`**❯ Bots:** ${members.filter(member => member.user.bot).size}`,
-				`**❯ Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`,
+				`**❯ Bots:** ${members.filter(member => member.user.bot).size}`,])
+			.addField('\u200b',[
+                `**❯ Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`,
 				`**❯ Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`,
 				`**❯ Boost Count:** ${message.guild.premiumSubscriptionCount || '0'}`,
-				'\u200b'])
+				'\u200b'
+            ])	
 			.addField(`Roles`, [`**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,])
             
 			.setTimestamp();
