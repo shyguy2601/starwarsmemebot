@@ -32,6 +32,11 @@ Client.once('ready', () => {
     }, 10000);
     });
 
+
+
+
+
+
     Client.on(`messageDelete`, function(message, channel){
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
@@ -53,37 +58,7 @@ Client.once('ready', () => {
       }
     }
     })
-    //leveling
-    if(message.guild.id == '396021514740301825'){
-      const Levels = require('discord-xp');
-      Levels.setURL(mongodb)
-      if(!message.guild) return;
-      if (message.author.bot) return;
-      
-      const randomXp = Math.floor(Math.random() * 9) + 1;
-      const hasLeveledUp = await Levels.appendXp(message.author.id, message.guild.id, randomXp);
-      
-      if(hasLeveledUp){
-        const user = await Levels.fetch(message.author.id, message.guild.id);
-        message.channel.send(`You leveled up to ${user.level}, nice one`)
-      }
-      
-      if(command === "rank"){
-        const user = await Levels.fetch(message.author.id, message.guild.id);
-        message.channel.send(`Your level is ${user.level}`);
-      }
-      if(command === "leaderboard" || command === "lb"){
-        const rawLeaderboard = await Levels.fetchLeaderboard(message.guild.id, 5);
-        if (rawLeaderboard.length < 1) return message.channel.send('Nobody is on the leaderboard yet');
-      
-        const leaderboard = Levels.computeLeaderboard(bot, rawLeaderboard);
-        const lb = leaderboard.map(e => `${e.position}- ${e.username}#${e.discriminator}\nLevel: ${e.level}\nXP: ${e.xp.toLocaleString()}`)
-      
-        message.channel.send(`${lb.join("\n\n")}`);
-      }
-
-    }
-
+    
 
     Client.on('message', message => {
 
