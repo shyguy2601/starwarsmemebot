@@ -76,7 +76,7 @@ module.exports = {
 				`**❯ Offline:** ${members.filter(member => member.presence.status === 'offline').size}`,
 				'\u200b'
 			])
-            .addField(`**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,)
+            .addField(`Roles`, [`**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,])
             
 			.setTimestamp();
 		message.channel.send(embed);
