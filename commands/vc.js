@@ -16,7 +16,7 @@ module.exports = {
         .setColor(0x00F5FF)
         .setTitle('Viginity Check')
         .setDescription('React with ✅ if you are a virgin')
-        message.channel.send(AskForImageEmbed)
+        message.channel.send(vcheck)
         .then(embed => {
             embed.react('✅');
         })
