@@ -1,4 +1,5 @@
-const Me
+const Discord = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'simp',
     description: "this is a simp command",
