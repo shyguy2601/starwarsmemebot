@@ -69,9 +69,7 @@ Client.once('ready', () => {
         const args = message.content.trim().split(/ +/g);
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
-      if(message.content.includes(`<@!704708159901663302>`)){
-        message.channel.send('Shyguy has gone to bed and will be back online tomorrow after he gets back from work');
-      }
+      
        if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
         }
