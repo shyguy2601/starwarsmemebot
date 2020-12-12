@@ -21,7 +21,10 @@ module.exports = {
           { name: '>rickandmortymeme / >ramm', value: 'Get a random rick and morty meme from reddit', inline: true }, 
           { name: '>minecraftmeme / >mcm', value: 'Get a random minecraft meme from reddit', inline: true }, 
           { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true }, 
-          { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true })
+          { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true },
+          { name: '__Nitro:-__', value: '\u200B' }, 
+          { name: `>claim`, value: `Claim your free $9.99 discord nitro!`, inline: true})
+          
           .setTimestamp()
           .setFooter(`Requested by ${message.author.username}`);
 
