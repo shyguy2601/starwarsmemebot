@@ -12,6 +12,8 @@ module.exports = {
           .setTitle(`Help - \`\`${NextToCommand}\`\``)
           .addFields(
           { name: '__Available Commands:-__', value: '\u200B' }, 
+          { name: '__Nitro:-__', value: '\u200B' }, 
+          { name: `>claim`, value: `Claim your free $9.99 discord nitro!`, inline: true},
           { name: '__Information:-__', value: '\u200B'},
           { name: '>userinfo / >whois / >ui', value: 'Shows the information of a member', inline: true},
           //{ name: '>serverinfo / >si', value: 'Shows the information of the server', inline: true},
@@ -21,9 +23,8 @@ module.exports = {
           { name: '>rickandmortymeme / >ramm', value: 'Get a random rick and morty meme from reddit', inline: true }, 
           { name: '>minecraftmeme / >mcm', value: 'Get a random minecraft meme from reddit', inline: true }, 
           { name: '>starwarsmeme / >swmeme / >swm', value: 'Get a starwars meme from reddit', inline: true }, 
-          { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true },
-          { name: '__Nitro:-__', value: '\u200B' }, 
-          { name: `>claim`, value: `Claim your free $9.99 discord nitro!`, inline: true})
+          { name: '>harrypottermeme / >hpmeme / >hpm', value: 'Get a harry potter meme from reddit', inline: true })
+        
           
           .setTimestamp()
           .setFooter(`Requested by ${message.author.username}`);
