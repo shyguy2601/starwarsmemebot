@@ -9,7 +9,7 @@ module.exports = {
     const ImLonely = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
     .setTitle(`${message.author.username} is sad and lonely and needs some love`)
-    .setDescription(`Pls give ${message.author.username} daily dose of love and attention`)
+    .setDescription(`Pls give ${message.author.username} their daily dose of love and attention`)
 
   message.channel.send(ImLonely);
   }
