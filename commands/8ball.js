@@ -31,7 +31,7 @@ module.exports = {
       const Discord = require('discord.js');
       const prefix = ">";
       
-      return msg.reply(question.join(' ').endsWith('?') ?
+      return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
       '🎱 That doesn\'t seem to be a question, please try again!');
   
