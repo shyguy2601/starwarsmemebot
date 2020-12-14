@@ -27,7 +27,7 @@ const answers = [
 module.exports = {
     name: '8ball',
     description: "this is an 8ball command",
-    execute(message, args){
+    execute(message, ...question){
       const Discord = require('discord.js');
       const prefix = ">";
       
