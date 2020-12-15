@@ -72,7 +72,7 @@ Client.once('ready', () => {
       
        if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
-        }
+       }
         /*if (message.content == `pls meme` || message.content==`Pls meme`){
             message.reply('***Pls meme is disabled use >meme instead***')
         }*/

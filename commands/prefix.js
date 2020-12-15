@@ -4,7 +4,8 @@ module.exports = {
     execute(message, args){
       const Discord = require('discord.js');
       const prefix = ">";
-
+      if (message.content == `<@!783629275546648577> prefix`){
   message.channel.send(`My prefix is ${prefix}`)
+      }
   }
 }
