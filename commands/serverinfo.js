@@ -56,16 +56,18 @@ module.exports = {
 			.addField('Statistics', [
 				`**❯ Role Count:** ${roles.length}`,
 				`**❯ Emoji Count:** ${emojis.size}`,
+				`**❯ Regular Emoji Count:** ${emojis.filter(emoji => !emoji.animated).size}`,
+				`**❯ Animated Emoji Count:** ${emojis.filter(emoji => emoji.animated).size}`,
 				`**❯ Member Count:** ${message.guild.memberCount}`,])
 			.addField('\u200b',[
 				`**❯ Humans:** ${members.filter(member => !member.user.bot).size}`,
 				`**❯ Bots:** ${members.filter(member => member.user.bot).size}`,])
 			.addField('\u200b',[
                 `**❯ Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`,
+				`**❯ Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`,
+				`**❯ Boost Count:** ${message.guild.premiumSubscriptionCount || '0'}`,
 				'\u200b'
-			])	
-			.addField(`Roles`, [`**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,])
-            
+            ])	
 			.setTimestamp();
 		message.channel.send(embed);
 	}
