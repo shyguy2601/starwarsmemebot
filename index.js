@@ -23,6 +23,7 @@ const activities_list = [
   //{ text: "I'm basically just a meme bot right now", type: 0},
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
+  { text: "9 Days until Christmas!", type: 0},
   { text: "you sleep 0_o", type: 3},
   ]
 
