@@ -14,7 +14,7 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
-            `**> Commands:** ${this.client.commands.size}`,
+            `**> Commands:** 21`,
             `**> Servers:** ${this.client.guilds.cache.size.toLocalString()}`,
             `**> Users:** ${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocalString()}`,
             `**> Channels:** ${this.client.channels.cache.size.toLocalString()}`,
