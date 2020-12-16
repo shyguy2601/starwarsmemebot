@@ -5,11 +5,10 @@ module.exports = {
   name: 'help',
   description: "this is a help command",
   execute(message, args) {
-      const Discord = require('discord.js');
+      
       const prefix = ">";
-      const { MessageEmbed } = require('discord.js');
-      const NextToCommand = "[] next to the command name is a mandatory thing for the command to work"
-      const insultExample = ">insult [ping the user you want to insult]"
+      
+   
 
       const embed = new Discord.MessageEmbed()
           .addField('`Fun Commands`', '😂', true)
