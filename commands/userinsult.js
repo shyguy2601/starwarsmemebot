@@ -26,6 +26,10 @@ module.exports = {
                 });
                 resp.on('end', () => {
                     const taggedUser = message.mentions.users.first();
+                    if(taggedUser.id == "704708159901663302") {
+                        message.channel.send("Sorry but i cant slap my owner") 
+                        return;
+                    }else if(!taggedUser.id != "704708159901663302")
                     message.channel.send(taggedUser.username + " " + data.toLowerCase() + ".");
                 });
             }).on("error", (err) => {
