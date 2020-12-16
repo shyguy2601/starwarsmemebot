@@ -20,7 +20,6 @@ module.exports = {
             `**> Channels:** ${client.channels.cache.size}`,
             `**> Creation Date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYYY HH:mm:ss')}`,
             `**> Node.js Version:** ${process.version}`,
-            `**> Version:** v${version}`,
             `**> Discord.js Version:** v${djsversion}`,
             `**> Bot Creator:** ShyGuy#5504`,
             '\u200B'
