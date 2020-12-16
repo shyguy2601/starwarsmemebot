@@ -32,7 +32,7 @@ Client.once('ready', () => {
   console.log('Online!');
   setInterval(() => {
       if (i > activities_list.length) { i = 0 }
-      Client.user.setPresence({ activity: { name: activities_list[i].text, type: activities_list[i].type } });
+      Client.user.setPresence({ activity: { name: activities_list[i], type: activities_list[i].type } });
       i++; 
   }, 10000);
   });
