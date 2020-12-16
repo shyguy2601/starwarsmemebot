@@ -19,7 +19,7 @@ module.exports = {
         message.channel.send(embed).then((msg) => {
             msg.react('🏠').then(() => msg.react('😂')).then(() => msg.react('💻')).then(() => msg.react('🧰)')).then(() => {
                 const filter = (reaction, user) => {
-                    return ['🏠', '😂', '💻', '🧰)'].includes(reaction.emoji.name) && user.id === message.author.id;
+                    return ['🏠', '😂', '💻', '🔨'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
                 const collector = msg.createReactionCollector(filter, { time: 30000 });
                 collector.on('collect', (reaction, user) => {
