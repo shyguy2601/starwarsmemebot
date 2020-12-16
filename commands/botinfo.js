@@ -14,10 +14,10 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
-            `**> Commands:** 21`,
-            `**> Servers:** ${this.client.guilds.cache.size.toLocalString()}`,
-            `**> Users:** ${this.client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocalString()}`,
-            `**> Channels:** ${this.client.channels.cache.size.toLocalString()}`,
+            `**> Commands:** ${client.commands.size}`,
+            `**> Servers:** ${client.guilds.cache.size.toLocalString()}`,
+            `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocalString()}`,
+            `**> Channels:** ${client.channels.cache.size.toLocalString()}`,
             `**> Creation Date:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYYY HH:mm:ss')}`,
             `**> Node.js Version:** ${process.version}`,
             `**> Version:** v${version}`,
@@ -25,7 +25,7 @@ module.exports = {
             `**> Bot Creator:** ShyGuy#5504`,
             '\u200B'
         ])
-        addField('System', [
+        .addField('System', [
             `**> Platform:** ${process.platform}`,
             `**> Uptime:** ${ms(os.uptime() * 1000, {long: true})}`,
             
