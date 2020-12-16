@@ -13,9 +13,9 @@
     ],
     
     "information": [
-        { "name": ">userinfo / >ui / >whois", "description": "Get's information on a user" },
-        { "name": ">serverinfo / >si ", "description": "Get's information about the server" },
-        { "name": ">botinfo / >bi ", "description": "Get's information about the bot" }
-        ]
-    
+        { "name": ">userinfo / >ui / >whois", "description": "Get's information on a user" }
+        ],
+    "utilities": [
+        { "name": ">message @ShyGuy <message you want to send>", "description": "Messages the bot owner"}
+    ]
 }
