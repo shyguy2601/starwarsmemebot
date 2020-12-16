@@ -41,7 +41,7 @@ module.exports = {
                         help["information"].forEach(command => {
                             embed.addField(command.name, command.description)
                         });
-                    } else if(reaction.emoji.name === '🧰)'){
+                    } else if(reaction.emoji.name === '🧰'){
                       help["utilities"].forEach(command =>{
                         embed.addField(command.name, command.description)
                       }
