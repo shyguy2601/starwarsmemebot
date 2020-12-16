@@ -8,7 +8,7 @@ const ms = require('ms');
 module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
-    aliases: ['bi', 'info'],
+    aliases: ['bi', 'botinfo'],
     execute: (message, args) => {
     const core = os.cpus()[0];
     const embed = new Discord.MessageEmbed()
