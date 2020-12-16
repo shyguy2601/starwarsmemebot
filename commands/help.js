@@ -43,12 +43,12 @@ module.exports = {
                     msg.edit(embed);
                     try { reaction.users.remove(message.author.id); } catch {}
                 });
-                collector.on('end', collected => {
+                /*collector.on('end', collected => {
                     try {
                         msg.delete();
                         message.react('👌');
                     } catch {}
-                })
+                })*/
             })
         })
     }
