@@ -32,7 +32,7 @@ Client.once('ready', () => {
     Client.user.setPresence({ activity: { name: activities_list[i].text, type: activities_list[i].type } });
     i++; 
 }, 10000);
-    
+}); 
 
 
 
