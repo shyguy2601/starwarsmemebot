@@ -1,7 +1,7 @@
 module.exports = {
-    name: 'virginitycheck',
+    name: 'vc',
     description: "this is a viginity check command",
-    aliases: ['vc'],
+    aliases: ['virginitycheck'],
     execute(message, args){
       const Discord = require('discord.js');
       const prefix = ">";

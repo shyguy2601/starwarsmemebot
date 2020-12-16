@@ -7,10 +7,17 @@
         { "name": ">m / >meme", "description": "Sends a meme" },
         { "name": ">swm / >starwarsmeme", "description": "Sends a Star Wars meme"},
         { "name": ">hpm / >harrypottermeme", "description": "Sends a Harry Potter meme"},
-        { "name": ">ramm / >rickandmortymeme", "description": "Sends a Rick and Morty meme"},
-        { "name": ">mm / >minecraftmeme", "description": "Sends Minecraft meme"}
-
+        { "name": ">ramm / >rickandmortymeme", "description": "Sends a Rick and Morty meme"}
     ],
+    "extra": [
+        { "name": ">kiss/ >gl", "description": "Kisses the mentioned user"},
+        { "name": ">makebaby / >mb", "description": "Make a baby with another user"},
+        { "name": ">simp", "description": "SIMP ALERT"},
+        { "name": ">sus <Mention the User>", "description": "Use this if a user is acting sus"},
+        { "name": ">vc / virginitycheck", "description": "This one is pretty self explanatory"} 
+    ],
+
+    
     
     "information": [
         { "name": ">userinfo / >ui / >whois", "description": "Get's information on a user" }
