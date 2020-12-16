@@ -19,7 +19,7 @@ const activities_list = [
     "Prefix is > , do >help",
     //"I'm basically just a meme bot right now",
     //">help",
-    "Developed by Microsoft PowerPoint"]
+    "Developed by ShyGuy#5504"]
 
     let i = 0;
 
