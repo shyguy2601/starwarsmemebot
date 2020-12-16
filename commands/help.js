@@ -5,7 +5,7 @@ module.exports = {
     name: 'help',
     description: "this is a help command",
     execute(message, args) {
-
+        const member = message.author()
         const prefix = ">";
 
         const embed = new Discord.MessageEmbed()
