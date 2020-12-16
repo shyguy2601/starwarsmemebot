@@ -1,16 +1,9 @@
-/*const Discord = require('discord.js');
+const Discord = require('discord.js');
 const { MessageEmbed, version: djsversion } = require('discord.js');
 const version = require('../package.json');
 const { utc } = require('moment');
 const os = require('os');
 const ms = require('ms');
-
-function formatBytes(bytes){
-    if (bytes === 0) return '0 Bytes';
-    const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-    const i = Math.floor(math.log(bytes) / Math.log(1024));
-    return `${parseFloat((bytes / math.pow(1024, i)).toFixed(2))} ${sizes[i]}` }
-
 
 module.exports = {
     name: 'botinfo',
@@ -30,21 +23,16 @@ module.exports = {
             `**> Node.js Version:** ${process.version}`,
             `**> Version:** v${version}`,
             `**> Discord.js Version:** v${djsversion}`,
+            `**> Bot Creator:** ShyGuy#5504`,
             '\u200B'
         ])
         addField('System', [
             `**> Platform:** ${process.platform}`,
             `**> Uptime:** ${ms(os.uptime() * 1000, {long: true})}`,
-            `**> CPU:** `,
-            `\u3000 Cores: ${os.cpus().length}`,
-            `\u3000 Model: ${core.model}`,
-            `\u3000 Speed: ${core.speed}MHz`,
-            `**> Memory:** `,
-            `\u3000 Total: ${this.client.utils.formatBytes(process.memoryUsage().heapTotal)}`,
-            `\u3000 Used: ${this.client.utils.formatBytes(process.memoryUsage().heapUsed)}`,
+            
         ])
         .setTimestamp()
         
         message.channel.send(embed);
     }
-};*/
+};
