@@ -12,7 +12,7 @@ module.exports = {
             .addField('`Fun Commands `', '😂', true)
             .addField('`Information Commands `', '💻', true)
             .setTimestamp()
-            .setFooter(`Requested by $ { message.author.username }`)
+            .setFooter(`Requested by ${message.author.username}`)
             .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
         message.channel.send(embed).then((message) => {
