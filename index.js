@@ -18,7 +18,7 @@ for(const file of commandFiles){
 }
 
 
-/*const activities_list = [ 
+const activities_list = [ 
   //{ text: "Prefix is > , do >help", type: 0},
   //{ text: "I'm basically just a meme bot right now", type: 0},
   { text: ">help", type: 0},
@@ -36,7 +36,7 @@ Client.once('ready', () => {
       i++; 
   }, 10000);
   });
-    */
+    
 
 
 
