@@ -14,7 +14,8 @@
     
     "information": [
         { "name": ">userinfo / >ui / >whois", "description": "Get's information on a user" },
-        { "name": ">serverinfo / >si ", "description": "Get's information about the server" }
+        { "name": ">serverinfo / >si ", "description": "Get's information about the server" },
+        { "name": ">botinfo / >bi ", "description": "Get's information about the bot" }
         ]
     
 }
