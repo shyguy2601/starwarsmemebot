@@ -15,17 +15,18 @@ module.exports = {
             .setFooter(`Requested by ${message.author.username}`)
             .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
-        message.channel.send(embed).then((message) => {
-            message.react('🏠').then(() => message.react('😂')).then(() => message.react('💻')).then(() => {
+        message.channel.send(embed).then((msg) => {
+            msg.react('🏠').then(() => msg.react('😂')).then(() => msg.react('💻')).then(() => {
                 const filter = (reaction, user) => {
                     return ['🏠', '😂', '💻'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
-                const collector = message.createReactionCollector(filter, { time: 30000 });
+                const collector = msg.createReactionCollector(filter, { time: 30000 });
                 collector.on('collect', (reaction, user) => {
+                    console.log("here")
                     const embed = new Discord.MessageEmbed()
                         .setTimestamp()
                         .setFooter(`Requested by ${message.author.username}`)
-                      .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
+                        .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
                     if (reaction.emoji.name === '🏠') {
                         embed.addField('`Fun Commands `', '😂', true)
@@ -39,12 +40,12 @@ module.exports = {
                             embed.addField(command.name, command.description)
                         });
                     }
-                    message.edit(embed);
+                    msg.edit(embed);
                     try { reaction.users.remove(message.author.id); } catch {}
                 });
                 collector.on('end', collected => {
                     try {
-                        message.delete();
+                        msg.delete();
                         message.react('👌');
                     } catch {}
                 })
