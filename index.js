@@ -5,8 +5,6 @@ const Client = new Discord.Client();
 const prefix = '>';
 
 const fs = require('fs');
-const daystogo = require('./commands/daystogo');
-
 Client.commands = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
