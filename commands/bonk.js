@@ -8,6 +8,10 @@ module.exports = {
       const prefix = ">";
       
     const BonkedUser = message.mentions.members.first() || message.guild.members.get(args[1]);
+    if(BonkedUser.id == "704708159901663302") {
+    message.channel.send("Sorry but i cant bonk my owner") 
+    return;
+}
     const BonkEmbed = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
     .setTitle(`${message.author.username} Bonked ${BonkedUser.user.username}!`)
