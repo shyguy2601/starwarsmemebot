@@ -16,7 +16,7 @@ for(const file of commandFiles){
 
 }
 
-Client.user.setPresence({ activity: { name: daystogoargs.join(" "), type: 0 } });
+
 const activities_list = [ 
   //{ text: "Prefix is > , do >help", type: 0},
   //{ text: "I'm basically just a meme bot right now", type: 0},
