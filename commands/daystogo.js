@@ -1,3 +1,4 @@
+const Client = new Discord.Client();
 module.exports ={
     name: "daystogo",
     description: "Changes days to go activity status",
