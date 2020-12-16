@@ -31,8 +31,8 @@ let messagetosend = args.slice(2).join(" ");
         .setDescription(`${message.author.username} from the server ***${message.guild.name}*** said ${messagetosend}`);
         usertomessage.send(usermessageembed)
         .then(embed => {
-          embed.react('👍')
-        .then(() => embed.react('👎'));
+          embed.react('✉️')
+       
         
         
         message.channel.send(userwasmessagedembed);
