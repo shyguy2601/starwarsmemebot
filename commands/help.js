@@ -22,6 +22,7 @@ message.channel.send(embed).then((message) => {
     };
     const collector = message.createReactionCollector(filter, { time: 30000 });
     collector.on('collect', (reaction, user) => {
+      console.log('Hello')
       const embed = new Discord.MessageEmbed()
       .addField('`Fun Commands`', '😂', true)
       .addField('`Information Commands`', '💻', true)
@@ -43,8 +44,12 @@ message.channel.send(embed).then((message) => {
         try { reaction.users.remove(message.author.id); } catch {}
       }
     })
-    
-    
+    collector.on('end', collected => {
+      try{
+        message.delete();
+        message.react('👌');
+      } catch {}
+    })
   })
 })
   }
