@@ -32,7 +32,7 @@ module.exports = {
                     if (reaction.emoji.name === '🏠') {
                         embed.addField('`Fun Commands `', '😂', true)
                         embed.addField('`Information Commands `', '💻', true)
-                        embed.addField('`Utilities`', '🧰)', true)
+                        embed.addField('`Utilities`', '🔨', true)
                     } else if (reaction.emoji.name === '😂') {
                         help["fun"].forEach(command => {
                             embed.addField(command.name, command.description)
@@ -41,7 +41,7 @@ module.exports = {
                         help["information"].forEach(command => {
                             embed.addField(command.name, command.description)
                         });
-                    } else if(reaction.emoji.name === '🧰'){
+                    } else if(reaction.emoji.name === '🔨'){
                       help["utilities"].forEach(command =>{
                         embed.addField(command.name, command.description)
                       }
