@@ -17,7 +17,7 @@ module.exports = {
             //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
         message.channel.send(embed).then((msg) => {
-            msg.react('🏠').then(() => msg.react('😂')).then(() => msg.react('💻')).then(() => msg.react('🧰)')).then(() => {
+            msg.react('🏠').then(() => msg.react('😂')).then(() => msg.react('💻')).then(() => msg.react('🔨')).then(() => {
                 const filter = (reaction, user) => {
                     return ['🏠', '😂', '💻', '🔨'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
