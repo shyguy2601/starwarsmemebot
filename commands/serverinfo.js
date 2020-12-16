@@ -47,7 +47,7 @@ module.exports = {
 			.addField('General', [
 				`**❯ Name:** ${message.guild.name}`,
 				`**❯ ID:** ${message.guild.id}`,
-				`**❯ Server Owner:** bollocks`,
+				`**❯ Server Owner:** ${message.guild.owner}`,
 				`**❯ Boost Tier:** ${message.guild.premiumTier ? `Tier ${message.guild.premiumTier}` : 'None'}`,
                 `**❯ Explicit Filter:** ${filterLevels[message.guild.explicitContentFilter]}`,
                 `**❯ Verification Level:** ${verificationLevels[message.guild.verificationLevel]}`,
