@@ -95,7 +95,7 @@ Client.once('ready', () => {
           
         } if(!command) return;
       
-        command.execute(message, args);
+        command.execute(message, args, client);
 
         
       });

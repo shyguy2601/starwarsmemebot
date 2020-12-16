@@ -9,7 +9,7 @@ module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
     aliases: ['bi', 'botinfo'],
-    execute: (message, args) => {
+    execute: (message, args, client) => {
     const core = os.cpus()[0];
     const embed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor || 'BLUE')
