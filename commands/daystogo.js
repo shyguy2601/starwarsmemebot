@@ -6,7 +6,7 @@ module.exports ={
     execute(message, args){
     let daystogo = args.slice(1).join(" ");
 if(daystogo){
-Client.user.setPresence({ activity: { name: args.join(" "), type: 0 } });
+Client.user.setPresence({ activity: { name: args.join(" "), type: 0 }});
 }
       
     }
