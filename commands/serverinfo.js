@@ -67,7 +67,8 @@ module.exports = {
 				`**❯ Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`,
 				`**❯ Boost Count:** ${message.guild.premiumSubscriptionCount || '0'}`,
 				'\u200b'
-            ])	
+			])	
+			
 			.setTimestamp();
 		message.channel.send(embed);
 	}
