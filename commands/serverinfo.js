@@ -60,9 +60,6 @@ module.exports = {
 				`**❯ Animated Emoji Count:** ${emojis.filter(emoji => emoji.animated).size}`,
 				`**❯ Member Count:** ${message.guild.memberCount}`,])
 			.addField('\u200b',[
-				`**❯ Humans:** ${members.filter(member => !member.user.bot).size}`,
-				`**❯ Bots:** ${members.filter(member => member.user.bot).size}`,])
-			.addField('\u200b',[
                 `**❯ Text Channels:** ${channels.filter(channel => channel.type === 'text').size}`,
 				`**❯ Voice Channels:** ${channels.filter(channel => channel.type === 'voice').size}`,
 				`**❯ Boost Count:** ${message.guild.premiumSubscriptionCount || '0'}`,
