@@ -1,4 +1,4 @@
-const answers = [
+/*const answers = [
 	'Maybe.',
 	'Certainly not.',
 	'I hope so.',
@@ -36,4 +36,4 @@ module.exports = {
       '🎱 That doesn\'t seem to be a question, please try again!');
   
   }
-}
+}*/
