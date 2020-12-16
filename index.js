@@ -25,6 +25,7 @@ const activities_list = [
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: "9 Days until Christmas!", type: 0},
   { text: "you sleep 0_o", type: 3},
+  { text: "SAVE ME", type: 0}
   ]
 
   let i = 0;
