@@ -9,6 +9,9 @@ module.exports = {
         const prefix = ">";
 
         const embed = new Discord.MessageEmbed()
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
+            .setColor(message.member.displayColor)
+            .setTitle('Help')
             .addField('`Fun Commands `', '😂', true)
             .addField('`More Fun Commands `', '😭', true)
             .addField('`Information Commands `', '💻', true)
@@ -26,6 +29,8 @@ module.exports = {
                 collector.on('collect', (reaction, user) => {
                     console.log("here")
                     const embed = new Discord.MessageEmbed()
+                        .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
+                        .setColor(message.member.displayColor)
                         .setTimestamp()
                         .setFooter(`Requested by ${message.author.username}`)
                         //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
