@@ -15,9 +15,9 @@ module.exports = {
         .setColor(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
             `**> Commands:** ${client.commands.size}`,
-            `**> Servers:** ${client.guilds.cache.size.toLocalString()}`,
-            `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0).toLocalString()}`,
-            `**> Channels:** ${client.channels.cache.size.toLocalString()}`,
+            `**> Servers:** ${client.guilds.cache.size}`,
+            `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}`,
+            `**> Channels:** ${client.channels.cache.size}`,
             `**> Creation Date:** ${utc(this.client.user.createdTimestamp).format('Do MMMM YYYYY HH:mm:ss')}`,
             `**> Node.js Version:** ${process.version}`,
             `**> Version:** v${version}`,
