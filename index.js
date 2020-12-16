@@ -16,22 +16,23 @@ for(const file of commandFiles){
 
 }
 const activities_list = [ 
-    "Prefix is > , do >help",
-    //"I'm basically just a meme bot right now",
-    //">help",
-    "Developed by ShyGuy#5504"]
+  { text: "Prefix is > , do >help", type: 0},
+  { text: "I'm basically just a meme bot right now", type: 0},
+  { text: ">help", type: 0},
+  { text: "Developed by ShyGuy#5504", type: 0},
+  { text: "you sleep", type: 3}
+]
 
-    let i = 0;
+  let i = 0;
 
 Client.once('ready', () => {
-    console.log('Online!');
-    setInterval(() => {
-        if (i > activities_list.length) { i = 0 }
-        Client.user.setActivity(activities_list[i]);
-        i++; 
-    }, 10000);
-    });
-
+  console.log('Online!');
+  setInterval(() => {
+      if (i > activities_list.length) { i = 0 }
+      Client.user.setPresence({ activity: { name: activities_list[i].text, type: activities_list[i].type } });
+      i++; 
+  }, 10000);
+  });
     
 
 
