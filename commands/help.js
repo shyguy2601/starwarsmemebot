@@ -43,12 +43,8 @@ message.channel.send(embed).then((message) => {
         try { reaction.users.remove(message.author.id); } catch {}
       }
     })
-    collector.on('end', collected => {
-      try{
-        message.delete();
-        message.react('👌');
-      } catch {}
-    })
+    
+    
   })
 })
   }
