@@ -13,7 +13,7 @@ module.exports = {
             .addField('`Information Commands `', '💻', true)
             .setTimestamp()
             .setFooter(`Requested by ${message.author.username}`)
-            .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
+            //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
         message.channel.send(embed).then((msg) => {
             msg.react('🏠').then(() => msg.react('😂')).then(() => msg.react('💻')).then(() => {
@@ -26,7 +26,7 @@ module.exports = {
                     const embed = new Discord.MessageEmbed()
                         .setTimestamp()
                         .setFooter(`Requested by ${message.author.username}`)
-                        .setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
+                        //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
                     if (reaction.emoji.name === '🏠') {
                         embed.addField('`Fun Commands `', '😂', true)
