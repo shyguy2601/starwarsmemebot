@@ -44,7 +44,7 @@ Client.once('ready', () => {
 
 
 
-    Client.on(`messageDelete`, function(message, channel){
+  Client.on(`messageDelete`, function(message, channel){
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
