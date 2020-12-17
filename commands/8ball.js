@@ -1,4 +1,4 @@
-/*const answers = [
+const answers = [
 	'Maybe.',
 	'Certainly not.',
 	'I hope so.',
@@ -30,10 +30,12 @@ module.exports = {
     execute(message, ...question){
       const Discord = require('discord.js');
       const prefix = ">";
-      
+      console.log(question)
       return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
-      '🎱 That doesn\'t seem to be a question, please try again!');
+	  '🎱 That doesn\'t seem to be a question, please try again!');
+	  
+	  
   
   }
-}*/
+}
