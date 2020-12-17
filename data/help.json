@@ -1,5 +1,6 @@
 {
     "fun": [
+        { "name": ">8ball", "description":"Ask the bot a question, (don't forget the question mark at the end!)"},
         { "name": ">insult", "description": "Insults the mentioned user" },
         { "name": ">bonk", "description": "Bonks the mentioned user" },
         { "name": ">slap", "description": "Slaps the mentioned user" },
