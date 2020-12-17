@@ -27,10 +27,9 @@ const answers = [
 module.exports = {
     name: '8ball',
     description: "this is an 8ball command",
-    execute(message, ...question){
+    execute(message, ...question, Client ){
       const Discord = require('discord.js');
       const prefix = ">";
-      console.log(`Questions values are: ${question.join(", ")}`)
       return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 	  '🎱 That doesn\'t seem to be a question, please try again!');
