@@ -27,7 +27,7 @@ const answers = [
 module.exports = {
     name: '8ball',
     description: "this is an 8ball command",
-    execute(message, ...question, Client ){
+    execute(message, question, Client ){
       const Discord = require('discord.js');
       const prefix = ">";
       return message.reply(question.join(' ').endsWith('?') ?
