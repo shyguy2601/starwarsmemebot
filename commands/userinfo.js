@@ -22,49 +22,36 @@ module.exports = {
     description: "gets information of a user",
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
-        let options = message.content.split(/ +/);
-        let member = message.mentions.members.first() 
-     
-        if (!member) {
-            if (!options[1]) {
-                return message.reply("Please mention a user!.")
-            }
-            let userId = (options[1]);
-            if (Number.isInteger(userId) == true) {
-                member = message.guild.members.cache.get(options[1]);
-            }
-        }
-    const roles = member.roles.cache    
-        .sort((a, b) => b.position - a.position)
-        .map(role => role.toString())
-        .slice(0, -1);
-    const userFlags = member.user.flags.toArray();
-    const embed = new MessageEmbed()
-    .setFooter(`Requested by ${message.author.username}`)
-    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
-    .setColor(message.member.displayColor)
-    .addField('User', [
-        `**> Username:** ${member.user.username}`,
-        `**> Discriminator:** ${member.user.discriminator}`,
-        `**> UserID:** ${member.id}`,
-        `**> Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
-        `**> Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
-        `**> Time Account Was Created:** ${moment(member.user.createdTimestamp).format('LT')} ${moment(member.user.createdTimestamp).format('LL')} ${moment(member.user.createdTimestamp).fromNow()}`,
-        //`**> Status:** ${member.user.presence.status}`,
-        //`**> Game:** ${member.user.presence.game || 'Not playing a game.'}`,
-        `\u200b`
-    ])
-    .addField('Member', [
-        `**> Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
-        `**> Server Join Date:** ${moment(member.joinedAt).format('LL LTS')}`,
-        `**> Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
-        `**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,
-       `\u200b`
-    ]);
-    message.delete()
-  .then(msg => console.log(`Deleted message from ${msg.author.username}`))
-  .catch(console.error);
-        return message.channel.send(embed);
+        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[0]) || message.guild.members.cache.find(user => user.id == args[0]);
 
+        if (!member)
+            return message.reply("Please mention a user!");
+
+        const roles = member.roles.cache
+            .sort((a, b) => b.position - a.position)
+            .map(role => role.toString())
+            .slice(0, -1);
+        const userFlags = member.user.flags.toArray();
+        const embed = new MessageEmbed()
+            .setFooter(`Requested by ${message.author.username}`)
+            .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512 }))
+            .setColor(message.member.displayColor)
+            .addField('User', [
+                `**> Username:** ${member.user.username}`,
+                `**> Discriminator:** ${member.user.discriminator}`,
+                `**> UserID:** ${member.id}`,
+                `**> Flags:** ${userFlags.length ? userFlags.map(flag => flags[flag]).join(', ') : 'None'}`,
+                `**> Avatar:** [Link to avatar](${member.user.displayAvatarURL({ dynamic: true })})`,
+                //`**> Status:** ${member.user.presence.status}`,
+                //`**> Game:** ${member.user.presence.game || 'Not playing a game.'}`,
+                `\u200b`
+            ])
+            .addField('Member', [
+                `**> Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
+                `**> Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
+                `**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,
+                `\u200b`
+            ]);
+        return message.channel.send(embed);
     }
 };
