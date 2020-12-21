@@ -23,7 +23,7 @@ module.exports = {
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
         let options = message.content.split(/ +/);
-        let member = message.mentions.users.first() 
+        let member = message.mentions.members.first() 
      
         if (!member) {
             if (!options[1]) {
