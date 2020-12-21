@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
-
+ 
 const flags = {
     DISCORD_EMPLOYEE: 'Discord Employee',
     DISCORD_PARTNER: 'Discord Partner',
@@ -22,15 +22,22 @@ module.exports = {
     description: "gets information of a user",
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
-        let options = message.content.split(/ +/);
         let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[1]) || message.guild.members.cache.find(user => user.id == args[1]);
-     
+ 
         if (!member) {
-            
-                return message.reply("Please mention a user!.")
-            
-           
+            message.guild.members.fetch(args[1]).then(mem => {
+                returnData(message, mem);
+            }).catch(() => {
+                return message.reply("Please mention a user!");
+            });
+            return message.reply("Please mention a user!");
         }
+ 
+        returnData(message, member);
+    }
+};
+ 
+function returnData(message, member) {
     const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
@@ -63,5 +70,4 @@ module.exports = {
   .catch(console.error);
         return message.channel.send(embed);
 
-    }
 };
