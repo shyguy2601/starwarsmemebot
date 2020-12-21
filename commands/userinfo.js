@@ -23,7 +23,7 @@ module.exports = {
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
         let options = message.content.split(/ +/);
-        let member = message.mentions.members.first() 
+        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[1]) || message.guild.members.cache.find(user => user.id == args[1]);
      
         if (!member) {
             if (!options[1]) {
