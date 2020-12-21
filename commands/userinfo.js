@@ -50,6 +50,10 @@ module.exports = {
         `**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,
        `\u200b`
     ]);
+    message.delete()
+  .then(msg => console.log(`Deleted message from ${msg.author.username}`))
+  .catch(console.error);
         return message.channel.send(embed);
+
     }
 };
