@@ -26,13 +26,10 @@ module.exports = {
         let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[1]) || message.guild.members.cache.find(user => user.id == args[1]);
      
         if (!member) {
-            if (!options[1]) {
+            
                 return message.reply("Please mention a user!.")
-            }
-            let userId = parseInt(options[1]);
-            if (Number.isInteger(userId) == true) {
-                member = message.guild.members.fetch(options[1]);
-            }
+            
+           
         }
     const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
