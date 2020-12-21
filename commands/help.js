@@ -17,7 +17,7 @@ module.exports = {
             .addField('`Information Commands `', '💻', true)
             .addField('`Utilities`', '🔨', true)
             .setTimestamp()
-            .setFooter(`Requested by ${message.author.username} | Special thx to macedonga#5797 for allowing me to use this layout`)
+            .setFooter(`Requested by ${message.author.username}`)
             //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
         message.channel.send(embed).then((msg) => {
@@ -32,7 +32,7 @@ module.exports = {
                         .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                         .setColor(message.member.displayColor)
                         .setTimestamp()
-                        .setFooter(`Requested by ${message.author.username} | Special thx to macedonga#5797 for allowing me to use this layout`)
+                        .setFooter(`Requested by ${message.author.username} `)
                         //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
                     if (reaction.emoji.name === '🏠') {
