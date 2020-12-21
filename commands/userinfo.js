@@ -25,7 +25,7 @@ module.exports = {
     execute: (message, args) => {
         let options = message.content.split(/ +/);
         let member = message.mentions.members.first()
-        
+        console.log(member)
         if (!member) {
             if (!options[1]) {
                 return message.reply("Please mention a user to kick!.")
@@ -35,7 +35,7 @@ module.exports = {
                 member = message.guild.members.cache.get(options[1]);
             }
         }
-    const roles = member.user.roles.cache    
+    const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
         .slice(0, -1);
@@ -56,9 +56,9 @@ module.exports = {
         `\u200b`
     ])
     .addField('Member', [
-        `**> Highest Role:** ${member.user.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
+        `**> Highest Role:** ${member.roles.highest.id === message.guild.id ? 'None' : member.roles.highest.name}`,
         `**> Server Join Date:** ${moment(member.joinedAt).format('LL LTS')}`,
-        `**> Hoist Role:** ${member.user.roles.hoist ? member.roles.hoist.name : 'None'}`,
+        `**> Hoist Role:** ${member.roles.hoist ? member.roles.hoist.name : 'None'}`,
         `**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,
        `\u200b`
     ]);
