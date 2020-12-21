@@ -24,7 +24,7 @@ module.exports = {
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
         let options = message.content.split(/ +/);
-        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.id == args[1]);
+        let member = message.mentions.members.first() 
         console.log(member)
         if (!member) {
             if (!options[1]) {
@@ -62,10 +62,10 @@ module.exports = {
         `**> Roles [${roles.length}]:** ${roles.length > 0 ? roles.join(', '): 'None'}`,
        `\u200b`
     ]);
-    message.delete()
+    /*message.delete()
   .then(msg => console.log(`Deleted message from ${msg.author.username}`))
   .catch(console.error);
-        return message.channel.send(embed);
+        return message.channel.send(embed);*/
 
     }
 };
