@@ -28,9 +28,9 @@ module.exports = {
      
         if (!member) {
             if (!options[1]) {
-                return message.reply("Please mention a user to kick!.")
+                return message.reply("Please mention a user!.")
             }
-            let userId = parseInt(options[1]);
+            let userId = (options[1]);
             if (Number.isInteger(userId) == true) {
                 member = message.guild.members.cache.get(options[1]);
             }
