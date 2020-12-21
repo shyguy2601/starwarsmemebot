@@ -23,7 +23,12 @@ module.exports = {
     description: "gets information of a user",
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
-    const member = message.mentions.members.last() || message.guild.members.cache.get(args[0]) || message.member;
+        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[0]) || message.guild.members.cache.find(user => user.id == args[0]);
+        if (!member){
+        message.channel.send("Please mention a user")
+    return;
+    }
+   
     const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
