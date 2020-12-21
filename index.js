@@ -19,7 +19,7 @@ for(const file of commandFiles){
 const activities_list = [ 
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
-  { text: "7 Days until Christmas!", type: 0},
+  { text: "4 Days until Christmas!", type: 0},
   { text: "you sleep 0_o", type: 3},
   { text: "SAVE ME", type: 0}]
 
