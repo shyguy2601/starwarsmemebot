@@ -3,19 +3,19 @@ const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 
 const flags = {
-	DISCORD_EMPLOYEE: 'Discord Employee',
-	DISCORD_PARTNER: 'Discord Partner',
-	BUGHUNTER_LEVEL_1: 'Bug Hunter (Level 1)',
-	BUGHUNTER_LEVEL_2: 'Bug Hunter (Level 2)',
-	HYPESQUAD_EVENTS: 'HypeSquad Events',
-	HOUSE_BRAVERY: 'House of Bravery',
-	HOUSE_BRILLIANCE: 'House of Brilliance',
-	HOUSE_BALANCE: 'House of Balance',
-	EARLY_SUPPORTER: 'Early Supporter',
-	TEAM_USER: 'Team User',
-	SYSTEM: 'System',
-	VERIFIED_BOT: 'Verified Bot',
-	VERIFIED_DEVELOPER: 'Verified Bot Developer'
+    DISCORD_EMPLOYEE: 'Discord Employee',
+    DISCORD_PARTNER: 'Discord Partner',
+    BUGHUNTER_LEVEL_1: 'Bug Hunter (Level 1)',
+    BUGHUNTER_LEVEL_2: 'Bug Hunter (Level 2)',
+    HYPESQUAD_EVENTS: 'HypeSquad Events',
+    HOUSE_BRAVERY: 'House of Bravery',
+    HOUSE_BRILLIANCE: 'House of Brilliance',
+    HOUSE_BALANCE: 'House of Balance',
+    EARLY_SUPPORTER: 'Early Supporter',
+    TEAM_USER: 'Team User',
+    SYSTEM: 'System',
+    VERIFIED_BOT: 'Verified Bot',
+    VERIFIED_DEVELOPER: 'Verified Bot Developer'
 };
 
 module.exports = {
@@ -24,12 +24,17 @@ module.exports = {
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
         let options = message.content.split(/ +/);
-        
-        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == options[0]) || message.guild.members.cache.find(user => user.id == options[0]);
-
-        if (!member)
-            return message.reply("Please mention a user to kick!");
-            
+        let member = message.mentions.members.first() 
+     
+        if (!member) {
+            if (!options[1]) {
+                return message.reply("Please mention a user to kick!.")
+            }
+            let userId = parseInt(options[1]);
+            if (Number.isInteger(userId) == true) {
+                member = message.guild.members.cache.get(options[1]);
+            }
+        }
     const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
