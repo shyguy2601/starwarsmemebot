@@ -31,7 +31,7 @@ module.exports = {
             }
             let userId = parseInt(options[1]);
             if (Number.isInteger(userId) == true) {
-                member = message.guild.members.cache.fetch(options[1]);
+                member = message.guild.members.fetch(options[1]);
             }
         }
     const roles = member.roles.cache    
