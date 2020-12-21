@@ -10,9 +10,9 @@ module.exports = {
    }
   
       
-    if (args[0]) {
+    if (args[1]) {
       
-      const user = getUserFromMention(args[0]);
+      const user = getUserFromMention(args[1]);
 
       if (!user) {
           return message.reply('Please use a proper mention if you want to see someone else\'s avatar.');
