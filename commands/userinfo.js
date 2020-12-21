@@ -41,6 +41,7 @@ module.exports = {
         .slice(0, -1);
     const userFlags = member.user.flags.toArray();
     const embed = new MessageEmbed()
+    .setFooter(`Requested by ${message.author.username}`)
     .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
     .setColor(message.member.displayColor)
     .addField('User', [
