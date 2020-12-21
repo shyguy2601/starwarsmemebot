@@ -24,17 +24,12 @@ module.exports = {
     aliases: ['ui', 'whois'],
     execute: (message, args) => {
         let options = message.content.split(/ +/);
-        let member = message.mentions.members.first() 
-     
-        if (!member) {
-            if (!options[1]) {
-                return message.reply("Please mention a user to kick!.")
-            }
-            let userId = parseInt(options[1]);
-            if (Number.isInteger(userId) == true) {
-                member = message.guild.members.cache.get(options[1]);
-            }
-        }
+        
+        let member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == options[0]) || message.guild.members.cache.find(user => user.id == options[0]);
+
+        if (!member)
+            return message.reply("Please mention a user to kick!");
+            
     const roles = member.roles.cache    
         .sort((a, b) => b.position - a.position)
         .map(role => role.toString())
