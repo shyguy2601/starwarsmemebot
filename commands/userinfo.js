@@ -17,7 +17,6 @@ const flags = {
     VERIFIED_BOT: 'Verified Bot',
     VERIFIED_DEVELOPER: 'Verified Bot Developer'
 };
-
 module.exports = {
     name: 'userinfo',
     description: "gets information of a user",
