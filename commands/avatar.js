@@ -1,7 +1,7 @@
 module.exports = {
   name: 'avatar',
   description: "Get's a user's avatar",
-  execute(message, args){
+  execute(message, args, Client){
     const getUserFromMention = mention => {
       if (!mention || !mention.startsWith('<@')|| !mention.endsWith('>')) return;
       mention = mention.slice(2, -1);
