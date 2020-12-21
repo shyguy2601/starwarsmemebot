@@ -7,7 +7,6 @@ module.exports = {
       const Discord = require('discord.js');
       const prefix = ">";
     const ImLonely = new Discord.MessageEmbed()
-    .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
     .setColor(message.member.displayColor)
     .setTitle(`${message.author.username} is sad and lonely and needs some love`)
     .setDescription(`Pls give ${message.author.username} their daily dose of love and attention`)
