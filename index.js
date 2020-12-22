@@ -60,6 +60,7 @@ Client.once('ready', () => {
     })
     Client.on("messageDelete", message => {
 const messageDeletedEmbed = new Discord.MessageEmbed()
+.setTimestamp()
 .setTitle('Message Deleted')
 .setDescription(`Message from ${message.author.username} deleted in ${message.guild.name}`)
 .addField(`Message content:- ${message.content}`)
