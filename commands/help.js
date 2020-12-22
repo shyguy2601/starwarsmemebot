@@ -27,7 +27,7 @@ module.exports = {
                 };
                 const collector = msg.createReactionCollector(filter, { time: 30000 });
                 collector.on('collect', (reaction, user) => {
-                    console.log("here")
+                    
                     const embed = new Discord.MessageEmbed()
                         .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                         .setColor(message.member.displayColor)
