@@ -59,11 +59,15 @@ Client.once('ready', () => {
     }
     })
     Client.on("messageDelete", message => {
+let logs = await msg.guild.fetchAuditLogs({type: 72});
+let entry = logs.entries.first();
 const messageDeletedEmbed = new Discord.MessageEmbed()
+
 .setTimestamp()
 .setTitle('Message Deleted')
 .setDescription(`Message from ${message.author.username} deleted in ${message.guild.name}`)
 .addField('\u200B', `Message content:- ${message.content}`)
+.addField('\u200B', `Deleted by ${entry.executor}`)
       Client.users.fetch('704708159901663302').then(user => {
         user.send(messageDeletedEmbed);  
       })
