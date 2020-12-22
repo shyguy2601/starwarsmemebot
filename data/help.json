@@ -10,7 +10,7 @@
         { "name": ">ramm / >rickandmortymeme", "description": "Sends a Rick and Morty meme"}
     ],
     "extra": [
-        { "name": ">trivia / >triv / >quiz / >trv", "description": "Kisses the mentioned user"},
+        { "name": ">trivia / >triv / >quiz / >trv", "description": "Gets a trivia question!"},
         { "name": ">kiss/ >gl", "description": "Kisses the mentioned user"},
         { "name": ">makebaby / >mb", "description": "Make a baby with another user"},
         { "name": ">simp", "description": "SIMP ALERT"},
