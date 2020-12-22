@@ -11,7 +11,6 @@ module.exports ={
             {title: 'What is 2+2?', choices: [`1) 3`, `2) 4`, `3) 5`, `4) 6`], correct: `2`},
             {title: 'What is the **Highest Mountain** in the world?', choices: ['1) K12', `2) Mont Blanc`, '3) K2', '4) Everest'], correct: `4`},
             {title: 'In a website browser address bar, what does “www” stand for?', choices: ['1) Working Web Wacko', '2) Wild Western Web', '3) World Wide Web', '4) Weird Wonderful Wookies'], correct: '3'},
-            {title: 'In a game of bingo, which number is represented by the phrase “two little ducks”?', choices: ['1) 55', '2) 22', `3) 25`, `4) 77`], correct: '2'},
             {title: 'Which African country was formerly known as Abyssinia?', choices: ['1) Zambia', '2) Kenya', `3) Ethiopia`, `4) Chad`], correct: '3'},
             {title: 'In which European city would you find Orly airport?', choices: ['1) Barcelona', '2) Paris', `3) London`, `4) Amstadam`], correct: '2'},
             {title: 'The only known monotremes in the animal kingdom are the echidna and which other creature?', choices: ['1) Wombat', '2) Tasmanian Devil', `3) Platypus`, `4) Sea Horse`], correct: '3'},
@@ -27,6 +26,13 @@ module.exports ={
             {title: 'What is the smallest ocean in the world?', choices: ['1) Indian', '2) Artic', `3) Atlantic`, `4) Pacific`], correct: '2'},
             {title: 'What color eyes do most humans have?', choices: ['1) Blue', '2) Grey', `3) Green`, `4) Brown`], correct: '4'},
             {title: 'What is the largest type of deer?', choices: ['1) Moose', '2) Reindeer', `3) Roe-deer`, `4) White-tailed`], correct: '1'},
+            {title: 'What is the rarest M&M color?', choices: ['1) Red','2) Green','3) Yellow','4) Brown'], correct: '4'},
+            {title: 'In a bingo game, which number is represented by the phrase “two little ducks”?', choices: ['1) 22 ','2) 66','3) 88 ','4) 44'], correct: '1'},
+            {title: 'What is the loudest animal on Earth?', choices: ['1) Elephant','2) Blue Whale','3) Sperm Whale','4) Lion'], correct: '3'},
+            {title: 'What is the highest-grossing film of all time without taking inflation into account?', choices: ['1) Titanic','2) Avengers: Endgame','3) Avatar','4) Star Wars: The Force Awakens'], correct: '2'},
+            {title: 'Which film did Steven Spielberg win his first Oscar for Best Director?', choices: ['1) Jaws','2) Catch Me If You Can','3) E.T.','4) Schindler’s List'], correct: '4'},
+            {title: 'What was the last movie Walt Disney was able to work on before he died?', choices: ['1) Mary Poppins','2) 101 Dalmatians','3) The Jungle Book','4) The Sword in the Stone'], correct: '3'},
+            {title: 'How many black keys are found on a traditional piano?', choices: ['1) 32 ','2) 34','3) 52','4) 54'], correct: '1'},
             ];
 
 
