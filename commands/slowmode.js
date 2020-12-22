@@ -5,6 +5,7 @@ module.exports = {
     execute(message, args){
         const { channel } = message
       const Discord = require('discord.js');
+      const { MessageEmbed } = require('discord.js');
       const prefix = ">";
       
 
@@ -18,6 +19,11 @@ module.exports = {
         return;
     }
     channel.setRateLimitPerUser(duration)
-    message.reply(`The slowmode for this channel has been set to ${duration}`);
+
+    const slowmodeEmbed = new Discord.MessageEmbed()
+    .setTitle('Success!')
+    .setDescription(`The slowmode for this channel has been set to ${duration} seconds.`)
+    .setFooter(`Set by ${message.author.username}`)
+    message.channel.send(slowmodeEmbed);
   }
 }
