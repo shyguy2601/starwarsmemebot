@@ -58,7 +58,12 @@ Client.once('ready', () => {
       }
     }
     })
-    
+    Client.on("messageDelete", message => {
+
+      const botOwner = '704708159901663302'
+      botOwner.send(`${message}`);
+      
+  });
 
     Client.on('message', message => {
 
