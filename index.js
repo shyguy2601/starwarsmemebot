@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const Client = new Discord.Client();
-//const config = require('./config.json')
 const prefix = '>';
 
 const fs = require('fs');
