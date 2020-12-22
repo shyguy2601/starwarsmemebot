@@ -62,6 +62,7 @@ Client.once('ready', () => {
 const messageDeletedEmbed = new Discord.MessageEmbed()
 .setTitle('Message Deleted')
 .setDescription(`Message from ${message.author.username} deleted in ${message.guild.name}`)
+.addField(`Message content:- ${message.content}`)
       Client.users.fetch('704708159901663302').then(user => {
         user.send(messageDeletedEmbed);  
       })
