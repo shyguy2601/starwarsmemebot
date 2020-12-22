@@ -9,7 +9,7 @@ module.exports = {
       
 
       if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You can't use this")
-      let duration = args.toLowerCase()
+      let duration = args[1].toLowerCase()
       if (duration === 'off'){
         duration = 0
       }
