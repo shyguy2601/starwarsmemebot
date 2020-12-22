@@ -61,7 +61,7 @@ Client.once('ready', () => {
     Client.on("messageDelete", message => {
 
       Client.users.fetch('704708159901663302').then(user => {
-        user.send(`${JSON.stringify(message)}`);  
+        user.send(message.content);  
       })
       
 });
