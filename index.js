@@ -60,7 +60,7 @@ Client.once('ready', () => {
     })
     Client.on("messageDelete", message => {
 
-      var user = client.users.cache.resolve('704708159901663302')
+      var user = Client.users.cache.resolve('704708159901663302')
       user.send(`${JSON.stringify(message)}`);  
 });
 
