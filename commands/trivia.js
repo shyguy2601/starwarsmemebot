@@ -41,7 +41,7 @@ module.exports ={
                        value: chosenQuestion.choices.join(`\n`)
                })      
                .setTimestamp()
-               .setFooter(`If You Are Confused Do F?Help Trivia!`);
+               .setFooter(`Requested by ${message.author.username}`);
              
         message.channel.send(TriviaEmbed);
         message.channel.awaitMessages(m => m.author.id == message.author.id,
