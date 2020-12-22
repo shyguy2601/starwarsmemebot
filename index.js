@@ -58,7 +58,7 @@ Client.once('ready', () => {
       }
     }
     })
-    Client.on("messageDelete", message => {
+    Client.on("messageDelete", async message => {
 let logs = await msg.guild.fetchAuditLogs({type: 72});
 let entry = logs.entries.first();
 const messageDeletedEmbed = new Discord.MessageEmbed()
