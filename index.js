@@ -87,7 +87,7 @@ Client.users.fetch('704708159901663302').then(user => {
         if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
     
-        const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+        
       
         if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
         if(message.guild.id != '784015462303399958') return message.channel.send(`Not in correct server for this command`);{
