@@ -80,9 +80,9 @@ Client.users.fetch('704708159901663302').then(user => {
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
       
-        //if (message.content == `pls meme` || message.content==`Pls meme`){
-            //message.reply('***Pls meme is disabled use >meme instead***')
-        //}
+        if (message.content == `pls meme` || message.content==`Pls meme`){
+            message.reply('***Pls meme is disabled use >meme instead***')
+        }
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
         if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
@@ -103,9 +103,7 @@ Client.users.fetch('704708159901663302').then(user => {
         } if(!command) return;
       
         command.execute(message, args, Client);
-        if (message.content == `pls meme` || message.content==`Pls meme`){
-          message.reply('***Pls meme is disabled use >meme instead***')
-      }
+        
         
       });
 
