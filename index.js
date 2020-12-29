@@ -88,6 +88,9 @@ Client.users.fetch('704708159901663302').then(user => {
       if (message.content == `pls meme` || message.content==`Pls meme`){
         message.reply('***Pls meme is disabled use >meme instead***')
     }
+    if(message.content == 'Hi'.toLowerCase()){
+      message.channel.send('Hallo');
+    }
         if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
     
