@@ -9,7 +9,7 @@ module.exports ={
        const ServerCountEmbed = new Discord.MessageEmbed()
  
                  .setColor(`#FFD0F0`)
-                 .setTitle(`Uptime`)
+                 .setTitle(`Server Count`)
  
        
  
