@@ -83,9 +83,9 @@ Client.users.fetch('704708159901663302').then(user => {
        if (message.content == `<@!783629275546648577> prefix`){
           Client.commands.get(`prefix`).execute(message, args);
        }
-        /*if (message.content == `pls meme` || message.content==`Pls meme`){
+        if (message.content == `pls meme` || message.content==`Pls meme`){
             message.reply('***Pls meme is disabled use >meme instead***')
-        }*/
+        }
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
         if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
