@@ -72,7 +72,9 @@ Client.users.fetch('704708159901663302').then(user => {
 });
 
     Client.on('message', message => {
-
+      if (message.content == `pls meme` || message.content==`Pls meme`){
+        message.reply('***Pls meme is disabled use >meme instead***')
+    }
         if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
     
@@ -80,9 +82,7 @@ Client.users.fetch('704708159901663302').then(user => {
       
         const commandName = args[0].slice(prefix.length).toLowerCase();
       
-        if (message.content == `pls meme` || message.content==`Pls meme`){
-            message.reply('***Pls meme is disabled use >meme instead***')
-        }
+      
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
         if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
