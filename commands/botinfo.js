@@ -21,7 +21,7 @@ module.exports = {
         .setColor(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
             `**> Commands:** ${client.commands.size}`,
-            `**> Servers:** ${client.guilds.cache.size}`,
+            `**> Server Count:** ${client.guilds.cache.size}`,
             `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}`,
             `**> Channels:** ${client.channels.cache.size}`,
             `**> Creation Date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYYY HH:mm:ss')}`,
@@ -32,7 +32,7 @@ module.exports = {
         ])
         .addField('System', [
             `**> Platform:** ${process.platform}`,
-            `**> Uptime:** ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds \nServer Count : ${guilds.length}`,
+            `**> Uptime:** ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`,
             
         ])
         .setTimestamp()
