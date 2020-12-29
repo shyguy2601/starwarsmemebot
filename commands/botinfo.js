@@ -10,7 +10,13 @@ module.exports = {
     description: "gets information about the bot",
     aliases: ['bi', 'botinfo'],
     execute: (message, args, client) => {
+    const guilds = client.guilds.cache.array()
     const core = os.cpus()[0];
+
+        let days = Math.floor(client.uptime / 86400000);
+        let hours = Math.floor(client.uptime / 3600000) % 24;
+        let minutes = Math.floor(client.uptime / 60000) % 60;
+        let seconds = Math.floor(client.uptime / 1000) % 60;    
     const embed = new Discord.MessageEmbed()
         .setColor(message.guild.me.displayHexColor || 'BLUE')
         .addField('General', [
@@ -26,7 +32,7 @@ module.exports = {
         ])
         .addField('System', [
             `**> Platform:** ${process.platform}`,
-            `**> Uptime:** ${ms(os.uptime() * 1000, {long: true})}`,
+            `**> Uptime:** ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds \nServer Count : ${guilds.length}`,
             
         ])
         .setTimestamp()
