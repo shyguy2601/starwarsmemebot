@@ -78,7 +78,7 @@ Client.users.fetch('704708159901663302').then(user => {
       
       
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-      if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1]) && !client.disabledMembers.has(message.author.id)){
+      if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1]) && !Client.disabledMembers.has(message.author.id)){
         message.channel.send(`Hi ${args.slice(1).join(' ')}, I'm dad`);
       }
       if (message.content == `pls meme` || message.content==`Pls meme`){
