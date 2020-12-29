@@ -10,7 +10,8 @@ module.exports = {
 
         const embed = new Discord.MessageEmbed()
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
-            .addField(' ',`Join the support server if you are confused:-(https://discord.gg/hcpK8kvjPc) `)
+            .addField(
+                {name: 'Join the support server if you are confused', value:`(https://discord.gg/hcpK8kvjPc)`})
             .setColor(message.member.displayColor)
             .setTitle('Help')
             .addField('`Fun Commands `', '😂', true)
