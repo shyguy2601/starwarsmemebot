@@ -13,6 +13,7 @@
         { "name": ">trivia / >triv / >quiz / >trv", "description": "Gets a trivia question!"},
         { "name": ">kiss/ >gl", "description": "Kisses the mentioned user"},
         { "name": ">makebaby / >mb", "description": "Make a baby with another user"},
+        { "name": ">hug", "description": "Hug another user"},
         { "name": ">simp", "description": "SIMP ALERT"},
         { "name": ">sus <Mention the User>", "description": "Use this if a user is acting sus"},
         { "name": ">vc / virginitycheck", "description": "This one is pretty self explanatory"} 
@@ -21,8 +22,11 @@
     
     
     "information": [
-        { "name": ">userinfo / >ui / >whois", "description": "Get's information on a user" }
-        ],
+        { "name": ">userinfo / >ui / >whois", "description": "Gets information on a user" },
+        { "name": ">serverinfo / >si", "description": "Gets information of the server"},
+        { "name": ">botinfo / >bi", "description": "Gets information of the bot"},
+        { "name": ">uptime", "description": "Shows the amount of time the bot's been online for"}
+    ],
     "utilities": [
         { "name": ">message @ShyGuy <message you want to send>", "description": "Messages the bot owner"}
     ]
