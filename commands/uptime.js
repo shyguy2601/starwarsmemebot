@@ -16,7 +16,7 @@ module.exports ={
        let minutes = Math.floor(client.uptime / 60000) % 60;
        let seconds = Math.floor(client.uptime / 1000) % 60;    
  
-       UptimeEmbed.setDescription(`\`\`\`Uptime : ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds \nServer Count : ${guilds.length}\`\`\``)
+       UptimeEmbed.setDescription(`\`\`\`Uptime : ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds \`\`\``)
  
        message.channel.send(UptimeEmbed)
     }
