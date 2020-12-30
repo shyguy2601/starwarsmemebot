@@ -16,7 +16,7 @@ module.exports = {
   .setColor(0x00F5FF)
   .setTitle('Error Occurred')
   .setDescription('I was unable to message shyguy, their DMs are off')
-
+console.log(args[1]);
   if(args[1].includes('704708159901663302'))
     return message.channel.send('You can only message the bot owner ShyGuy')
   
