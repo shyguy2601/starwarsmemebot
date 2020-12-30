@@ -30,6 +30,10 @@ module.exports = {
     execute(message, question, Client ){
       const Discord = require('discord.js');
 	  const prefix = ">";
+	  const BannedUser = message.author;
+	  if(BannedUser.id == '628307778242347042'){
+		  message.reply('You are temporarily banned from this command')
+	  }
 	  if(message.channel.type == "text"){
 		  return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
