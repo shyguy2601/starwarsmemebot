@@ -4,7 +4,7 @@ module.exports = {
     name: 'bonk',
     description: "bonk someone",
     execute(message, args){
-      const Discord = require('discord.js');
+      
       const prefix = ">";
       if(message.channel.type == "text"){
     const BonkedUser = message.mentions.members.first() || message.guild.members.get(args[1]);
