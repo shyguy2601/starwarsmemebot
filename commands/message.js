@@ -23,7 +23,7 @@ if(usertomessage.id != '704708159901663302') {
     message.channel.send('You can only message the bot owner @ShyGuy')
     return;
 }
-let messagetosend = args.slice(2).join(" ");
+  let messagetosend = args.slice(2).join(" ");
       if(!messagetosend) return  message.channel.send("No message given to send to the user");
 
       const usermessageembed = new Discord.MessageEmbed()
