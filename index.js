@@ -80,13 +80,13 @@ Client.users.fetch('704708159901663302').then(user => {
       
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
       
-      /*if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1])){
+      if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1])){
         if(args[1].toLowerCase() == 'dad'){
           return message.channel.send(`Impossible, you can't be dad, because i'm dad`);
         }
         message.channel.send(`Hi ${args.slice(1).join(' ')}, I'm dad`);
       }
-      if (message.content == `pls meme` || message.content==`Pls meme`){
+     /* if (message.content == `pls meme` || message.content==`Pls meme`){
         message.reply('***Pls meme is disabled use >meme instead***')
     }*/
     
