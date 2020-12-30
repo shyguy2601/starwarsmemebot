@@ -17,7 +17,7 @@ module.exports = {
   .setTitle('Error Occurred')
   .setDescription('I was unable to message shyguy, their DMs are off')
 
-  if(args[1] != '704708159901663302' || args[1] != '<@704708159901663302>' || args[1] != '<@!704708159901663302>')
+  if(args[1].includes('704708159901663302'))
     return message.channel.send('You can only message the bot owner ShyGuy')
   
 let messagetosend = args.slice(2).join(" ");
