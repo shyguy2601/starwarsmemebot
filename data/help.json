@@ -28,6 +28,6 @@
         { "name": ">uptime", "description": "Shows the amount of time the bot's been online for"}
     ],
     "utilities": [
-        { "name": ">message @ShyGuy <message you want to send>", "description": "Messages the bot owner"}
+        { "name": ">message @ShyGuy / 704708159901663302 <message you want to send>", "description": "Messages the bot owner"}
     ]
 }
