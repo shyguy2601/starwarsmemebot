@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'remind',
+    name: 'reminder',
     description: "this is a reminder command",
     execute(message, args, client){
       const Discord = require('discord.js');
@@ -14,7 +14,7 @@ module.exports = {
             message.channel.send('Please provide the amount of time until i need to remind you')
             return;
         }
-        const Reminder = args.slice(2).join("").toLowerCase();
+        const Reminder = args.slice(2).join(" ")
         if(!Reminder){
             message.channel.send('You need to tell me what you need a reminder for')
             return;
