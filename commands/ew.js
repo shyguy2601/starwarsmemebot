@@ -5,7 +5,12 @@ module.exports = {
     execute(message, args){
       const Discord = require('discord.js');
       const prefix = ">";
+      if(message.channel.type == "text"){
+      message.channel.send(`EWWWWWWWWW gross`)
 
-  message.channel.send(`EWWWWWWWWW gross`)
+      }if(message.channel.type == "dm"){
+      message.channel.send(`EWWWWWWWWW gross`)
+      }
+  
   }
 }
