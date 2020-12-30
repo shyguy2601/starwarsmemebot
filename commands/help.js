@@ -72,7 +72,7 @@ module.exports = {
         }) 
         }if(message.channel.type == "dm"){
 
-            const member = message.mentions.members.last() || message.guild.members.cache.get(args[0]) || message.member;
+            const member = message.author;
         
 
             const embed = new Discord.MessageEmbed()
