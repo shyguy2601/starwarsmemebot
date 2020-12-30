@@ -6,7 +6,7 @@ module.exports = {
       const prefix = ">";
       const ms = require('ms');
         const db = require('quick.db');
-      const timeUntilReminder = parseInt(args[1]);
+      const timeUntilReminder = args[1];
         if(isNaN(args[1])){
             message.channel.send('The time until reminding needs to be a number')
             return;
