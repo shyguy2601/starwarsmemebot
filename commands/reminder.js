@@ -4,7 +4,8 @@ module.exports = {
     execute(message, args, client){
       const Discord = require('discord.js');
       const prefix = ">";
-
+      const ms = require('ms');
+        const db = require('quick.db');
       const timeUntilReminder = parseInt(args[1]);
         if(isNaN(args[1])){
             message.channel.send('The time until reminding needs to be a number')
@@ -19,6 +20,17 @@ module.exports = {
             message.channel.send('You need to tell me what you need a reminder for')
             return;
         }
+        db.set(`remind.${message.author.id}`,Date.now() + ms(timeUntilReminder))
+        const interval = setInterval(function(){
+            if(Date.now() > db.fetch(`remind.${message.author.id}`)){
+                db.delete(`remind.${message.author.id}`)
+                message.author.send(`**Reminder:** ${Reminder}`)
+                .catch(e => console.log(e))
+                clearInterval(interval)
+            }
+
+        },1000)
+
         const ConfirmationEmbed = new Discord.MessageEmbed()
         .setColor(`#DC143C`)
         .setTitle('Reminder')
