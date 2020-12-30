@@ -23,7 +23,7 @@ module.exports = {
         .setColor(`#DC143C`)
         .setTitle('Reminder')
         .setDescription(`I have set your reminder`)
-        .addField(`I will remind you in ${timeUntilReminder}, with the reminder - ${Reminder}`);
+        .addField('\u200B',`I will remind you in ${timeUntilReminder}, with the reminder - ${Reminder}`);
 
         message.channel.send(ConfirmationEmbed);
 
