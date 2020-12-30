@@ -19,7 +19,7 @@ module.exports ={
              .setColor(`#FFD0F0`)
              .setTitle(`Server Count`)
              ServerCountEmbed.setDescription(`\`\`\`\nServer Count : ${guilds.length}\`\`\``);
-
+             message.channel.send(ServerCountEmbed)
         }
     }
 } 
