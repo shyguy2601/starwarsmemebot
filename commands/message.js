@@ -1,7 +1,7 @@
 module.exports = {
   name: 'message',
   description: "this is a message command",
-  execute(message, args){
+  execute(message, args, client){
   
   const Discord = require('discord.js');
   
@@ -18,30 +18,21 @@ module.exports = {
   .setTitle('Error Occurred')
   .setDescription('I was unable to message shyguy, their DMs are off')
 
-  const member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[1]) || message.guild.members.cache.find(user => user.id == '704708159901663302');
-  if(args[1] != '704708159901663302'){
-    message.channel.send('You can only message the bot owner ShyGuy')
-    return;
-  }
-  if(member.user.id != '704708159901663302') {
-      message.channel.send('You can only message the bot owner ShyGuy')
-      return;
-  }
-let messagetosend = args.slice(2).join(" ");
+  
+  let messagetosend = args.slice(1).join(" ");
     if(!messagetosend) return  message.channel.send("No message given to send to the user");
 
     const usermessageembed = new Discord.MessageEmbed()
       .setColor(0x00F5FF)
       .setDescription(`${message.author.username} from the server ***${message.guild.name}*** said ${messagetosend}`);
-      member.send(usermessageembed)
-      .then(embed => {
-        embed.react('✉️')
-     
       
-      
-      message.channel.send(userwasmessagedembed);
-    }) 
-    .catch(() => message.channel.send(couldnotmessageuserembed))
+      message.client.users.fetch("704708159901663302").then(user=>{
+        user.send(usermessageembed)
+        .then(embed => {
+          embed.react('✉️')
+          message.channel.send(userwasmessagedembed);
+        })
+      })
       
   }
 }    
