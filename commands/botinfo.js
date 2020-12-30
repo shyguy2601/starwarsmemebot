@@ -51,7 +51,7 @@ module.exports = {
         `**> Server Count:** ${client.guilds.cache.size}`,
         `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}`,
         `**> Channels:** ${client.channels.cache.size}`,
-        `**> Creation Date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYYY HH:mm:ss')}`,
+        `**> Creation Date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
         `**> Node.js Version:** ${process.version}`,
         `**> Discord.js Version:** v${djsversion}`,
         `**> Bot Creator:** ShyGuy#5504`,
