@@ -79,7 +79,9 @@ Client.users.fetch('704708159901663302').then(user => {
       
       
         const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-      
+      if(message.content == 'what did i win' || message.content == 'What did i win'|| message.content == 'what did i win?' || message.content == 'What did i win?'){
+        message.reply(`You won nothing you greedy bastard, it's just for fun`)
+      }
       if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1])){
         if(args[1].toLowerCase() == 'dad'){
           return message.channel.send(`Impossible, you can't be dad, because i'm dad`);
