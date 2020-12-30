@@ -9,12 +9,16 @@ module.exports = {
       const timeUntilReminder = args[1];
         
         if(!timeUntilReminder){
-            message.channel.send('Please provide the amount of time until i need to remind you')
+            message.channel.send(`Please provide the amount of time until i need to remind you
+            \n **Correct usage:** >reminder (a number, followed by an s for seconds, m for minutes, d for days) <what you need reminding>. \n
+            For example:- >reminder 10m feed the cat `)
             return;
         }
         const Reminder = args.slice(2).join(" ")
         if(!Reminder){
-            message.channel.send('You need to tell me what you need a reminder for')
+            message.channel.send(`You need to tell me what you need a reminder for \n 
+            **Correct usage:** >reminder (a number, followed by an s for seconds, m for minutes, d for days) <what you need reminding>. \n
+            For example:- >reminder 10m feed the cat`)
             return;
         }
         db.set(`remind.${message.author.id}`,Date.now() + ms(timeUntilReminder))
