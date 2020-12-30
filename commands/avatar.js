@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   name: 'avatar',
   description: "Get's a user's avatar",
   execute(message, args, Client){
@@ -31,4 +31,4 @@ module.exports = {
 
 }
 
-}
+}*/
