@@ -26,12 +26,15 @@ let messagetosend = args.slice(2).join(" ");
     const usermessageembed = new Discord.MessageEmbed()
       .setColor(0x00F5FF)
       .setDescription(`${message.author.username} from the server ***${message.guild.name}*** said ${messagetosend}`);
-      message.client.users.fetch("704708159901663302").send(usermessageembed)
-      .then(embed => {
-        embed.react('✉️')
-        message.channel.send(userwasmessagedembed)
+      
+      message.client.users.fetch("704708159901663302").then(user=>{
+        user.send(usermessageembed)
+        .then(embed =>{
+          embed.react('')
+          message.channel.send(userwasmessagedembed);
+        })
+        .catch(() => message.channel.send(couldnotmessageuserembed));
       })
-      .catch(() => message.channel.send(couldnotmessageuserembed))
   }
 }    
     
