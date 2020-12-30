@@ -29,7 +29,7 @@ module.exports = {
       const usermessageembed = new Discord.MessageEmbed()
         .setColor(0x00F5FF)
         .setDescription(`${message.author.username} from the server ***${message.guild.name}*** said ${messagetosend}`);
-        usertomessage.send(usermessageembed)
+        member.send(usermessageembed)
         .then(embed => {
           embed.react('✉️')
        
