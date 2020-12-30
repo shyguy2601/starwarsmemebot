@@ -14,7 +14,7 @@ module.exports = {
             message.channel.send('Please provide the amount of time until i need to remind you')
             return;
         }
-        const Reminder = args[2].join(" ");
+        const Reminder = args.slice(2).join("").toLowerCase();
         if(!Reminder){
             message.channel.send('You need to tell me what you need a reminder for')
             return;
