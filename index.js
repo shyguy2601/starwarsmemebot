@@ -91,25 +91,7 @@ Client.users.fetch('704708159901663302').then(user => {
     
         if(!message.content.startsWith(`${prefix}`)) return;
         if (message.author.bot) return;
-    
-        
-      
-        if(message.channel.id === '784015463747026959' & (message.guild.id == '784015462303399958'))
-        if(message.guild.id != '784015462303399958') return message.channel.send(`Not in correct server for this command`);{
-          message.attachments.forEach(attachment => {
-            const userMemeEmbed = new Discord.MessageEmbed()
-              .setColor(message.member.displayColor)
-              .setTitle(`Meme Entry by ${message.author.username}`)
-              .setImage(attachment.url)
-              .setDescription(`If you like the meme then react with 👍 or if you don't like it, react with 👎`)
-            message.guild.channels.cache.find(i => i.name === `meme-entry`).send(userMemeEmbed)
-              .then(embed => {
-                embed.react('👍')
-                  .then(() => embed.react('👎'));
-              })
-          })
-          
-        } if(!command) return;
+        if(!command) return;
       
         command.execute(message, args, Client);
         
