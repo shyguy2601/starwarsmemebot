@@ -21,6 +21,7 @@ module.exports = {
         const interval = setInterval(function(){
             if(Date.now() > db.fetch(`remind.${message.author.id}`)){
                 db.delete(`remind.${message.author.id}`)
+                message.reply(`**Reminder:** ${Reminder}`)
                 message.author.send(`**Reminder:** ${Reminder}`)
                 .catch(e => console.log(e))
                 clearInterval(interval)
