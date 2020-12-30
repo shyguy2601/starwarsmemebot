@@ -33,8 +33,9 @@ let messagetosend = args.slice(2).join(" ");
           embed.react('')
           message.channel.send(userwasmessagedembed);
         })
-        .catch(() => message.channel.send(couldnotmessageuserembed));
+        
       })
+      .catch(() => message.channel.send(couldnotmessageuserembed));
   }
 }    
     
