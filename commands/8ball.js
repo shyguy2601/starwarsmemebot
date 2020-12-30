@@ -30,10 +30,17 @@ module.exports = {
     execute(message, question, Client ){
       const Discord = require('discord.js');
 	  const prefix = ">";
-	  
-      return message.reply(question.join(' ').endsWith('?') ?
+	  if(message.channel.type == "text"){
+		  return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 	  '🎱 That doesn\'t seem to be a question, please try again!');
+	  }if(message.channel.type == "dm"){
+		return message.reply(question.join(' ').endsWith('?') ?
+		`🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
+		'🎱 That doesn\'t seem to be a question, please try again!');
+
+	  }
+      
 	  
 	  
   
