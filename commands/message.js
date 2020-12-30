@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   name: 'message',
   description: "this is a message command",
   execute(message, args){
@@ -37,5 +37,5 @@ let messagetosend = args.slice(2).join(" ");
       })
       .catch(() => message.channel.send(couldnotmessageuserembed));
   }
-}    
+}    */
     
