@@ -76,7 +76,6 @@ module.exports = {
         
 
             const embed = new Discord.MessageEmbed()
-                .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                 .addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
                 .setColor('#008000')
                 .setTitle('Help')
@@ -97,14 +96,12 @@ module.exports = {
                     collector.on('collect', (reaction, user) => {
                         
                         const embed = new Discord.MessageEmbed()
-                            .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                             .setColor('#008000')
                             .setTimestamp()
                             .setFooter(`Requested by ${message.author.username} `)
                             //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
     
                         if (reaction.emoji.name === '🏠') {
-                            embed.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                             embed.addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
                             .setColor('#008000')
                             embed.setTitle('Help')
