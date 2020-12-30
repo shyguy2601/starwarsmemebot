@@ -1,4 +1,4 @@
-/*module.exports = {
+module.exports = {
   name: 'message',
   description: "this is a message command",
   execute(message, args){
@@ -17,7 +17,7 @@
   .setTitle('Error Occurred')
   .setDescription('I was unable to message shyguy, their DMs are off')
 
-  if(args[1] != '704708159901663302')
+  if(args[1] != '704708159901663302' || args[1] != '<@704708159901663302>' || args[1] != '<@!704708159901663302>')
     return message.channel.send('You can only message the bot owner ShyGuy')
   
 let messagetosend = args.slice(2).join(" ");
@@ -37,5 +37,5 @@ let messagetosend = args.slice(2).join(" ");
       })
       .catch(() => message.channel.send(couldnotmessageuserembed));
   }
-}    */
+}    
     
