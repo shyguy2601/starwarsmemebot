@@ -33,6 +33,7 @@ module.exports = {
 	  const BannedUser = message.author;
 	  if(BannedUser.id == '628307778242347042' || BannedUser == '692039115641978890'){
 		  message.reply('You are temporarily banned from this command')
+		  return;
 	  }
 	  if(message.channel.type == "text"){
 		  return message.reply(question.join(' ').endsWith('?') ?
