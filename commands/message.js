@@ -35,7 +35,7 @@ let messagetosend = args.slice(2).join(" ");
         })
         .catch(() => message.channel.send(couldnotmessageuserembed));
       })
-      
+      .catch(() => message.channel.send("Error in fetch"));
   }
 }    
     
