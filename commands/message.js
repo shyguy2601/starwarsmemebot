@@ -16,7 +16,7 @@ module.exports = {
   .setColor(0x00F5FF)
   .setTitle('Error Occurred')
   .setDescription('I was unable to message shyguy, their DMs are off')
-console.log(args[1]);
+  const usertomessage = message.mentions.members.first() || message.guild.members.get(args[1]);
   if(args[1].includes('704708159901663302'))
     return message.channel.send('You can only message the bot owner ShyGuy')
   
@@ -30,7 +30,7 @@ let messagetosend = args.slice(2).join(" ");
       message.client.users.fetch("704708159901663302").then(user=>{
         user.send(usermessageembed)
         .then(embed =>{
-          embed.react('')
+          embed.react('✉️')
           message.channel.send(userwasmessagedembed);
         })
         .catch(() => message.channel.send(couldnotmessageuserembed));
