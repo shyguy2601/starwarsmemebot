@@ -19,6 +19,10 @@ module.exports = {
     .setDescription('I was unable to message shyguy, their DMs are off')
 
     const member = message.mentions.members.first() || message.guild.members.cache.find(user => user.displayName == args[1]) || message.guild.members.cache.find(user => user.id == '704708159901663302');
+    if(args[1] != '704708159901663302'){
+      message.channel.send('You can only message the bot owner ShyGuy')
+      return;
+    }
     if(member.user.id != '704708159901663302') {
         message.channel.send('You can only message the bot owner ShyGuy')
         return;
