@@ -16,7 +16,7 @@ module.exports = {
   message.channel.send(ImLonely); 
       }if(message.channel.type == "dm"){
 
-        message.channel.send(`Sorry this command doesn't work in DMs`)
+        return message.channel.send(`Sorry this command doesn't work in DMs`);
       }
     }
 }
