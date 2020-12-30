@@ -31,7 +31,7 @@ module.exports = {
       const Discord = require('discord.js');
 	  const prefix = ">";
 	  const BannedUser = message.author;
-	  if(BannedUser.id == '628307778242347042'){
+	  if(BannedUser.id == '628307778242347042' || BannedUser == '692039115641978890'){
 		  message.reply('You are temporarily banned from this command')
 	  }
 	  if(message.channel.type == "text"){
