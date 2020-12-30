@@ -37,6 +37,10 @@ module.exports = {
                         //.setAuthor("Original help command made by macedonga#5797", "https://cdn.macedon.ga/p.n.g.r.png");
 
                     if (reaction.emoji.name === '🏠') {
+                        embed.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
+                        embed.addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
+                        embed.setColor(message.member.displayColor)
+                        embed.setTitle('Help')
                         embed.addField('`Fun Commands `', '😂', true)
                         .addField('`More Fun Commands `', '😭', true)
                         embed.addField('`Information Commands `', '💻', true)
