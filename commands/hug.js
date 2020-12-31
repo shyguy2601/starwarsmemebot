@@ -1,8 +1,7 @@
 module.exports = {
     name: 'hug',
     description: "hug another user",
-    aliases: [`kiss`, 'gl'],
-    execute(message, args){
+      execute(message, args){
       const Discord = require('discord.js');
       const prefix = ">";
       if(message.channel.type == 'text'){

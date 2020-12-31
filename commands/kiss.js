@@ -1,6 +1,6 @@
 module.exports = {
     name: 'givelove',
-    description: "this is an ew command",
+    description: "this is an kiss command",
     aliases: [`kiss`, 'gl'],
     execute(message, args){
       const Discord = require('discord.js');
