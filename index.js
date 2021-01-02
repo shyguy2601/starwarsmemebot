@@ -59,30 +59,8 @@ Client.once('ready', () => {
       }
     }
     })
-    Client.api.applications(Client.user.id).commands.post({data: {
-      name: 'ping',
-      description: 'ping pong!'
-  }})
-  Client.ws.on('INTERACTION_CREATE', async interaction => {
-    console.log(`a user used the ${interaction.data.name} command`)
-  })
-  Client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-    type: 4,
-    data: {
-      content: 'hello world!'
-      }
-    }
-  })
-  Client.ws.on('INTERACTION_CREATE', async interaction => {
-    if(interaction.data.name === "ping"){
-      Client.api.interactions(interaction.id, interaction.token).callback.post({data: {
-          type: 4,
-          data: {
-            content: '🏓 Pong!'
-          }
-        }
-      })
-    }
+    Client.ws.on('INTERACTION_CREATE', async interaction => {
+      require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
   })
 
     Client.on('message', message => {
