@@ -38,10 +38,7 @@ Client.once('ready', () => {
 
 
   Client.on(`messageDelete`, function(message, channel){
-    if(message.guild.id == '457545828261822476'){
-console.log(`Can't read messages here`)
-return;
-    }
+   
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
@@ -62,19 +59,7 @@ return;
       }
     }
     })
-    Client.on("messageDelete", async message => {
-
-const messageDeletedEmbed = new Discord.MessageEmbed()
-
-.setTimestamp()
-.setTitle('Message Deleted')
-.setDescription(`Message from ${message.author.username} deleted in ${message.guild.name}`)
-.addField('\u200B', `Message content:- ${message.content}`)
-Client.users.fetch('704708159901663302').then(user => {
-        user.send(messageDeletedEmbed);  
-      })
-      
-});
+    
 
     Client.on('message', message => {
       const args = message.content.trim().split(/ +/g);
