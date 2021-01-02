@@ -20,7 +20,7 @@ const activities_list = [
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: "you sleep 0_o", type: 3},
-  { text: "25 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: "24 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
 
