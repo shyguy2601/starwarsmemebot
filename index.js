@@ -59,23 +59,23 @@ Client.once('ready', () => {
       }
     }
     })
-    client.api.applications(client.user.id).commands.post({data: {
+    Client.api.applications(Client.user.id).commands.post({data: {
       name: 'ping',
       description: 'ping pong!'
   }})
-  client.ws.on('INTERACTION_CREATE', async interaction => {
+  Client.ws.on('INTERACTION_CREATE', async interaction => {
     console.log(`a user used the ${interaction.data.name} command`)
   })
-  client.api.interactions(interaction.id, interaction.token).callback.post({data: {
+  Client.api.interactions(interaction.id, interaction.token).callback.post({data: {
     type: 4,
     data: {
       content: 'hello world!'
       }
     }
   })
-  client.ws.on('INTERACTION_CREATE', async interaction => {
+  Client.ws.on('INTERACTION_CREATE', async interaction => {
     if(interaction.data.name === "ping"){
-      client.api.interactions(interaction.id, interaction.token).callback.post({data: {
+      Client.api.interactions(interaction.id, interaction.token).callback.post({data: {
           type: 4,
           data: {
             content: '🏓 Pong!'
