@@ -38,6 +38,10 @@ Client.once('ready', () => {
 
 
   Client.on(`messageDelete`, function(message, channel){
+    if(message.guild.id == '457545828261822476'){
+console.log(`Can't read messages here`)
+return;
+    }
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
