@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const Client = require('discord.js');
+const prefix = '>'
 module.exports = (Client, message) =>{
 
     Client.on('message', message => {
