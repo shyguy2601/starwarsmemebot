@@ -1,38 +1,26 @@
 const fetch = require('node-fetch');
-const { MessageEmbed } = require('discord.js')
-const Client = require('discord.js')
-const Attachment = require('discord.js');
- //--------------------------------------------------
+const { MessageEmbed } = require('discord.js');
+
 module.exports = {
     name: 'hug',
     description: "hug another user",
-      execute: async(message, args) => {
-        const hug_gifs = [
-          'https://tenor.com/1oGd.gif',
-          'https://tenor.com/0K7K.gif',
-          'https://tenor.com/bgHxU.gif',
-          'https://tenor.com/bfifQ.gif'
-        ]
-     if (!message.author.bot) {
-let hugged = message.mentions.users.first();
-if(!hugged) {
- 
-message.channel.send(`Mention a user to hug!`)
-return;
-  
-} else {
-  
-      const author = message.author.username;
-      let gifToSend = hug_gifs[Math.floor(Math.random() * hug_gifs.length)];
-          const Embed = new MessageEmbed()
-          .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
-          .setImage(`${gifToSend}`)
-          
-          message.channel.send(Embed)
-    
- 
-   
-       }
+    execute: (client, message, args) => {
+        if (!message.author.bot) {
+            let hugged = message.mentions.users.first();
+            if (!hugged)
+                return message.channel.send(`Mention a user to hug!`)
+            else {
+                const author = message.author.username;
+                fetch('https://nekos.life/api/v2/img/hug')
+                    .then(res => res.json())
+                    .then(json => {
+                        const Embed = new MessageEmbed()
+                            .setImage(json.url)
+                            .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
+                        message.channel.send(Embed)
+                    })
+                    .catch(err => console.log(err));
+            }
+        }
+    }
 }
-}
-  }
