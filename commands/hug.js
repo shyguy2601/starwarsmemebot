@@ -21,7 +21,7 @@ return;
       if (!(data || data.url)) return message.sendError('NO_DATA');
           const Embed = new MessageEmbed()
           .setImage(data.url)
-          .setTitle(`${message.author.username} hugged ${hugged.username} -ს `) //hug msg
+          .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
           message.channel.send(Embed)
     
  
