@@ -1,4 +1,4 @@
-/*const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 const { MessageEmbed } = require('discord.js')
 const Client = require('discord.js')
 const Attachment = require('discord.js');
@@ -6,11 +6,11 @@ const Attachment = require('discord.js');
 module.exports = {
     name: 'hug',
     description: "hug another user",
-      execute(message, args){
+      execute: async(message, args) => {
      if (!message.author.bot) {
 let hugged = message.mentions.users.first();
 if(!hugged) {
-
+ 
 message.channel.send(`Mention a user to hug!`)
 return;
   
@@ -21,13 +21,12 @@ return;
       if (!(data || data.url)) return message.sendError('NO_DATA');
           const Embed = new MessageEmbed()
           .setImage(data.url)
-        . setTitle(`${message.author.username} hugged ${hugged.username} -ს `) //hug msg
+          .setTitle(`${message.author.username} hugged ${hugged.username} -ს `) //hug msg
           message.channel.send(Embed)
     
-
+ 
    
        }
 }
 }
   }
-     */
