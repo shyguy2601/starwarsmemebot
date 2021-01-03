@@ -8,10 +8,10 @@ module.exports = {
     description: "hug another user",
       execute: async(message, args) => {
         const hug_gifs = [
-          'https://tenor.com/view/milk-and-mocha-bear-couple-line-hug-cant-breathe-gif-12687187',
-          'https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134',
-          'https://tenor.com/view/peach-cat-hug-hug-up-love-mochi-mochi-peach-cat-gif-16334628',
-          'https://tenor.com/view/hug-love-hi-bye-cat-gif-15999080'
+          'https://tenor.com/1oGd.gif',
+          'https://tenor.com/0K7K.gif',
+          'https://tenor.com/bgHxU.gif',
+          'https://tenor.com/bfifQ.gif'
         ]
      if (!message.author.bot) {
 let hugged = message.mentions.users.first();
