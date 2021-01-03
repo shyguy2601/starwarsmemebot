@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+/*const fetch = require('node-fetch');
 const { MessageEmbed } = require('discord.js')
 const Client = require('discord.js')
 const Attachment = require('discord.js');
@@ -30,4 +30,4 @@ return;
 }
 }
   }
-     
+     */
