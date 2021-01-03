@@ -25,7 +25,7 @@ module.exports = {
                     .then(json => {
                         const Embed = new MessageEmbed()
                             .setImage(json.url)
-                            .setTitle(`${message.author.username} kissed ${slapped.username}`) //hug msg
+                            .setTitle(`${message.author.username} slapped ${slapped.username}`) //hug msg
                         message.channel.send(Embed)
                     })
                     .catch(err => console.log(err));
