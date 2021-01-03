@@ -8,4 +8,5 @@ module.exports = {
   message.channel.send(`My prefix is ${prefix}`)
       }
   }
+  
 }
