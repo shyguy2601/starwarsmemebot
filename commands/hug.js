@@ -14,7 +14,7 @@ module.exports = {
                 fetch('https://nekos.life/api/v2/img/hug')
                     .then(res => res.json())
                     .then(json => {
-                        const Embed = new MessageEmbed()
+                        const Embed = new Discord.MessageEmbed()
                             .setImage(json.url)
                             .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
                         message.channel.send(Embed)
