@@ -50,7 +50,7 @@ const language = {
     yiddish: "yi"
 };
 
-module.exports = (Client, interaction) => {
+module.exports = (client, interaction) => {
     var langs = interaction.data.options[0].value.split(":");
 
     if (langs.length < 2) return;
@@ -60,12 +60,12 @@ module.exports = (Client, interaction) => {
     let text = interaction.data.options[1].value;
 
     translatte(text, { from: lang_from, to: lang_to })
-        .then(res => respond(res.text, Client, interaction))
+        .then(res => respond(res.text, client, interaction))
         .catch(err => respond("An error occured while translating :-(\nCheck if you spelled the langauges right!", client, interaction));
 };
 
-function respond(text, Client, interaction) {
-    Client.api.interactions(interaction.id, interaction.token).callback.post({
+function respond(text, client, interaction) {
+    client.api.interactions(interaction.id, interaction.token).callback.post({
         data: {
             type: 4,
             data: {

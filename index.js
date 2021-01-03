@@ -14,6 +14,10 @@ for(const file of commandFiles){
     Client.commands.set(command.name, command);
 
 }
+Client.ws.on('INTERACTION_CREATE', async interaction => {
+  require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
+})
+
 const activities_list = [ 
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
