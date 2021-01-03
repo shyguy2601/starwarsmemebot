@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'hug',
     description: "hug another user",
-    execute: (client, message, args) => {
+    execute: (message, args) => {
         if (!message.author.bot) {
             let hugged = message.mentions.users.first();
             if (!hugged)
@@ -14,7 +14,7 @@ module.exports = {
                 fetch('https://nekos.life/api/v2/img/hug')
                     .then(res => res.json())
                     .then(json => {
-                        const Embed = new Discord.MessageEmbed()
+                        const Embed = new MessageEmbed()
                             .setImage(json.url)
                             .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
                         message.channel.send(Embed)
