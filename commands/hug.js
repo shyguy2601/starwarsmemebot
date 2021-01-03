@@ -5,7 +5,7 @@ module.exports = {
     name: 'hug',
     description: "hug another user",
     execute: (client, message, args) => {
-        if (!message.author.bot) {
+        if (!message.author.client) {
             let hugged = message.mentions.users.first();
             if (!hugged)
                 return message.channel.send(`Mention a user to hug!`)
