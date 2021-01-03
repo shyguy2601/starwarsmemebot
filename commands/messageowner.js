@@ -1,6 +1,7 @@
 module.exports = {
-  name: 'message',
+  name: 'messageowner',
   description: "this is a message command",
+  aliases:['message'],
   execute(message, args, client){
   
   const Discord = require('discord.js');

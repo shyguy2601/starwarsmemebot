@@ -14,7 +14,13 @@ for(const file of commandFiles){
     Client.commands.set(command.name, command);
 
 }
-
+const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
+for (const file of eventFiles) {
+    const event = require(`./events/${file}`);
+    
+    Client.on(file.replace(".js", ""), event.bind(null, Client));
+    console.log(`Event loaded: ${file}`);
+}
 
 const activities_list = [ 
   { text: ">help", type: 0},
