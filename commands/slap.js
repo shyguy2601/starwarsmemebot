@@ -11,7 +11,7 @@ module.exports = {
       
         if (!message.author.bot) {
             let slapped = message.mentions.users.first();
-              if(userToSlap.id == "704708159901663302") {            //ignore this for someone bot
+              if(slapped.id == "704708159901663302") {            //ignore this for someone bot
               message.channel.send("Sorry but i cant slap my owner") 
               return;
     }
