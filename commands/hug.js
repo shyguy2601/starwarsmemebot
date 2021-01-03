@@ -1,17 +1,33 @@
+const fetch = require('node-fetch');
+const { MessageEmbed } = require('discord.js')
+const Client = require('discord.js')
+const Attachment = require('discord.js');
+ //--------------------------------------------------
 module.exports = {
     name: 'hug',
     description: "hug another user",
       execute(message, args){
-      const Discord = require('discord.js');
-      const prefix = ">";
-      if(message.channel.type == 'text'){
-        const member = message.member;
-    const userToHug = message.mentions.members.first() || message.guild.members.get(args[1]);
-  message.channel.send(`${message.author.username} hugged ${userToHug}`);
-      }if(message.channel.type == 'dm'){
-        return message.channel.send(`Sorry this command doesn't work in DMs`);
-      }
-      
+     if (!message.author.bot) {
+let hugged = message.mentions.users.first();
+if(!hugged) {
 
-  }
+message.channel.send(`Mention a user to hug!`)
+return;
+  
+} else {
+  
+      const author = message.author.username;
+      const data = await (await fetch('https://nekos.life/api/v2/img/hug')).json();
+      if (!(data || data.url)) return message.sendError('NO_DATA');
+          const Embed = new MessageEmbed()
+          .setImage(data.url)
+        . setTitle(`${message.author.username} hugged ${hugged.username} -ს `) //hug msg
+          message.channel.send(Embed)
+    
+
+   //--------------------------------------------------
+       }
 }
+}
+  }
+     
