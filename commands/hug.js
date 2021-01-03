@@ -23,10 +23,10 @@ return;
 } else {
   
       const author = message.author.username;
-      
+      let gifToSend = hug_gifs[Math.floor(Math.random() * hug_gifs.length)];
           const Embed = new MessageEmbed()
           .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
-          .setImage(`${hug_gifs[Math.floor(Math.random() * hug_gifs.length)]}`)
+          .setImage(`${gifToSend}`)
           
           message.channel.send(Embed)
     
