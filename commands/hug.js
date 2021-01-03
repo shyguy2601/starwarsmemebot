@@ -5,6 +5,9 @@ module.exports = {
     name: 'hug',
     description: "hug another user",
     execute: (message, args) => {
+      if(message.channel.type == 'dm'){
+        return message.channel.send('Sorry this command does not work in DMs');
+      }
         if (!message.author.bot) {
             let hugged = message.mentions.users.first();
             if (!hugged)
