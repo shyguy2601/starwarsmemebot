@@ -17,13 +17,13 @@ return;
 } else {
   
       const author = message.author.username;
-      const data = await fetch('https://nekos.life/api/v2/img/hug');
-      if (!(data || data.url)) return message.sendError('NO_DATA');
+      fetch('https://nekos.life/api/v2/img/hug').then((data)=>{
+            if (!(data || data.url)) return message.sendError('NO_DATA');
           const Embed = new MessageEmbed()
           .setImage(data.url)
           .setTitle(`${message.author.username} hugged ${hugged.username}`) //hug msg
           message.channel.send(Embed)
-    
+    });
  
    
        }
