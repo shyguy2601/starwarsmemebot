@@ -111,10 +111,10 @@ module.exports = {
     const FeatureCommandExample = ">feature / >featurerequest / >fr"
     const FeatureHelpEmbed = new Discord.MessageEmbed()
     .setColor(message.member.displayColor)
-    .setTitle('Botusers help')
+    .setTitle('Feature Request help')
     .setDescription('If you have any bot feature requests (commands) use this command, it will send the request to ShyGuy')
     .addField('Usage Example:-', `${FeatureCommandExample}`)
-    message.channel.send(FeatureHelpEmbed)
+    message.channel.send(FeatureHelpEmbed) //i'm so exhausted
     return;
 }
     const AlternativeHelp = "An alternative to using this is to do >help [Field Name]\nFor Example:- >help information"
