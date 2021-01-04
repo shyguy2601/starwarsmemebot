@@ -10,7 +10,7 @@ module.exports = {
       message.channel.send('You need to mention a user to call out for being sus!')
       return;
     }
-    message.channel.send(` ${sussedmemeber} looking kinda sus tho`);
+    message.channel.send(` ${sussedMember} looking kinda sus tho`);
 
   }
 }
