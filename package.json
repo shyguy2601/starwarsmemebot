@@ -17,6 +17,7 @@
       "node.js": "0.0.1-security",
       "snekfetch": "^4.0.4"
     }
+    
   },
   "dependencies": {
     "discord-xp": "^1.1.7",
@@ -34,3 +35,4 @@
     "utils": "^0.3.1"
   }
 }
+ 
