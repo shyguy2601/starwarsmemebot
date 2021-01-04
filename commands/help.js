@@ -107,8 +107,16 @@ module.exports = {
     .addField('Usage Example:-', `${BotUsersExample}`)
     message.channel.send(BotUsersHelpEmbed)
     return;
+}else if(args[1] == 'feature'){
+    const FeatureCommandExample = ">feature / >featurerequest / >fr"
+    const FeatureHelpEmbed = new Discord.MessageEmbed()
+    .setColor(message.member.displayColor)
+    .setTitle('Botusers help')
+    .setDescription('If you have any bot feature requests (commands) use this command, it will send the request to ShyGuy')
+    .addField('Usage Example:-', `${FeatureCommandExample}`)
+    message.channel.send(FeatureHelpEmbed)
+    return;
 }
-        
     const AlternativeHelp = "An alternative to using this is to do >help [Field Name]\nFor Example:- >help information"
         const embed = new Discord.MessageEmbed()
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
