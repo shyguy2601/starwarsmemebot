@@ -89,6 +89,24 @@ module.exports = {
     .addField('Usage Example:-',`${BonkExample}`)
     message.channel.send(BonkHelpEmbed)
     return;
+}else if(args[1] == 'botinfo'){
+    const BIcommandExample = ">botinfo"
+    const BIhelpEmbed = new Discord.MessageEmbed()
+    .setColor(message.member.displayColor)
+    .setTitle('Botinfo help')
+    .setDescription('This command gets the information of the bot')
+    .addField('Usage Example:-', `${BIcommandExample}`)
+    message.channel.send(BIhelpEmbed)
+    return;
+}else if(args[1] == 'botusers'){
+    const BotUsersExample = ">botusers / >bu "
+    const BotUsersHelpEmbed = new Discord.MessageEmbed()
+    .setColor(message.member.displayColor)
+    .setTitle('Botusers help')
+    .setDescription('This command gets the amount of bot users')
+    .addField('Usage Example:-', `${BotUsersExample}`)
+    message.channel.send(BotUsersHelpEmbed)
+    return;
 }
         
     const AlternativeHelp = "An alternative to using this is to do >help [Field Name]\nFor Example:- >help information"
