@@ -89,7 +89,7 @@ module.exports = {
             .setColor(message.member.displayColor)
             .setTitle('Help')
             .addField('`Fun Commands `', '😂', true)
-            .addField('`More Fun Commands `', '😭', true)
+            .addField('`Fun2`', '😭', true)
             .addField('`Information Commands `', '💻', true)
             .addField('`Utilities`', '🔨', true)
             .setTimestamp()
@@ -116,7 +116,7 @@ module.exports = {
                         embed.setColor(message.member.displayColor)
                         embed.setTitle('Help')
                         embed.addField('`Fun Commands `', '😂', true)
-                        .addField('`More Fun Commands `', '😭', true)
+                        embed.addField('`Fun2`', '😭', true)
                         embed.addField('`Information Commands `', '💻', true)
                         embed.addField('`Utilities`', '🔨', true)
                     } else if (reaction.emoji.name === '😂') {
