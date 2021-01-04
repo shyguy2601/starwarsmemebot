@@ -7,7 +7,7 @@ module.exports = {
       const prefix = ">";
       if(message.channel.type == 'text'){
       const member = message.member;
-    const userToMakeBabyWith = message.mentions.members.first() || message.guild.members.get(args[1]);
+    const userToMakeBabyWith = message.mentions.members.first(); 
   message.channel.send(`${message.author.username} made a baby with ${userToMakeBabyWith}`);
       }if(message.channel.type == 'dm'){
         return message.channel.send('Sorry this command does not work in DMs');
