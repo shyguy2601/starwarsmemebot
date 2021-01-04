@@ -4,14 +4,7 @@ module.exports = {
     aliases: ['virginitycheck'],
     execute(message, args){
       const Discord = require('discord.js');
-      const prefix = ">";
-      
-
-
-
-
-      
-      
+        
         const vcheck = new Discord.MessageEmbed()
         .setColor(0x00F5FF)
         .setTitle('Viginity Check')
