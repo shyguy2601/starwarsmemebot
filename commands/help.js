@@ -80,7 +80,17 @@ module.exports = {
             .addField('Usage example:-', `\`\`${EightBallExample}\`\``)
             message.channel.send(EightBallHelpEmbed);
             return;
+}else if(args[1] == 'bonk' || args[1] == 'Bonk'){
+    const BonkExample = ">bonk @Shyguy"
+    const BonkHelpEmbed = new Discord.MessageEmbed()
+    .setColor(message.member.displayColor)
+    .setTitle('Bonk Help')
+    .setDescription('This command is used to bonk another user')
+    .addField('Usage Example:-',`${BonkExample}`)
+    message.channel.send(BonkHelpEmbed)
+    return;
 }
+        
     const AlternativeHelp = "An alternative to using this is to do >help [Field Name]\nFor Example:- >help information"
         const embed = new Discord.MessageEmbed()
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
