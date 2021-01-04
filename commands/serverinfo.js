@@ -35,7 +35,7 @@ module.exports = {
     description: "gets information about the server",
     aliases: ['si'],
     execute: (message, args) => {
-		if(message.channel.type == 'text'){
+		
 		const roles = message.guild.roles.cache.sort((a, b) => b.position - a.position).map(role => role.toString());
 		const members = message.guild.members.cache;
 		const channels = message.guild.channels.cache;
@@ -71,7 +71,7 @@ module.exports = {
 			.setTimestamp();
 		message.channel.send(embed);
 
-		}if(message.channel.type == 'dm'){
+		if(message.channel.type == 'dm'){
 			return message.channel.send('Sorry, this command does not work in DMs')
 		}
         

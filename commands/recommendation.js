@@ -1,22 +1,23 @@
-/* module.exports = {
-    name: 'recommendation',
-    description: "this is a recommendation command",
+/*module.exports = {
+    name: 'feature',
+    description: "this is a feature request command",
+    aliases: ['fr', 'featurerequest'],
     execute(message, args){
       const Discord = require('discord.js');
-      const prefix = ">";
       
+      const featurerequest = 
     
 
     const AskForRecommendationEmbed = new Discord.MessageEmbed()
-    .setColor(message.member.displayColor)
-    .setTitle('Recommendation')
-    .setDescription('What is your recommendation')
+    .setColor('#DC143C')
+    .setTitle('Feature Request')
+    .setDescription(`Feature Request from ${}:-`)
     .addField('\u200b', 'Send the recommendation in the chat')
     .setFooter(`Requested by: ${message.author.username}`)
     
     
   
-    message.channel.send(AskForRecommendationEmbed);
+    
   
     message.channel.awaitMessages(m => m.author.id == message.author.id,
         {max: 1, time: 30000}).then(collected => {    
@@ -34,9 +35,7 @@
             
           })
             
-        aliases: [
-          `addrec`
-        ]
+        
     } 
   } 
   */
