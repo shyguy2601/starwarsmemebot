@@ -12,13 +12,18 @@ module.exports = {
       }
       
       if(!message.guild.me.hasPermission("MANAGE_CHANNELS")){
+          message.channel.send('Error')
           console.log(`Bot doesn't have the right permission`)
           return;
       }
-     
+     if(!TopicForChannel){
+         console.log('No channel topic given')
+         message.delete()
+         return;
+     }
         const channel = message.channel;
       channel.setTopic(`${TopicForChannel}`)
-  .then(TopicForChannel => console.log(`Channel's new topic is ${TopicForChannel.topic}`))
+  .then(TopicForChannel => console.log(`${message.channel.name}'s new topic is ${TopicForChannel.topic}`))
   .catch(console.error);
     
   message.delete();
