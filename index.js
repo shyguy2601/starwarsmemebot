@@ -40,7 +40,10 @@ Client.once('ready', () => {
 
 
   Client.on(`messageDelete`, function(message, channel){
-   
+   if(message.guild.id == '771799156557480006'){
+     console.log('Ghost Ping is ignored for woogies world ')
+     return;
+   }
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
