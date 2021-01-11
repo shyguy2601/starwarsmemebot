@@ -122,6 +122,7 @@ module.exports = {
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
             .addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
             .addField('\u200B',`\`\`\`${AlternativeHelp}\`\`\``)
+            .addField('Bot Invite',`Invite me to your own servers:- (https://top.gg/bot/783629275546648577)`)
             .setColor(message.member.displayColor)
             .setTitle('Help')
             .addField('`Fun Commands `', '😂', true)
