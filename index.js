@@ -51,6 +51,7 @@ Client.once('ready', () => {
           
                 const GhostPingEmbed = new MessageEmbed();
                 GhostPingEmbed.setColor(message.member.displayColor);
+                GhostPingEmbed.addField('Wanna remove this feature from your server?',`Message ShyGuy#5504 your server ID number and evidence that you are that server owner`)
                 GhostPingEmbed.setTitle("Ghost Ping");
                 GhostPingEmbed.addField("Author:- ", message.author);
                 GhostPingEmbed.addField("Message:- ", message.content);
