@@ -17,11 +17,11 @@ for(const file of commandFiles){
 Client.ws.on('INTERACTION_CREATE', async interaction => {
   require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
 })
-
+const guilds = client.guilds.cache.array()
 const activities_list = [ 
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
-  { text: "you sleep 0_o", type: 3},
+  { text: `in ${guilds.length} Servers`, type: 1},
   { text: "15 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
