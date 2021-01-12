@@ -22,8 +22,8 @@ const guilds = Client.guilds.cache.array()
 const activities_list = [ 
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
-  { text: `in ${guilds.length} Servers`, type: 1},
-  { text: "15 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: `in ${guilds.length} Servers`, type: 0},
+  { text: "14 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
 
