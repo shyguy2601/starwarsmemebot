@@ -18,6 +18,7 @@ Client.ws.on('INTERACTION_CREATE', async interaction => {
   require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
 })
 const guilds = Client.guilds.cache.array()
+
 const activities_list = [ 
   { text: ">help", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
