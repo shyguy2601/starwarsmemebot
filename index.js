@@ -66,8 +66,11 @@ const activities_list = [
                 }    
         } else if(!message.mentions.users.first() || message.mentions.roles.first()){
           console.log(`no ping detected`)
+
+          .catch(err => console.log(err))
       }
     }
+    
     })
     Client.ws.on('INTERACTION_CREATE', async interaction => {
       require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
