@@ -17,7 +17,11 @@ for(const file of commandFiles){
 Client.ws.on('INTERACTION_CREATE', async interaction => {
   require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
 })
-const guilds = Client.guilds.cache.array()
+
+Client.once('ready', async () => {
+  console.log('Online!');
+  let guilds = await Client.guilds.cache
+  guilds = guilds.array()
 
 const activities_list = [ 
   { text: ">help", type: 0},
@@ -26,15 +30,14 @@ const activities_list = [
   { text: "14 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
-
-Client.once('ready', () => {
-  console.log('Online!');
+  
   setInterval(() => {
     if (i >= activities_list.length)  i = 0; 
     Client.user.setPresence({ activity: { name: activities_list[i].text, type: activities_list[i].type } });
     i++; 
 }, 10000);
 }); 
+
 
 
 
