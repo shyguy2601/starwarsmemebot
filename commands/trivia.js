@@ -42,6 +42,7 @@ module.exports ={
         const TriviaEmbed = new Discord.MessageEmbed()
                .setColor(`#123456`)  
                .setTitle(chosenQuestion.title)
+               .addField(`\u200b`,'Borrowed with permisson from Feesh')
                .addFields({
                        name: `Choices`,
                        value: chosenQuestion.choices.join(`\n`)

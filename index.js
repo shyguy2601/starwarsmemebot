@@ -25,9 +25,10 @@ Client.once('ready', async () => {
 
 const activities_list = [ 
   { text: ">help", type: 0},
+  { text: "do >vote", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: `in ${guilds.length} Servers`, type: 0},
-  { text: "14 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: "13 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
   
