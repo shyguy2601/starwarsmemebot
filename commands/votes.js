@@ -18,7 +18,9 @@ module.exports = {
         votes.push(i+1 + " - " + apiVotes[i]["username"] + "#" + apiVotes[i]["discriminator"]);
       }
 
-      if (api.hasVoted(message.author.id)) { has_voted = "✅ You have voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!"; } else { has_voted = "❌ You have not voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!" }
+      let canVote = await api.hasVoted(message.author.id)
+
+      if (canVote) { has_voted = "✅ You have voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!"; } else { has_voted = "❌ You have not voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!" }
 
     const VoteEmbed = new Discord.MessageEmbed()
       .setColor('#3586cd')
