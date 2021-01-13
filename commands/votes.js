@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+/*const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
 const Client = new Discord.Client();
 const Topgg = require('@top-gg/sdk')
@@ -30,3 +30,4 @@ module.exports = {
     message.channel.send(VoteEmbed);
   }
 }
+*/
