@@ -12,8 +12,9 @@ module.exports = {
     const UserRequestEmbed = new Discord.MessageEmbed()
     .setColor('#DC143C')
     .setTitle('Feature Request')
-    .setDescription(`Feature Request from ${message.author} in server ${message.guild.name}:-`)
-    .addField('Their Request:-',`${featurerequest}`)
+    .setDescription(`Feature Request from ${message.author} in server ${message.guild.name}. Their Request is \n
+    ${featurerequest}`)
+   
     
     const RequestWasSentEmbed = new Discord.MessageEmbed()
     .setColor('#DC143C')
