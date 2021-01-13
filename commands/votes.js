@@ -20,7 +20,7 @@ module.exports = {
 
       let canVote = await api.hasVoted(message.author.id)
 
-      if (canVote) { has_voted = "✅ You have voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!"; } else { has_voted = "❌ You have not voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!" }
+      if (canVote) { has_voted = `<a:check_yes:798896012773031938> You have voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!`; } else { has_voted = `<a:check_no:798895971265675294> You have not voted for **[VibeMaster](https://top.gg/bot/783629275546648577/vote)**!` }
 
     const VoteEmbed = new Discord.MessageEmbed()
       .setColor('#3586cd')
