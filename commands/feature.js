@@ -20,7 +20,7 @@ module.exports = {
     .setColor('#DC143C')
     .setTitle('Success!')
     .setDescription(`Your bot feature request has successfully been sent to Shyguy!`)
-    .addField('Your request:-',`${featurerequest}`)
+    .addField(`\u200B`,`Your request:- ${featurerequest}`)
     .setFooter(`Feature request from ${message.author.username}`)
 
     if(!featurerequest){
