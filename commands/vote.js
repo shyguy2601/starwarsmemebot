@@ -9,6 +9,7 @@ module.exports = {
     .setColor(message.member.displayColor)
     .setTitle('Vote')
     .setDescription('Please vote for me on top.gg')
+    .addField(`\u200B`,`<:vmkittyblush:798856313961840672>`)
     .addField('Vote Link',`https://top.gg/bot/783629275546648577/vote`)
     message.channel.send(VoteEmbed);
 
