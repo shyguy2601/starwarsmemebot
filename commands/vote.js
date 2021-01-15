@@ -29,12 +29,10 @@ module.exports = {
     .addField('Vote Status', has_voted);
   message.channel.send(VoteEmbed);
   const botlistspace = `**[botlist.space](https://botlist.space/bot/783629275546648577)**`
-  const discordbotlist = `**[discordbotlist](https://discordbotlist.com/bots/vibemaster)**`
   const OtherVotesEmbed = new Discord.MessageEmbed()
   .setColor('#3586cd')
   .setTitle('Vote for VibeMaster on these other sites')
   .addField(`\u200B`,`${botlistspace}`)
-  .addField(`\u200B`,`${discordbotlist}`)
   message.channel.send(OtherVotesEmbed)
   
   }
