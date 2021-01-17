@@ -4,9 +4,9 @@ module.exports ={
     name: 'botusers',
     description: "Says the amount of users the bot has",
     aliases: ['bu'],
-    execute(message,args,client){
+    async execute(message,args,client){
         if(message.channel.type == "text"){
-        const guilds = client.guilds.cache.array()
+        const guilds = await client.guilds.cache.array()
        const BotUsersEmbed = new Discord.MessageEmbed()
         .setColor(`#FFD0F0`)
         .setTitle(`Bot Users`)
