@@ -8,9 +8,9 @@ module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
     aliases: ['bi', 'botinfo'],
-    async execute(message,args, Client){
+    async execute(message,args, client){
         if(message.channel.type == "text"){
-            let guilds = await Client.guilds.cache
+            let guilds = client.guilds.cache
             guilds = guilds.array()
     const core = os.cpus()[0];
 
