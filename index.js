@@ -100,6 +100,6 @@ const activities_list = [
 
     
   });
-//Client.login(process.env.DJS_TOKEN); //you should not use process.env
-Client.login('NzgzNjI5Mjc1NTQ2NjQ4NTc3.X8dhog.pjbn94kcGrKXd07E4txq4zsywDI')
+Client.login(process.env.DJS_TOKEN); //you should not use process.env
+
 
