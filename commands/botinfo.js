@@ -9,10 +9,9 @@ module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
     aliases: ['bi', 'botinfo'],
-    async execute(message, args, Client) {
+    execute: (message, args, client) => {
         if(message.channel.type == "text"){
-            let guilds = await Client.guilds.cache
-            guilds = guilds.array()
+    const guilds = client.guilds.cache.array()
     const core = os.cpus()[0];
 
             let days = Math.floor(client.uptime / 86400000);
