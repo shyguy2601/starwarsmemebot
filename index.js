@@ -76,21 +76,7 @@ const activities_list = [
     Client.ws.on('INTERACTION_CREATE', async interaction => {
       require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
   })
-  Client.on('message', message => {
-    const args = message.content.trim().split(/ +/g);
-    
-      const commandName = args[0].slice(prefix.length).toLowerCase();
-    
-    
-      const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-  
-      if(!message.content.startsWith(`${prefix}`)) return;
-      if (message.author.bot) return;
-      if(!command) return;
 
-<<<<<<< HEAD
-      if(message.channel.type !== dm &&!message.guild.me.hasPermission("SEND_MESSAGES")) return;
-=======
       Client.on('message', message => {
         const args = message.content.trim().split(/ +/g);
         
@@ -108,17 +94,5 @@ const activities_list = [
           
           
         });
->>>>>>> e0048ebd72570ca6582da1ed5d2ae76f19c3b3b1
-      command.execute(message, args, Client);
-      
-      
-    });
-<<<<<<< HEAD
-  command.execute(message, args, Client);
-  
 Client.login(process.env.DJS_TOKEN);
-=======
-    
-    
-Client.login('NzQ2NDI1MDA0NTIyMDc4Mjgw.X0AIdA._5SHAaoE8zN-Rb-F-VUVIvG4hm4');
->>>>>>> e0048ebd72570ca6582da1ed5d2ae76f19c3b3b1
+
