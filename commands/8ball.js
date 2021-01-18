@@ -30,19 +30,31 @@ module.exports = {
     execute(message, question, Client ){
       const Discord = require('discord.js');
 	  const prefix = ">";
+<<<<<<< HEAD
 
 	  if(message.channel.type == "text"){
+=======
+	  
+	  if(!message.guild.me.hasPermission('SEND_MESSAGES')){
+		console.log('Somebody tried to use the 8ball command but i was missing the SEND_MESSAGES permission') 
+		return; 
+	  }
+		
+		if(message.channel.type == "text"){
+>>>>>>> e0048ebd72570ca6582da1ed5d2ae76f19c3b3b1
 		  return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 	  '🎱 That doesn\'t seem to be a question, please try again!');
-	  }if(message.channel.type == "dm"){
+	  
+	  }
+	  if(message.channel.type == "dm"){
 		return message.reply(question.join(' ').endsWith('?') ?
 		`🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 		'🎱 That doesn\'t seem to be a question, please try again!');
 
 	  }
       
-	  
+	
 	  
   
   }
