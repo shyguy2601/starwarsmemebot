@@ -30,23 +30,26 @@ module.exports = {
     execute(message, question, Client ){
       const Discord = require('discord.js');
 	  const prefix = ">";
-	  /*const BannedUser = message.author;
-	  if(BannedUser.id == '628307778242347042' || BannedUser == '692039115641978890'){
-		  message.reply('You are temporarily banned from this command')
-		  return;
-	  }*/
-	  if(message.channel.type == "text"){
+	  
+	  if(!message.guild.me.hasPermission('SEND_MESSAGES')){
+		console.log('Somebody tried to use the 8ball command but i was missing the SEND_MESSAGES permission') 
+		return; 
+	  }
+		
+		if(message.channel.type == "text"){
 		  return message.reply(question.join(' ').endsWith('?') ?
       `🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 	  '🎱 That doesn\'t seem to be a question, please try again!');
-	  }if(message.channel.type == "dm"){
+	  
+	  }
+	  if(message.channel.type == "dm"){
 		return message.reply(question.join(' ').endsWith('?') ?
 		`🎱 ${answers[Math.floor(Math.random() * answers.length)]}` :
 		'🎱 That doesn\'t seem to be a question, please try again!');
 
 	  }
       
-	  
+	
 	  
   
   }
