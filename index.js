@@ -28,7 +28,7 @@ const activities_list = [
   { text: "do >vote", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: `in ${guilds.length} Servers`, type: 0},
-  { text: "9 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: "8 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
   
@@ -83,27 +83,20 @@ const activities_list = [
     
     
       const command = Client.commands.get(commandName) || Client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-    /*if(message.content == 'what did i win' || message.content == 'What did i win'|| message.content == 'what did i win?' || message.content == 'What did i win?'){
-      message.reply(`You won nothing you greedy bastard, it's just for fun`)
-    }
-    if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im') && (args[1])){
-      if(args[1].toLowerCase() == 'dad'){
-        return message.channel.send(`Impossible, you can't be dad, because i'm dad`);
-      }
-      message.channel.send(`Hi ${args.slice(1).join(' ')}, I'm dad`);
-    }
-    if (message.content == `pls meme` || message.content==`Pls meme`){
-      message.reply('***Pls meme is disabled use >meme instead***')
-  }*/
   
       if(!message.content.startsWith(`${prefix}`)) return;
       if (message.author.bot) return;
       if(!command) return;
-    
+
+      if(message.channel.type !== dm &&!message.guild.me.hasPermission("SEND_MESSAGES")) return;
       command.execute(message, args, Client);
       
       
     });
+  command.execute(message, args, Client);
+  
+  
+});
     
     
 Client.login(process.env.DJS_TOKEN);

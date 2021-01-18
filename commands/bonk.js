@@ -8,6 +8,7 @@ module.exports = {
       const prefix = ">";
       
     const BonkedUser = message.mentions.members.first();
+   
     if(!BonkedUser){
       message.channel.send('You need to mention a user to bonk!')
       return;
