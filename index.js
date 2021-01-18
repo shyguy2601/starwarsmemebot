@@ -95,8 +95,4 @@ const activities_list = [
     });
   command.execute(message, args, Client);
   
-  
-});
-    
-    
 Client.login(process.env.DJS_TOKEN);
