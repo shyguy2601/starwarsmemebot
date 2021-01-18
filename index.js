@@ -92,7 +92,7 @@ const activities_list = [
     if (message.author.bot) return;
     if(!command) return;
   
-    command.execute(message, args);
+    command.execute(message, args, Client);
 
     
   });

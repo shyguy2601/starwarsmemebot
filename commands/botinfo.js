@@ -4,7 +4,6 @@ const version = require('../package.json');
 const { utc } = require('moment');
 const os = require('os');
 const ms = require('ms');
-
 module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
