@@ -8,7 +8,7 @@ module.exports = {
     name: 'botinfo',
     description: "gets information about the bot",
     aliases: ['bi', 'botinfo'],
-    async execute(message,args, client){
+    async execute(message,args, client = new Discord.Client()){
         if(message.channel.type == "text"){
             let guilds = client.guilds.cache
             guilds = guilds.array()
@@ -49,7 +49,7 @@ module.exports = {
         .addField('General', [
         `**> Commands:** ${client.commands.size}`,
         `**> Server Count:** ${client.guilds.cache.size}`,
-        `**> Users:** ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}`,
+        `**> Users:** ${client.users.cache.array().length}`,
         `**> Channels:** ${client.channels.cache.size}`,
         `**> Creation Date:** ${utc(client.user.createdTimestamp).format('Do MMMM YYYY HH:mm:ss')}`,
         `**> Node.js Version:** ${process.version}`,
