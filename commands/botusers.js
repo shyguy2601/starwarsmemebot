@@ -14,7 +14,7 @@ module.exports ={
         .setColor(`#FFD0F0`)
         .setTitle(`Bot Users`)
         BotUsersEmbed.setDescription(`\`\`\`\nBot Users : ${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}\`\`\``);
-        console.log(Client.guilds.cache.reduce((a, b) => a + b.memberCount, 0))
+        console.log(client.guilds.cache.reduce((a, b) => a + b.memberCount, 0))
  
        message.channel.send(BotUsersEmbed)
         }if(message.channel.type == "dm"){
