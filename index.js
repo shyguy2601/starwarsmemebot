@@ -1,6 +1,10 @@
+'use strict';
+process.on('uncaughtException', function (err) {
+    console.log(`Caught exception:  ${err}`);
+});
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
-const Client = new Discord.Client();
+const Client = new Discord.Client({fetchAllMembers: true});
 const prefix = '>';
 
 
@@ -96,5 +100,5 @@ const activities_list = [
 
     
   });
-Client.login(process.env.DJS_TOKEN);
+Client.login(process.env.DJS_TOKEN); //you should not use process.env
 
