@@ -6,7 +6,7 @@ module.exports ={
     description: "Says the amount of users the bot has",
     aliases: ['bu'],
     async execute(message,args, Client){
-        let guilds = Client.guilds.cache
+        let guilds = await Client.guilds.cache
         guilds = guilds.array()
         if(message.channel.type == "text"){
      

@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const { MessageEmbed } = require('discord.js');
-const Client = new Discord.Client();
+const Client = new Discord.Client({fetchAllMembers: true});
 const prefix = '>';
 
 
