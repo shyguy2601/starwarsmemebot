@@ -1,12 +1,13 @@
 const { MessageEmbed } = require('discord.js');
 const Discord = require('discord.js');
-        let guilds = Client.guilds.cache
-            guilds = guilds.array()
+       
 module.exports ={
     name: 'botusers',
     description: "Says the amount of users the bot has",
     aliases: ['bu'],
     async execute(message,args, Client){
+        let guilds = Client.guilds.cache
+        guilds = guilds.array()
         if(message.channel.type == "text"){
      
        const BotUsersEmbed = new Discord.MessageEmbed()
