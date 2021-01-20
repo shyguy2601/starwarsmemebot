@@ -32,6 +32,7 @@
     ],
     "utilities": [
         { "name": ">message <the message you want to send>", "description": "Sends a message to the owner of the bot"},
-        { "name": " >feature / >featurerequest / >fr", "description": "If you have any bot feature requests (commands) use this command, it will send the request to ShyGuy"}
+        { "name": " >feature / >featurerequest / >fr", "description": "If you have any bot feature requests (commands) use this command, it will send the request to ShyGuy"},
+        { "name": ">channeltopic / >ct", "description": "Sets the channel topic (You will require the manage channels permission)"}
     ]
 }
