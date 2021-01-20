@@ -53,6 +53,10 @@ const activities_list = [
      console.log('Ghost Ping is ignored for woogies world ')
      return;
    }
+   if(message.guild.id == '614895425639546881'){
+     console.log(`Ghost ping ignored for BytesToBits`)
+     return;
+   }
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
