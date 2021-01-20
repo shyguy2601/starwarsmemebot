@@ -86,7 +86,15 @@ const activities_list = [
   })
 
   Client.on('message', message => {
-
+    if(message.guild.id == '729703207848378460'){
+      const keywords = ["i dont simp over shawty","shawty like a melody"]
+      var i;
+      for(i = 0;i < keywords.length; i++) {
+      if(message.content.toLowerCase().includes(keywords[i].toLowerCase())){
+        message.channel.send("Shut up, no one likes that joke")
+      }
+    }
+  }
     if(!message.content.startsWith(`${prefix}`)) return;
     if (message.author.bot) return;
 
