@@ -32,7 +32,7 @@ const activities_list = [
   { text: "do >vote", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: `in ${guilds.length} Servers`, type: 0},
-  { text: "7 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: "6 days until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
   
