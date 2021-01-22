@@ -4,6 +4,7 @@ const https = require('https');
 module.exports = {
     name: 'hpmeme',
     description: 'Sends harry potter meme.',
+    cooldown: 5,
     aliases:['harrypottermeme', 'hpm'],
     execute(message, args) {
         if(message.channel.type == "text"){
