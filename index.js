@@ -21,6 +21,7 @@ for(const file of commandFiles){
 Client.ws.on('INTERACTION_CREATE', async interaction => {
   require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
 })
+const cooldowns = new Discord.Collection();
 
 Client.once('ready', async () => {
   console.log('Online!');
@@ -107,8 +108,32 @@ const activities_list = [
     if(!message.content.startsWith(`${prefix}`)) return;
     if (message.author.bot) return;
     if(!command) return;
-  
-    command.execute(message, args, Client);
+
+    if (!cooldowns.has(command.name)) {
+      cooldowns.set(command.name, new Discord.Collection());
+    }
+    
+    const now = Date.now();
+    const timestamps = cooldowns.get(command.name);
+    const cooldownAmount = (command.cooldown || 3) * 1000;
+    
+    if (timestamps.has(message.author.id)) {
+      const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
+
+      if (now < expirationTime) {
+        const timeLeft = (expirationTime - now) / 1000;
+        return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
+    }
+  }
+    timestamps.set(message.author.id, now);
+    setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
+    try {
+      command.execute(message, args, Client);
+    } catch (error) {
+      console.error(error);
+      message.reply('There was an error trying to execute that command');
+    }
+    
 
     
   });
