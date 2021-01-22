@@ -4,6 +4,7 @@ const https = require('https');
 module.exports = {
     name: 'rickandmortymeme',
     description: 'Sends a Rick and Morty meme.',
+    cooldown: 5,
     aliases: [`ramm`],
     execute(message, args) {
         if(message.channel.type == "text"){
