@@ -33,7 +33,7 @@ const activities_list = [
   { text: "do >vote", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
   { text: `in ${guilds.length} Servers`, type: 0},
-  { text: "4 days until Shyguy's 18th birthday!!", type: 0}]
+  { text: "1 day until Shyguy's 18th birthday!!", type: 0}]
 
   let i = 0;
   
@@ -122,7 +122,7 @@ const activities_list = [
 
       if (now < expirationTime) {
         const timeLeft = (expirationTime - now) / 1000;
-        return message.reply(`You must wait another ${timeLeft.toFixed(1)} second(s) before using this command again!.`);
+        return message.reply(`You must wait another ${timeLeft.toFixed(1)} more second(s) before using this command again!.`);
     }
   }
     timestamps.set(message.author.id, now);
