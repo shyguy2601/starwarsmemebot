@@ -27,7 +27,8 @@
         { "name": ">serverinfo / >si", "description": "Gets information of the server"},
         { "name": ">botinfo / >bi", "description": "Gets information of the bot"},
         { "name": ">botusers / >bu", "description": "Says the amount of users the bot has"},
-        { "name": ">uptime", "description": "Shows the amount of time the bot's been online for"}
+        { "name": ">uptime", "description": "Shows the amount of time the bot's been online for"},
+        { "name": ">ping", "description": "Displays the bot's pings in milliseconds"}
 
     ],
     "utilities": [
