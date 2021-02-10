@@ -121,6 +121,7 @@ module.exports = {
         const embed = new Discord.MessageEmbed()
             .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
             .addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
+            .addField('\u200B',`All you VScode devs out there, you should totally use my VScode color theme extension:- (https://marketplace.visualstudio.com/items?itemName=HaydenTravers.color-theme#review-details)`)
             .addField('\u200B',`\`\`\`${AlternativeHelp}\`\`\``)
             .addField('Bot Invite',`Invite me to your own servers:- (https://top.gg/bot/783629275546648577)`)
             .setColor(message.member.displayColor)
@@ -150,6 +151,7 @@ module.exports = {
                     if (reaction.emoji.name === '🏠') {
                         embed.setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 512}))
                         embed.addField('\u200B',`Join the support server if you are confused:- (https://discord.gg/hcpK8kvjPc)`)
+                        .addField('\u200B',`All you VScode devs out there, you should totally use my VScode color theme extension:- (https://marketplace.visualstudio.com/items?itemName=HaydenTravers.color-theme#review-details)`)
                         embed.setColor(message.member.displayColor)
                         embed.setTitle('Help')
                         embed.addField('`Fun Commands `', '😂', true)
