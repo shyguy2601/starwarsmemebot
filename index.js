@@ -58,6 +58,9 @@ const activities_list = [
      console.log(`Ghost ping ignored for BytesToBits`)
      return;
    }
+   if(message.guild.id == '810757784089919489'){
+     console.log(`Ghost ping ignored for galactic central`)
+   }
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
           const usersMentioned = message.mentions.users;
