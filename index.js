@@ -60,6 +60,7 @@ const activities_list = [
    }
    if(message.guild.id == '810757784089919489'){
      console.log(`Ghost ping ignored for galactic central`)
+     return;
    }
       if(message.mentions.users.first() || message.mentions.roles.first()){
         if(!message.author.bot) {
