@@ -7,8 +7,7 @@ module.exports = {
     cooldown: 2,
     aliases: [`m`],
     execute(message, args) {
-        if(message.channel.type == "text"){
-            https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
+            https.get({ hostname: 'api.macedon.ga', path: '/reddit/random/memes', headers: { Authorization: 'the-key-is-ur-mom-kek' } }, (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
@@ -25,24 +24,5 @@ module.exports = {
                     message.channel.send(embed);
                 });
             });
-        }if(message.channel.type == "dm"){
-            https.get('https://api.macedon.ga/reddit/random/memes', (resp) => {
-                let data = '';
-                resp.on('data', (chunk) => {
-                    data += chunk;
-                });
-                resp.on('end', () => {
-                    var res = JSON.parse(data);
-                    const embed = new Discord.MessageEmbed()
-                        .setColor('#DC143C')
-                        .setTitle(res.title)
-                        .setURL(res.permalink)
-                        .setImage(res.image)
-                        .setTimestamp()
-                        .setFooter(`Requested by ${message.author.username}`)
-                    message.channel.send(embed);
-                });
-            });
-        }
     },
 };
