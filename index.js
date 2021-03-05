@@ -103,6 +103,7 @@ const activities_list = [
             .setColor('#ff000')
             .setTitle('Rate')
             .setImage(Attachment[0].url)
+            .setFooter(`Sent by ${message.author.username}`)
             .setTimestamp()
             message.channel.send(RateEmbed).then(async embed => {
             message.delete()    
@@ -130,6 +131,7 @@ const activities_list = [
             .setColor('#ff000')
             .setTitle('Hot Or Not')
             .setImage(HotOrNotAttachment[0].url)
+            .setFooter(`Sent by ${message.author.username}`)
             .setTimestamp()
             
             message.channel.send(HotOrNotEmbed).then(async embed => {
@@ -149,6 +151,7 @@ const activities_list = [
             .setColor('#ff000')
             .setTitle('Left or Right')
             .setImage(LeftRightAttachment[0].url)
+            .setFooter(`Sent by ${message.author.username}`)
             .setTimestamp()
             
             message.channel.send(LeftRightEmbed).then(async embed => {
@@ -168,6 +171,7 @@ const activities_list = [
             .setColor('#ff000')
             .setTitle('Boner-O-Meter')
             .setImage(BonerAttachment[0].url)
+            .setFooter(`Sent by ${message.author.username}`)
             .setTimestamp()
             
             message.channel.send(BonerEmbed).then(async embed => {
@@ -188,6 +192,7 @@ const activities_list = [
             .setColor('#ff000')
             .setTitle('Smash Or Pass')
             .setImage(SmashOrPassAttachment[0].url)
+            .setFooter(`Sent by ${message.author.username}`)
             .setTimestamp()
             
             message.channel.send(SmashOrPassEmbed).then(async embed => {
