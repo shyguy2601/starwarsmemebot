@@ -52,46 +52,46 @@ const activities_list = [
 
 
 
-  Client.on(`messageDelete`, function(message, channel){
-   if(message.guild.id == '771799156557480006'){
-     console.log('Ghost Ping is ignored for woogies world ')
-     return;
-   }
-   if(message.guild.id == '614895425639546881'){
-     console.log(`Ghost ping ignored for BytesToBits`)
-     return;
-   }
-   if(message.guild.id == '810757784089919489'){
-     console.log(`Ghost ping ignored for galactic central`)
-     return;
-   }
-      if(message.mentions.users.first() || message.mentions.roles.first()){
+  //Client.on(`messageDelete`, function(message, channel){
+   //if(message.guild.id == '771799156557480006'){
+     //console.log('Ghost Ping is ignored for woogies world ')
+     //return;
+   //}
+   //if(message.guild.id == '614895425639546881'){
+     //console.log(`Ghost ping ignored for BytesToBits`)
+     //return;
+   //}
+   //if(message.guild.id == '810757784089919489'){
+     //console.log(`Ghost ping ignored for galactic central`)
+     //return;
+   //}
+      //if(message.mentions.users.first() || message.mentions.roles.first()){
         // if(!message.author.bot) {
-          const usersMentioned = message.mentions.users;
-          if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
+         // const usersMentioned = message.mentions.users;
+          //if (usersMentioned.first().id === message.author.id && usersMentioned.size === 1) return;
           
-                const GhostPingEmbed = new MessageEmbed();
-                GhostPingEmbed.setColor(message.member.displayColor);
-                GhostPingEmbed.addField('Wanna remove this feature from your server?',`Message ShyGuy#5504 your server ID number and evidence that you are that server owner`)
-                GhostPingEmbed.setTitle("Ghost Ping");
-                GhostPingEmbed.addField("Author:- ", message.author);
-                GhostPingEmbed.addField("Message:- ", message.content);
-                GhostPingEmbed.setColor(message.member.displayColor);
-                message.channel.send(GhostPingEmbed);
-                if (message.guild.id == '396021514740301825'){
+            //    const GhostPingEmbed = new MessageEmbed();
+              //  GhostPingEmbed.setColor(message.member.displayColor);
+       //         GhostPingEmbed.addField('Wanna remove this feature from your server?',`Message ShyGuy#5504 your server ID number and evidence that you are that server owner`)
+         //       GhostPingEmbed.setTitle("Ghost Ping");
+           //     GhostPingEmbed.addField("Author:- ", message.author);
+             //   GhostPingEmbed.addField("Message:- ", message.content);
+               // GhostPingEmbed.setColor(message.member.displayColor);
+                //message.channel.send(GhostPingEmbed);
+                //if (message.guild.id == '396021514740301825'){
                   // message.guild.channels.cache.find(c => c.name === `🤖-bot-commands`).send(GhostPingEmbed)
-                }    
-        } else if(!message.mentions.users.first() || message.mentions.roles.first()){
-          console.log(`no ping detected`)
+                //}    
+       // } else if(!message.mentions.users.first() || message.mentions.roles.first()){
+         // console.log(`no ping detected`)
 
-          .catch(err => console.log(err))
-      }
-    }
+          //.catch(err => console.log(err))
+      //}
+    //}
     
-  )
-    Client.ws.on('INTERACTION_CREATE', async interaction => {
-      require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
-  })
+  //)
+    //Client.ws.on('INTERACTION_CREATE', async interaction => {
+      //require(`./slash_commands/${interaction.data.name}.js`)(client, interaction);
+ // })
 
   // bot.on('message', async (message) => {
     
