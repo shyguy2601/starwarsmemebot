@@ -29,7 +29,7 @@ module.exports = {
         message.channel.send('You need to give a request!')
         return;
     }
-       client.channels.get(`865066844661481504`).send(UserRequestEmbed)
+       client.channels.cache.get(`865066844661481504`).send(UserRequestEmbed)
     message.client.users.fetch("704708159901663302").then(user=>{
         user.send(UserRequestEmbed)
         .then(embed => {
