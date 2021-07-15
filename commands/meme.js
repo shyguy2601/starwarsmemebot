@@ -7,7 +7,7 @@ module.exports = {
     cooldown: 2,
     aliases: [`m`],
     execute(message, args) {
-            https.get({ hostname: 'api.macedon.ga', path: '/reddit/random/memes', headers: { Authorization: 'the-key-is-ur-mom-kek' } }, (resp) => {
+            https.get({ hostname: 'api.macedon.win', path: '/reddit/random/memes', headers: { Authorization: 'the-key-is-ur-mom-kek' } }, (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
