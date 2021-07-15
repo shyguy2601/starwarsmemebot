@@ -26,7 +26,7 @@ module.exports = {
                 });
             });
         }if(message.channel.type == "dm"){
-            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
+            https.get('https://api.marco.win/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
