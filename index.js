@@ -35,6 +35,7 @@ const activities_list = [
   { text: ">help", type: 0},
   { text: "do >vote", type: 0},
   { text: "Developed by ShyGuy#5504", type: 0},
+    { text: "Sorry but memes aren't working rn, api is broken", type: 0},
   { text: `in ${guilds.length} Servers`, type: 0},
 ]
 
