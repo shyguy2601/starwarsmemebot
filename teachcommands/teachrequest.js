@@ -2,7 +2,7 @@ module.exports = {
     name: 'request',
     description: "this is a request command",
     aliases: ['r', 'rqst'],
-    execute(message, args){
+    execute(message, args, client){
       const Discord = require('discord.js');
       const { MessageEmbed } = require('discord.js')
       
