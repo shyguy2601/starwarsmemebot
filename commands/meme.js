@@ -25,6 +25,24 @@ module.exports = {
                     message.channel.send(embed);
                 });
             });
+        } if(message.channel.type == 'dm'){
+          https.get({ hostname: 'api.marco.win', path: '/reddit/random/memes', headers: { Authorization: 'the-key-is-ur-mom-kek' } }, (resp) => {
+                let data = '';
+                resp.on('data', (chunk) => {
+                    data += chunk;
+                });
+                resp.on('end', () => {
+                    var res = JSON.parse(data);
+                    const embed = new Discord.MessageEmbed()
+                        .setColor('#DC143C')
+                        .setTitle(res.title)
+                        .setURL(res.permalink)
+                        .setImage(res.image)
+                        .setTimestamp()
+                        .setFooter(`Requested by ${message.author.username}`)
+                    message.channel.send(embed);
+                });
+            });
         }
     },
 };
