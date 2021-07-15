@@ -7,7 +7,7 @@ module.exports = {
     aliases:['swmeme', 'swm'],
     execute(message, args) {
         if(message.channel.type == "text"){ 
-            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
+            https.get('https://api.marco.win/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
             let data = '';
             resp.on('data', (chunk) => {
                 data += chunk;
@@ -25,7 +25,7 @@ module.exports = {
             });
         });
     }if(message.channel.type == "dm"){
-        https.get('https://api.macedon.ga/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
+        https.get('https://api.marco.win/reddit/random/subreddit?sub=starwarsmemes', (resp) => {
             let data = '';
             resp.on('data', (chunk) => {
                 data += chunk;
