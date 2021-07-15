@@ -8,7 +8,7 @@ module.exports = {
     aliases:['harrypottermeme', 'hpm'],
     execute(message, args) {
         if(message.channel.type == "text"){
-            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
+            https.get('https://api.marco.win/reddit/random/subreddit?sub=harrypottermemes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
