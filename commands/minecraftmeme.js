@@ -7,7 +7,7 @@ module.exports = {
     aliases: [`mcm`],
     execute(message, args) {
         if(message.channel.type == "text"){
-            https.get('https://api.macedon.ga/reddit/random/subreddit?sub=MinecraftMemes', (resp) => {
+            https.get('https://api.marco.win/reddit/random/subreddit?sub=MinecraftMemes', (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
                     data += chunk;
