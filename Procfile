@@ -1,2 +1,2 @@
-worker: node index.js
-worker: node teacher.js
+worker1: node index.js
+worker2: node teacher.js
