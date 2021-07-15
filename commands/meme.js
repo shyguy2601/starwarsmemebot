@@ -7,6 +7,7 @@ module.exports = {
     cooldown: 2,
     aliases: [`m`],
     execute(message, args) {
+        if(message.channel.type == 'text'){
             https.get({ hostname: 'api.marco.win', path: '/reddit/random/memes', headers: { Authorization: 'the-key-is-ur-mom-kek' } }, (resp) => {
                 let data = '';
                 resp.on('data', (chunk) => {
@@ -24,5 +25,6 @@ module.exports = {
                     message.channel.send(embed);
                 });
             });
+        }
     },
 };
