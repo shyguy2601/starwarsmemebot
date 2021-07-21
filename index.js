@@ -217,6 +217,11 @@ const activities_list = [
       }
     }
   }
+      if(message.channel.id === '815681703192428574'){
+               if(message.content.toLowerCase() == 'pls meme'){
+                    message.channel.send('Pls meme is disabled, use >meme instead')
+               } 
+            }
     if(!message.content.startsWith(`${prefix}`)) return;
     if (message.author.bot) return;
 
