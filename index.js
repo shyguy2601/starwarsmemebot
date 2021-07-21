@@ -217,7 +217,7 @@ const activities_list = [
       }
     }
   }
-      if(message.channel.id === '396021514740301825'){
+      if(message.guild.id === '396021514740301825'){
                if(message.content.toLowerCase() == 'pls meme'){
                     message.channel.send('Pls meme is disabled, use >meme instead')
                } 
